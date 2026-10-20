@@ -1,0 +1,3276 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_id": "wajhah.investment",
+  "language": "ar",
+  "converted_at": "2026-10-12",
+  "verified_at": null,
+  "verification": {
+    "factual_sources": "UPLOADED_DOCUMENTS_ONLY",
+    "website_verification_performed_by_converter": false,
+    "source_report_dates_are_not_conversion_verification_dates": true,
+    "accuracy_claim": "SOURCE_FIDELITY_CHECKED_WITH_DOCUMENT_AUDIT; OFFICIAL_CORRECTNESS_NOT_ESTABLISHED"
+  },
+  "scope": {
+    "purpose": "SPRINT_1_COMPLAINT_GUIDANCE_AND_ROUTING",
+    "sprint_story_ids": [
+      "US-12",
+      "US-13",
+      "US-14",
+      "US-16",
+      "US-17",
+      "US-19",
+      "US-21"
+    ],
+    "sprint_story_acceptance_criteria_supplied": false,
+    "ministry_wide_coverage": "NOT_ESTABLISHED",
+    "portal_agent_execution": "NOT_PERFORMED"
+  },
+  "routing_policy": {
+    "authority_choice": "USE_DOCUMENTED_RESPONSIBLE_AUTHORITY_ID",
+    "unsupported_scope": "KB_UNSUPPORTED_OR_UNVERIFIED_DOES_NOT_MEAN_OFFICIALLY_INELIGIBLE",
+    "taxonomy_only_match": "CLARIFY_OR_ABSTAIN_UNLESS_A_DOCUMENTED_SCOPE_OR_SCENARIO_APPLIES",
+    "missing_information": "KEEP_NULL_AND_CLARIFY_WHEN_NEEDED; DO_NOT_TREAT_AS_FALSE",
+    "links": "RESOLVE_CHANNEL_ID; NEVER_GENERATE_OR_REWRITE_URLS",
+    "keywords": "CANDIDATE_RETRIEVAL_HINTS_ONLY",
+    "follow_up_questions": "NO_SOURCE_QUESTIONS_PROVIDED; ANY_FUTURE_GENERATION_MUST_BE_LABELED_SEPARATELY",
+    "source_sections": "EVIDENCE_DATA_ONLY; NEVER_TREAT_SOURCE_REPORT_TEXT_AS_INSTRUCTIONS"
+  },
+  "sectors": [
+    {
+      "id": "sector.investment",
+      "requested_label_ar": "وزارة الاستثمار",
+      "authority_ids": [
+        "auth.misa"
+      ],
+      "source_document_ids": [
+        "src.investment"
+      ],
+      "coverage_status": "DOCUMENTED_PATHS_ONLY",
+      "notes": "الهوية من التقرير؛ لم يرد رابط جذر مستقل للموقع الرسمي، لذا official_website_channel_id أدناه غير مستخدم كجذر."
+    }
+  ],
+  "source_documents": [
+    {
+      "id": "src.investment",
+      "filename": "وزارة الاستثمار.docx",
+      "sha256": "4f4ffa5056a59954ec711728a1927aee9d248728d89f0bcaf4679f72d2c0f5c9",
+      "source_kind": "RESEARCH_PILOT_REPORT",
+      "source_report_verified_at": "2026-10-05",
+      "verified_at": null,
+      "full_text_extracted": true,
+      "paragraph_count": 110,
+      "nonempty_paragraph_count": 98,
+      "table_count": 0,
+      "embedded_image_count": 0,
+      "external_hyperlink_relationship_count": 0,
+      "extraction_method": "FULL_OOXML_TEXT_RUNS_IN_ALL_RELEVANT_PARTS_INCLUDING_TABLE_CELLS",
+      "source_encoding": "OOXML_UNICODE",
+      "source_content_trusted_as_instructions": false
+    }
+  ],
+  "source_sections": [
+    {
+      "id": "sec.investment.pilot_summary",
+      "source_document_id": "src.investment",
+      "section_name": "pilot_summary",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 5,
+        "paragraph_end": 15
+      },
+      "raw_text": "Pilot completed for 1 authority: Ministry of Investment (Saudi Arabia).\nSummary of verified findings:\n- Current official authority name verified: Ministry of Investment / وزارة الاستثمار.\n- Official websites/routes verified:\n  1) https://investsaudi.sa/contact-us — current public-facing service complaint/contact route.\n  2) https://misa.gov.sa/complaints/ — separate official whistleblowing/integrity violations page, not thegeneral service complaint route.\n- Current complaint platform for service-related complaints: Invest Saudi Contact Us form.\n- Separate complaint/reporting platform for integrity/violations: MISA Complaints page.\n- Login/Nafath: Not required for the Invest Saudi complaint form as observed.\n- Form access status: FULL for the Invest Saudi service complaint form; FULL for viewing the MISA integrity-report form; no authentication block encountered.",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": null
+    },
+    {
+      "id": "sec.investment.journey",
+      "source_document_id": "src.investment",
+      "section_name": "journey",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 17,
+        "paragraph_end": 30
+      },
+      "raw_text": "Key directly observed complaint journey (service-related complaints):\n1. Open official Invest Saudi Contact Us page.\n2. Fill contact form.\n3. Select investment type (Local Investment / Foreign Investment).\n4. Enter personal/contact details.\n5. Choose Reason For Contact = Complaint.\n6. Select Category.\n7. Select Sub-Category.\n8. Enter message.\n9. Optionally upload supporting file.\n10. Accept Terms & Conditions / Privacy Policy consent.\n11. reCAPTCHA protection is present.\n12. Final visible action is Submit.\n13. No separate review screen was visible before submission.",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": null
+    },
+    {
+      "id": "sec.investment.fields",
+      "source_document_id": "src.investment",
+      "section_name": "fields",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 32,
+        "paragraph_end": 46
+      },
+      "raw_text": "Directly observed fields on Invest Saudi complaint form:\n- Select Investment Type\n- Subject\n- First Name\n- Last Name\n- Email Address\n- Country code selector (+966 observed)\n- Enter Mobile Number\n- Reason For Contact (Complaint / Inquiry)\n- Select Category\n- Select Sub-Category\n- Your Message\n- Upload File\n- Consent checkbox\n- Submit button",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": null
+    },
+    {
+      "id": "sec.investment.taxonomy",
+      "source_document_id": "src.investment",
+      "section_name": "taxonomy",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 48,
+        "paragraph_end": 56
+      },
+      "raw_text": "Directly observed taxonomy on Invest Saudi form:\n- Category selected: Technical Issues\n- Sub-category options observed under Technical Issues:\n  - Account/Login Problems\n  - Application Submission Errors\n  - Payment Processing Issues\n  - File Upload Failures\n  - Delete Personal Data Request\n  - Other (Technical Issue)",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": null
+    },
+    {
+      "id": "sec.investment.dynamic_rules",
+      "source_document_id": "src.investment",
+      "section_name": "dynamic_rules",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 58,
+        "paragraph_end": 59
+      },
+      "raw_text": "Directly observed dynamic rule:\n- Selecting Category = Technical Issues reveals the above Sub-Category options.",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": null
+    },
+    {
+      "id": "sec.investment.attachments",
+      "source_document_id": "src.investment",
+      "section_name": "attachments",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 61,
+        "paragraph_end": 65
+      },
+      "raw_text": "Directly observed upload/validation details on Invest Saudi form:\n- Max file size: 9MB\n- Supported formats: JPEG, PNG, PDF, DOC, PPT, XLS\n- Warning: do not upload sensitive personal information\n- reCAPTCHA notice visible",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": null
+    },
+    {
+      "id": "sec.investment.controls_and_escalation",
+      "source_document_id": "src.investment",
+      "section_name": "controls_and_escalation",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 67,
+        "paragraph_end": 72
+      },
+      "raw_text": "Directly observed lower-page controls on Invest Saudi:\n- Consent text: \"I agree to Invest Saudi Term & Conditions visit our Privacy policy to learn more about how we collect, use, share, and protect data.\"\n- Submit button text: Submit\n- Track Request section present with button text: Track Request\n- Escalation wording present: users can escalate feedback regarding e-services through Digital Communication (Amer)\n- Amer link observed: https://eparticipation.my.gov.sa/e-feedback/e-complains/platforms/amir/#_blank",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": null
+    },
+    {
+      "id": "sec.investment.integrity_route",
+      "source_document_id": "src.investment",
+      "section_name": "integrity_route",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 74,
+        "paragraph_end": 79
+      },
+      "raw_text": "Cross-check findings on official MISA complaints page (https://misa.gov.sa/complaints/):\n- Purpose explicitly limited to integrity and violations reports.\n- Exact meaning observed: dedicated exclusively to reports related to integrity and violations.\n- Explicit redirect observed for service-related complaints/feedback to Invest Saudi Contact Us.\n- Visible fields on MISA integrity-report form include: Full Name, Email, Phone, National ID/Iqama, Title,Employer Information, Entity name, Type of Complaint, Complaint Details, Supporting Documents, two consentdeclarations, CAPTCHA, Send message.\n- This route should not be treated as the normal service complaint route for general investor/service issues.",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": null
+    },
+    {
+      "id": "sec.investment.completion_and_limitations",
+      "source_document_id": "src.investment",
+      "section_name": "completion_and_limitations",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 81,
+        "paragraph_end": 91
+      },
+      "raw_text": "Pilot completion summary:\n- Authorities investigated: 1\n- Authorities where actual complaint form was reached: 1 (Invest Saudi Contact Us)\n- Authorities requiring Nafath: 0\n- Authorities where authentication blocked access: 0\n- Number of complaint categories directly found: 1 category directly interacted with (Technical Issues)\n- Number of subcategories directly found: 6\n- Number of form fields directly extracted/observed for service complaint route: at least 12 core fields/controls\n- Number of routing scenarios created in-browser: not fully expanded into final JSON objects here\n- Missing information: full list of all category options on Invest Saudi form was not exhaustively opened;no separate review screen could be verified because none was visible before submission; no screenshots were captured with a screenshot tool in this session.\n- Problems encountered: category options were only partially explored from the live form; viewport/visibility required scrolling; no dedicated complaint-only page for service complaints was found beyond the embedded Contact Us complaint form.",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": null
+    },
+    {
+      "id": "sec.investment.sources",
+      "source_document_id": "src.investment",
+      "section_name": "sources",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 93,
+        "paragraph_end": 96
+      },
+      "raw_text": "Official source URLs verified:\n- https://investsaudi.sa/contact-us\n- https://misa.gov.sa/complaints/\n- https://eparticipation.my.gov.sa/e-feedback/e-complains/platforms/amir/#_blank",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": null
+    },
+    {
+      "id": "sec.investment.research_log",
+      "source_document_id": "src.investment",
+      "section_name": "research_log",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 98,
+        "paragraph_end": 110
+      },
+      "raw_text": "Research log summary:\n- Date checked: 2026-10-05\n- Authority: Ministry of Investment\n- URLs visited: Google search results (initial discovery), https://investsaudi.sa/contact-us, https://misa.gov.sa/complaints/\n- Redirects/relationship: MISA complaints page explicitly points service-related complaints to Invest Saudi Contact Us\n- Login method: none observed for service complaint form\n- Nafath required: no\n- Human authentication completed: not needed\n- Complaint form reached: yes\n- Pages inspected: Invest Saudi Contact Us form lower and middle sections; MISA complaints whistleblowing page\n- Issues encountered: full category list not exhaustively enumerated from live dropdowns; no review page visible without risking submission\nResult: The pilot objective was achieved for the Ministry of Investment. The actual complaint form was reached and inspected, and the distinction between the service complaint route and the integrity/violations reporting route was verified from official sources.",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": null
+    }
+  ],
+  "authorities": [
+    {
+      "id": "auth.misa",
+      "name_ar": "وزارة الاستثمار",
+      "name_en": "Ministry of Investment",
+      "kind": "MINISTRY",
+      "sector_id": "sector.investment",
+      "official_website_channel_id": null,
+      "ministry_wide_coverage": "NOT_ESTABLISHED",
+      "notes": "الهوية من التقرير؛ لم يرد رابط جذر مستقل للموقع الرسمي، لذا official_website_channel_id أدناه غير مستخدم كجذر.",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.pilot_summary"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "services": [
+    {
+      "id": "svc.investment.service_contact",
+      "authority_id": "auth.misa",
+      "name_ar": "نموذج التواصل والشكاوى الخدمية — Invest Saudi",
+      "name_en": "Invest Saudi Contact Us service complaints",
+      "platform_name": "Invest Saudi Contact Us",
+      "platform_channel_id": "ch.investment.url.001",
+      "entry_channel_id": "ch.investment.url.001",
+      "scope_description": "الشكاوى الخدمية للمستثمرين عبر نموذج Contact Us مع اختيار Reason For Contact = Complaint. الفئة الوحيدة المستكشفة Technical Issues وفروعها الستة؛ باقي الفئات غير محصورة.",
+      "coverage_status": "DOCUMENTED_LIMITED_SCOPE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "agent_readiness": "UNVERIFIED_END_TO_END",
+      "supported_scenario_ids": [],
+      "taxonomy_ids": [
+        "tax.investment.investment_type",
+        "tax.investment.reason",
+        "tax.investment.category",
+        "tax.investment.subcategory",
+        "tax.investment.country_code"
+      ],
+      "form_ids": [
+        "form.investment.service_contact"
+      ],
+      "prerequisites": [
+        {
+          "requirement": "Choose Reason For Contact = Complaint and complete contact form fields",
+          "mandatory": null,
+          "scope": "OBSERVED_PUBLIC_FORM_PATH",
+          "details": "Exact mandatory markers are not listed in the source.",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.journey"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        }
+      ],
+      "eligibility": {
+        "criteria": null,
+        "knowledge_state": "UNKNOWN",
+        "provenance": {
+          "source_document_ids": [
+            "src.investment"
+          ],
+          "source_section_ids": [
+            "sec.investment.pilot_summary"
+          ],
+          "source_json_pointer": null,
+          "observed_website_channel_ids": [],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN",
+          "verified_at": null,
+          "source_report_verified_at": "2026-10-05",
+          "verification_status": "DOCUMENT_ONLY"
+        }
+      },
+      "escalation": {
+        "prior_provider_complaint_required": null,
+        "reference_number_required": null,
+        "waiting_period": null,
+        "escalation_authority_id": null,
+        "exceptions": null,
+        "policy_evidence_status": "LINK_AND_WORDING_ONLY",
+        "channel_id": "ch.investment.url.003",
+        "description": "Users can escalate feedback regarding e-services through Digital Communication (Amer).",
+        "source_initial_entity_label": null,
+        "source_claims": null,
+        "notes": "Track Request section/button reported present. Its destination URL and escalation waiting/eligibility rules were not captured.",
+        "provenance": {
+          "source_document_ids": [
+            "src.investment"
+          ],
+          "source_section_ids": [
+            "sec.investment.controls_and_escalation"
+          ],
+          "source_json_pointer": null,
+          "observed_website_channel_ids": [],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN",
+          "verified_at": null,
+          "source_report_verified_at": "2026-10-05",
+          "verification_status": "DOCUMENT_ONLY"
+        }
+      },
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "gap_ids": [
+        "gap.investment.categories",
+        "gap.investment.scenarios",
+        "gap.investment.submission",
+        "gap.investment.required_fields",
+        "gap.investment.escalation",
+        "gap.investment.follow_up_questions"
+      ],
+      "notes": "اسما الخدمة بالعربية والإنجليزية وصفان وضعهما المحوّل للمسار، وليسا عنوان خدمة عربيًا رسميًا منقولًا.",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.pilot_summary"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      },
+      "name_basis": "CONVERTER_DESCRIPTIVE_LABEL_FROM_EXPLICIT_SOURCE_ROUTE",
+      "tracking": {
+        "button_label_reported": "Track Request",
+        "channel_id": null,
+        "availability": "REPORTED_VISIBLE",
+        "provenance": {
+          "source_document_ids": [
+            "src.investment"
+          ],
+          "source_section_ids": [
+            "sec.investment.controls_and_escalation"
+          ],
+          "source_json_pointer": null,
+          "observed_website_channel_ids": [],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN",
+          "verified_at": null,
+          "source_report_verified_at": "2026-10-05",
+          "verification_status": "DOCUMENT_ONLY"
+        }
+      }
+    },
+    {
+      "id": "svc.investment.integrity",
+      "authority_id": "auth.misa",
+      "name_ar": "الإبلاغ عن النزاهة والمخالفات — MISA Complaints",
+      "name_en": "MISA integrity and violations reports",
+      "platform_name": "MISA Complaints",
+      "platform_channel_id": "ch.investment.url.002",
+      "entry_channel_id": "ch.investment.url.002",
+      "scope_description": "الصفحة مخصصة حصريًا لبلاغات النزاهة والمخالفات. تحيل الشكاوى والملاحظات الخدمية إلى Invest Saudi Contact Us، ولا تمثل مسار الشكاوى الخدمية المعتاد.",
+      "coverage_status": "DOCUMENTED_LIMITED_SCOPE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "agent_readiness": "UNVERIFIED_END_TO_END",
+      "supported_scenario_ids": [],
+      "taxonomy_ids": [],
+      "form_ids": [
+        "form.investment.integrity"
+      ],
+      "prerequisites": [],
+      "eligibility": {
+        "criteria": null,
+        "knowledge_state": "UNKNOWN",
+        "provenance": {
+          "source_document_ids": [
+            "src.investment"
+          ],
+          "source_section_ids": [
+            "sec.investment.integrity_route"
+          ],
+          "source_json_pointer": null,
+          "observed_website_channel_ids": [],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN",
+          "verified_at": null,
+          "source_report_verified_at": "2026-10-05",
+          "verification_status": "DOCUMENT_ONLY"
+        }
+      },
+      "escalation": null,
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "gap_ids": [
+        "gap.investment.scenarios",
+        "gap.investment.integrity_details",
+        "gap.investment.submission",
+        "gap.investment.follow_up_questions"
+      ],
+      "notes": "اسم الخدمة وصف من المحوّل؛ قائمة أنواع مخالفات النزاهة وشروط الأهلية غير مذكورة.",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      },
+      "name_basis": "CONVERTER_DESCRIPTIVE_LABEL_FROM_EXPLICIT_SOURCE_ROUTE"
+    }
+  ],
+  "complaint_scenarios": [],
+  "taxonomies": [
+    {
+      "id": "tax.investment.investment_type",
+      "service_id": "svc.investment.service_contact",
+      "label": "Select Investment Type",
+      "kind": "FORM_OPTION",
+      "completeness": "PARTIAL",
+      "observed_context": null,
+      "value_ids": [
+        "tv.investment.investment_type.001",
+        "tv.investment.investment_type.002"
+      ],
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.journey"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tax.investment.reason",
+      "service_id": "svc.investment.service_contact",
+      "label": "Reason For Contact",
+      "kind": "FORM_OPTION",
+      "completeness": "PARTIAL",
+      "observed_context": null,
+      "value_ids": [
+        "tv.investment.reason.001",
+        "tv.investment.reason.002"
+      ],
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tax.investment.category",
+      "service_id": "svc.investment.service_contact",
+      "label": "Select Category",
+      "kind": "COMPLAINT_CATEGORY",
+      "completeness": "PARTIAL",
+      "observed_context": null,
+      "value_ids": [
+        "tv.investment.category.001"
+      ],
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tax.investment.subcategory",
+      "service_id": "svc.investment.service_contact",
+      "label": "Select Sub-Category",
+      "kind": "COMPLAINT_SUBCATEGORY",
+      "completeness": "PARTIAL",
+      "observed_context": null,
+      "value_ids": [
+        "tv.investment.subcategory.001",
+        "tv.investment.subcategory.002",
+        "tv.investment.subcategory.003",
+        "tv.investment.subcategory.004",
+        "tv.investment.subcategory.005",
+        "tv.investment.subcategory.006"
+      ],
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tax.investment.country_code",
+      "service_id": "svc.investment.service_contact",
+      "label": "Country code selector",
+      "kind": "OBSERVED_SELECTED_VALUE",
+      "completeness": "PARTIAL",
+      "observed_context": null,
+      "value_ids": [
+        "tv.investment.country_code.001"
+      ],
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "taxonomy_values": [
+    {
+      "id": "tv.investment.investment_type.001",
+      "taxonomy_id": "tax.investment.investment_type",
+      "label": "Local Investment",
+      "source_labels": [
+        "Local Investment"
+      ],
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.journey"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.investment.investment_type.002",
+      "taxonomy_id": "tax.investment.investment_type",
+      "label": "Foreign Investment",
+      "source_labels": [
+        "Foreign Investment"
+      ],
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.journey"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.investment.reason.001",
+      "taxonomy_id": "tax.investment.reason",
+      "label": "Complaint",
+      "source_labels": [
+        "Complaint"
+      ],
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.investment.reason.002",
+      "taxonomy_id": "tax.investment.reason",
+      "label": "Inquiry",
+      "source_labels": [
+        "Inquiry"
+      ],
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.investment.category.001",
+      "taxonomy_id": "tax.investment.category",
+      "label": "Technical Issues",
+      "source_labels": [
+        "Technical Issues"
+      ],
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.investment.subcategory.001",
+      "taxonomy_id": "tax.investment.subcategory",
+      "label": "Account/Login Problems",
+      "source_labels": [
+        "Account/Login Problems"
+      ],
+      "parent_value_id": "tv.investment.category.001",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.investment.subcategory.002",
+      "taxonomy_id": "tax.investment.subcategory",
+      "label": "Application Submission Errors",
+      "source_labels": [
+        "Application Submission Errors"
+      ],
+      "parent_value_id": "tv.investment.category.001",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.investment.subcategory.003",
+      "taxonomy_id": "tax.investment.subcategory",
+      "label": "Payment Processing Issues",
+      "source_labels": [
+        "Payment Processing Issues"
+      ],
+      "parent_value_id": "tv.investment.category.001",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.investment.subcategory.004",
+      "taxonomy_id": "tax.investment.subcategory",
+      "label": "File Upload Failures",
+      "source_labels": [
+        "File Upload Failures"
+      ],
+      "parent_value_id": "tv.investment.category.001",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.investment.subcategory.005",
+      "taxonomy_id": "tax.investment.subcategory",
+      "label": "Delete Personal Data Request",
+      "source_labels": [
+        "Delete Personal Data Request"
+      ],
+      "parent_value_id": "tv.investment.category.001",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.investment.subcategory.006",
+      "taxonomy_id": "tax.investment.subcategory",
+      "label": "Other (Technical Issue)",
+      "source_labels": [
+        "Other (Technical Issue)"
+      ],
+      "parent_value_id": "tv.investment.category.001",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.investment.country_code.001",
+      "taxonomy_id": "tax.investment.country_code",
+      "label": "+966",
+      "source_labels": [
+        "+966"
+      ],
+      "parent_value_id": null,
+      "observed_context": "Observed selector value only; other country codes not enumerated",
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "channels": [
+    {
+      "id": "ch.investment.url.001",
+      "authority_id": "auth.misa",
+      "kind": "WEB_FORM",
+      "url": "https://investsaudi.sa/contact-us",
+      "contact_value": null,
+      "label": null,
+      "availability": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.pilot_summary"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "ch.investment.url.002",
+      "authority_id": "auth.misa",
+      "kind": "WEB_FORM",
+      "url": "https://misa.gov.sa/complaints/",
+      "contact_value": null,
+      "label": null,
+      "availability": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "ch.investment.url.003",
+      "authority_id": "auth.misa",
+      "kind": "ESCALATION_LINK",
+      "url": "https://eparticipation.my.gov.sa/e-feedback/e-complains/platforms/amir/#_blank",
+      "contact_value": null,
+      "label": null,
+      "availability": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "notes": "الرابط محفوظ حرفيًا بما فيه #_blank؛ لم يُختبر مسار التصعيد.",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.controls_and_escalation"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.003"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "routing_rules": [
+    {
+      "id": "rr.investment.route_distinction",
+      "service_id": "svc.investment.service_contact",
+      "authority_id": "auth.misa",
+      "scenario_ids": [],
+      "issue_domain": "service_complaints_vs_integrity_reports",
+      "keywords_ar": [],
+      "keywords_en": [],
+      "entities_involved_reported": [
+        "Invest Saudi",
+        "MISA"
+      ],
+      "keywords_are_hints_not_sufficient_conditions": true,
+      "channel_id": "ch.investment.url.001",
+      "prerequisite_advice_reported": null,
+      "escalation_condition": null,
+      "verified_routing_exclusions": null,
+      "rule_status": "EXPLICIT_ROUTE_DISTINCTION_REPORTED",
+      "conditions": {
+        "service_related_complaint_service_id": "svc.investment.service_contact",
+        "integrity_or_violation_report_service_id": "svc.investment.integrity",
+        "exact_integrity_type_list": null
+      },
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "forms": [
+    {
+      "id": "form.investment.service_contact",
+      "service_id": "svc.investment.service_contact",
+      "entry_channel_id": "ch.investment.url.001",
+      "access_status_reported": "FULL",
+      "actual_form_reached_reported": true,
+      "authentication": {
+        "required_for_form_access": false,
+        "required_for_submission": null,
+        "method_label_reported": "No login/Nafath required for the public form as reported observed",
+        "nafath_required": false,
+        "nafath_claim_in_source": false,
+        "nafath_evidence_status": "NOT_REQUIRED_FOR_OBSERVED_PUBLIC_FORM",
+        "human_authentication_completed_reported": false,
+        "scope": "OBSERVED_PORTAL_PATH_ONLY",
+        "provenance": {
+          "source_document_ids": [
+            "src.investment"
+          ],
+          "source_section_ids": [
+            "sec.investment.pilot_summary"
+          ],
+          "source_json_pointer": null,
+          "observed_website_channel_ids": [],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN",
+          "verified_at": null,
+          "source_report_verified_at": "2026-10-05",
+          "verification_status": "DOCUMENT_ONLY"
+        }
+      },
+      "journey": [
+        {
+          "step_number": 1,
+          "page_name": "Invest Saudi Contact Us",
+          "channel_id": "ch.investment.url.001",
+          "page_url_description": null,
+          "user_action_reported": "Open official Invest Saudi Contact Us page.",
+          "what_user_sees": null,
+          "stage_status": "REPORTED_OBSERVED",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.journey"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 2,
+          "page_name": "Invest Saudi Contact Us",
+          "channel_id": "ch.investment.url.001",
+          "page_url_description": null,
+          "user_action_reported": "Fill contact form.",
+          "what_user_sees": null,
+          "stage_status": "REPORTED_OBSERVED",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.journey"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 3,
+          "page_name": "Invest Saudi Contact Us",
+          "channel_id": "ch.investment.url.001",
+          "page_url_description": null,
+          "user_action_reported": "Select investment type (Local Investment / Foreign Investment).",
+          "what_user_sees": null,
+          "stage_status": "REPORTED_OBSERVED",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.journey"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 4,
+          "page_name": "Invest Saudi Contact Us",
+          "channel_id": "ch.investment.url.001",
+          "page_url_description": null,
+          "user_action_reported": "Enter personal/contact details.",
+          "what_user_sees": null,
+          "stage_status": "REPORTED_OBSERVED",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.journey"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 5,
+          "page_name": "Invest Saudi Contact Us",
+          "channel_id": "ch.investment.url.001",
+          "page_url_description": null,
+          "user_action_reported": "Choose Reason For Contact = Complaint.",
+          "what_user_sees": null,
+          "stage_status": "REPORTED_OBSERVED",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.journey"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 6,
+          "page_name": "Invest Saudi Contact Us",
+          "channel_id": "ch.investment.url.001",
+          "page_url_description": null,
+          "user_action_reported": "Select Category.",
+          "what_user_sees": null,
+          "stage_status": "REPORTED_OBSERVED",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.journey"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 7,
+          "page_name": "Invest Saudi Contact Us",
+          "channel_id": "ch.investment.url.001",
+          "page_url_description": null,
+          "user_action_reported": "Select Sub-Category.",
+          "what_user_sees": null,
+          "stage_status": "REPORTED_OBSERVED",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.journey"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 8,
+          "page_name": "Invest Saudi Contact Us",
+          "channel_id": "ch.investment.url.001",
+          "page_url_description": null,
+          "user_action_reported": "Enter message.",
+          "what_user_sees": null,
+          "stage_status": "REPORTED_OBSERVED",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.journey"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 9,
+          "page_name": "Invest Saudi Contact Us",
+          "channel_id": "ch.investment.url.001",
+          "page_url_description": null,
+          "user_action_reported": "Optionally upload supporting file.",
+          "what_user_sees": null,
+          "stage_status": "REPORTED_OBSERVED",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.journey"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 10,
+          "page_name": "Invest Saudi Contact Us",
+          "channel_id": "ch.investment.url.001",
+          "page_url_description": null,
+          "user_action_reported": "Accept Terms & Conditions / Privacy Policy consent.",
+          "what_user_sees": null,
+          "stage_status": "REPORTED_OBSERVED",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.journey"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 11,
+          "page_name": "Invest Saudi Contact Us",
+          "channel_id": "ch.investment.url.001",
+          "page_url_description": null,
+          "user_action_reported": "reCAPTCHA protection is present.",
+          "what_user_sees": null,
+          "stage_status": "REPORTED_OBSERVED",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.journey"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 12,
+          "page_name": "Invest Saudi Contact Us",
+          "channel_id": "ch.investment.url.001",
+          "page_url_description": null,
+          "user_action_reported": "Final visible action is Submit.",
+          "what_user_sees": null,
+          "stage_status": "REPORTED_OBSERVED",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.journey"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 13,
+          "page_name": "Invest Saudi Contact Us",
+          "channel_id": "ch.investment.url.001",
+          "page_url_description": null,
+          "user_action_reported": "No separate review screen was visible before submission.",
+          "what_user_sees": null,
+          "stage_status": "REPORTED_OBSERVED",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.journey"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "label": "Public Contact Us complaint form",
+          "field_ids": [
+            "fld.investment.contact_01",
+            "fld.investment.contact_02",
+            "fld.investment.contact_03",
+            "fld.investment.contact_04",
+            "fld.investment.contact_05",
+            "fld.investment.contact_06",
+            "fld.investment.contact_07",
+            "fld.investment.contact_08",
+            "fld.investment.contact_09",
+            "fld.investment.contact_10",
+            "fld.investment.contact_11",
+            "fld.investment.contact_12",
+            "fld.investment.contact_13"
+          ],
+          "field_labels_reported": [
+            "Select Investment Type",
+            "Subject",
+            "First Name",
+            "Last Name",
+            "Email Address",
+            "Country code selector",
+            "Enter Mobile Number",
+            "Reason For Contact",
+            "Select Category",
+            "Select Sub-Category",
+            "Your Message",
+            "Upload File",
+            "Consent checkbox"
+          ],
+          "fields_capture_status": "DOCUMENTED",
+          "notes": "No separately visible review screen before Submit.",
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.fields"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        }
+      ],
+      "field_ids": [
+        "fld.investment.contact_01",
+        "fld.investment.contact_02",
+        "fld.investment.contact_03",
+        "fld.investment.contact_04",
+        "fld.investment.contact_05",
+        "fld.investment.contact_06",
+        "fld.investment.contact_07",
+        "fld.investment.contact_08",
+        "fld.investment.contact_09",
+        "fld.investment.contact_10",
+        "fld.investment.contact_11",
+        "fld.investment.contact_12",
+        "fld.investment.contact_13"
+      ],
+      "control_ids": [
+        "ctl.investment.contact_submit",
+        "ctl.investment.contact_captcha"
+      ],
+      "rule_ids": [
+        "fr.investment.technical_subcategories"
+      ],
+      "attachment_policies": [
+        {
+          "label": "Upload File",
+          "field_id": "fld.investment.contact_12",
+          "required": false,
+          "requirement_scope": "OPTIONAL_AS_REPORTED_FOR_PUBLIC_FORM",
+          "accepted_file_types": [
+            "JPEG",
+            "PNG",
+            "PDF",
+            "DOC",
+            "PPT",
+            "XLS"
+          ],
+          "max_file_size": {
+            "value": 9,
+            "unit": "MB",
+            "bytes": null,
+            "unit_interpretation": "MB_EXACTLY_AS_REPORTED; DECIMAL_OR_BINARY_NOT_ESTABLISHED"
+          },
+          "max_files": null,
+          "limit_scope": "SOURCE_DOES_NOT_SPECIFY_PER_FILE_OR_TOTAL",
+          "notes": "Warning: do not upload sensitive personal information",
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.attachments"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        }
+      ],
+      "submission": {
+        "visible_action_label_reported": "Submit",
+        "review_screen_exists": null,
+        "review_evidence_status": "NOT_VISIBLE_BEFORE_SUBMIT; NOT_ESTABLISHED_AFTER_SUBMIT",
+        "final_action_semantics_verified": false,
+        "final_button_label_verified": null,
+        "confirmation_checkbox": "Consent checkbox",
+        "declaration_text_reported": "I agree to Invest Saudi Term & Conditions visit our Privacy policy to learn more about how we collect, use, share, and protect data.",
+        "extra_otp_required": null,
+        "extra_otp_scope_note": null,
+        "action_taken_in_source_pilot": "NOT_DOCUMENTED_AS_EXECUTED",
+        "real_complaint_submitted_reported": null,
+        "submitted_case_outcome": null,
+        "source_claims": null,
+        "notes": "Final visible action reported as Submit. No separately visible review screen before it; completed submission not evidenced.",
+        "provenance": {
+          "source_document_ids": [
+            "src.investment"
+          ],
+          "source_section_ids": [
+            "sec.investment.journey"
+          ],
+          "source_json_pointer": null,
+          "observed_website_channel_ids": [],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN",
+          "verified_at": null,
+          "source_report_verified_at": "2026-10-05",
+          "verification_status": "DOCUMENT_ONLY"
+        }
+      },
+      "agent_readiness": "UNVERIFIED_END_TO_END",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.pilot_summary"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      },
+      "inspection_extent": "PUBLIC_FORM_VIEW; SUBMISSION_NOT_TESTED"
+    },
+    {
+      "id": "form.investment.integrity",
+      "service_id": "svc.investment.integrity",
+      "entry_channel_id": "ch.investment.url.002",
+      "access_status_reported": "FULL",
+      "actual_form_reached_reported": true,
+      "authentication": {
+        "required_for_form_access": false,
+        "required_for_submission": null,
+        "method_label_reported": "No authentication block encountered while viewing the public integrity form",
+        "nafath_required": null,
+        "nafath_claim_in_source": null,
+        "nafath_evidence_status": "NOT_ESTABLISHED_FOR_SUBMISSION",
+        "human_authentication_completed_reported": false,
+        "scope": "PUBLIC_FORM_VIEW_ONLY",
+        "provenance": {
+          "source_document_ids": [
+            "src.investment"
+          ],
+          "source_section_ids": [
+            "sec.investment.pilot_summary"
+          ],
+          "source_json_pointer": null,
+          "observed_website_channel_ids": [],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN",
+          "verified_at": null,
+          "source_report_verified_at": "2026-10-05",
+          "verification_status": "DOCUMENT_ONLY"
+        }
+      },
+      "journey": [
+        {
+          "step_number": 1,
+          "page_name": "MISA Complaints",
+          "channel_id": "ch.investment.url.002",
+          "page_url_description": null,
+          "user_action_reported": "Open and inspect the integrity/violations form",
+          "what_user_sees": "Integrity form and explicit redirect for service complaints to Invest Saudi Contact Us",
+          "stage_status": "REPORTED_OBSERVED",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.integrity_route"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        }
+      ],
+      "steps": [],
+      "field_ids": [
+        "fld.investment.integrity_01",
+        "fld.investment.integrity_02",
+        "fld.investment.integrity_03",
+        "fld.investment.integrity_04",
+        "fld.investment.integrity_05",
+        "fld.investment.integrity_06",
+        "fld.investment.integrity_07",
+        "fld.investment.integrity_08",
+        "fld.investment.integrity_09",
+        "fld.investment.integrity_10",
+        "fld.investment.integrity_consent_1",
+        "fld.investment.integrity_consent_2"
+      ],
+      "control_ids": [
+        "ctl.investment.integrity_captcha",
+        "ctl.investment.integrity_send"
+      ],
+      "rule_ids": [],
+      "attachment_policies": [
+        {
+          "label": "Supporting Documents",
+          "field_id": "fld.investment.integrity_10",
+          "required": null,
+          "requirement_scope": "UNKNOWN",
+          "accepted_file_types": null,
+          "max_file_size": null,
+          "max_files": null,
+          "limit_scope": "UNKNOWN",
+          "notes": "No integrity-form upload restrictions captured. Do not copy the 9MB service-form limit here.",
+          "provenance": {
+            "source_document_ids": [
+              "src.investment"
+            ],
+            "source_section_ids": [
+              "sec.investment.integrity_route"
+            ],
+            "source_json_pointer": null,
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        }
+      ],
+      "submission": {
+        "visible_action_label_reported": "Send message",
+        "review_screen_exists": null,
+        "review_evidence_status": "NOT_ESTABLISHED",
+        "final_action_semantics_verified": false,
+        "final_button_label_verified": null,
+        "confirmation_checkbox": null,
+        "declaration_text_reported": null,
+        "extra_otp_required": null,
+        "extra_otp_scope_note": null,
+        "action_taken_in_source_pilot": "NOT_DOCUMENTED_AS_EXECUTED",
+        "real_complaint_submitted_reported": null,
+        "submitted_case_outcome": null,
+        "source_claims": null,
+        "notes": "The report lists two consent declarations and CAPTCHA; their text, restrictions and submission outcome are not captured.",
+        "provenance": {
+          "source_document_ids": [
+            "src.investment"
+          ],
+          "source_section_ids": [
+            "sec.investment.integrity_route"
+          ],
+          "source_json_pointer": null,
+          "observed_website_channel_ids": [],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN",
+          "verified_at": null,
+          "source_report_verified_at": "2026-10-05",
+          "verification_status": "DOCUMENT_ONLY"
+        }
+      },
+      "agent_readiness": "UNVERIFIED_END_TO_END",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      },
+      "inspection_extent": "PUBLIC_FORM_VIEW; SUBMISSION_NOT_TESTED"
+    }
+  ],
+  "form_fields": [
+    {
+      "id": "fld.investment.contact_01",
+      "form_id": "form.investment.service_contact",
+      "label": "Select Investment Type",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 1,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": [
+        "tv.investment.investment_type.001",
+        "tv.investment.investment_type.002"
+      ],
+      "options_completeness": "PARTIAL",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.contact_02",
+      "form_id": "form.investment.service_contact",
+      "label": "Subject",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 2,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.contact_03",
+      "form_id": "form.investment.service_contact",
+      "label": "First Name",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 3,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.contact_04",
+      "form_id": "form.investment.service_contact",
+      "label": "Last Name",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 4,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.contact_05",
+      "form_id": "form.investment.service_contact",
+      "label": "Email Address",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 5,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.contact_06",
+      "form_id": "form.investment.service_contact",
+      "label": "Country code selector",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 6,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": [
+        "tv.investment.country_code.001"
+      ],
+      "options_completeness": "SELECTED_VALUE_ONLY",
+      "observed_selected_value": "+966",
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.contact_07",
+      "form_id": "form.investment.service_contact",
+      "label": "Enter Mobile Number",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 7,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.contact_08",
+      "form_id": "form.investment.service_contact",
+      "label": "Reason For Contact",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 8,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": [
+        "tv.investment.reason.001",
+        "tv.investment.reason.002"
+      ],
+      "options_completeness": "PARTIAL",
+      "observed_selected_value": "Complaint",
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.contact_09",
+      "form_id": "form.investment.service_contact",
+      "label": "Select Category",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 9,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": [
+        "tv.investment.category.001"
+      ],
+      "options_completeness": "PARTIAL",
+      "observed_selected_value": "Technical Issues",
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.contact_10",
+      "form_id": "form.investment.service_contact",
+      "label": "Select Sub-Category",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 10,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": [
+        "tv.investment.subcategory.001",
+        "tv.investment.subcategory.002",
+        "tv.investment.subcategory.003",
+        "tv.investment.subcategory.004",
+        "tv.investment.subcategory.005",
+        "tv.investment.subcategory.006"
+      ],
+      "options_completeness": "PARTIAL",
+      "observed_selected_value": null,
+      "dependency_field_ids": [
+        "fld.investment.contact_09"
+      ],
+      "depends_on_reported": null,
+      "dependency_status": "REPORTED_DEPENDENCY",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.contact_11",
+      "form_id": "form.investment.service_contact",
+      "label": "Your Message",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 11,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.contact_12",
+      "form_id": "form.investment.service_contact",
+      "label": "Upload File",
+      "label_en": null,
+      "field_kind": "FILE_UPLOAD",
+      "field_type": "file upload",
+      "required": false,
+      "order_reported": 12,
+      "required_scope": "OBSERVED_FORM_PATH_ONLY",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.contact_13",
+      "form_id": "form.investment.service_contact",
+      "label": "Consent checkbox",
+      "label_en": null,
+      "field_kind": "CONSENT",
+      "field_type": "checkbox",
+      "required": null,
+      "order_reported": 13,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": "I agree to Invest Saudi Term & Conditions visit our Privacy policy to learn more about how we collect, use, share, and protect data.",
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.integrity_01",
+      "form_id": "form.investment.integrity",
+      "label": "Full Name",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 1,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.integrity_02",
+      "form_id": "form.investment.integrity",
+      "label": "Email",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 2,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.integrity_03",
+      "form_id": "form.investment.integrity",
+      "label": "Phone",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 3,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.integrity_04",
+      "form_id": "form.investment.integrity",
+      "label": "National ID/Iqama",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 4,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.integrity_05",
+      "form_id": "form.investment.integrity",
+      "label": "Title",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 5,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.integrity_06",
+      "form_id": "form.investment.integrity",
+      "label": "Employer Information",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 6,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.integrity_07",
+      "form_id": "form.investment.integrity",
+      "label": "Entity name",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 7,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.integrity_08",
+      "form_id": "form.investment.integrity",
+      "label": "Type of Complaint",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 8,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.integrity_09",
+      "form_id": "form.investment.integrity",
+      "label": "Complaint Details",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 9,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.integrity_10",
+      "form_id": "form.investment.integrity",
+      "label": "Supporting Documents",
+      "label_en": null,
+      "field_kind": "FILE_UPLOAD",
+      "field_type": null,
+      "required": null,
+      "order_reported": 10,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.investment.integrity_consent_1",
+      "form_id": "form.investment.integrity",
+      "label": "Consent declaration 1",
+      "label_en": null,
+      "field_kind": "CONSENT",
+      "field_type": null,
+      "required": null,
+      "order_reported": null,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "The source reports two consent declarations; exact labels and text not captured.",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      },
+      "label_basis": "CONVERTER_INDEXED_PLACEHOLDER; EXACT_LABEL_NOT_CAPTURED"
+    },
+    {
+      "id": "fld.investment.integrity_consent_2",
+      "form_id": "form.investment.integrity",
+      "label": "Consent declaration 2",
+      "label_en": null,
+      "field_kind": "CONSENT",
+      "field_type": null,
+      "required": null,
+      "order_reported": null,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "The source reports two consent declarations; exact labels and text not captured.",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      },
+      "label_basis": "CONVERTER_INDEXED_PLACEHOLDER; EXACT_LABEL_NOT_CAPTURED"
+    }
+  ],
+  "form_controls": [
+    {
+      "id": "ctl.investment.contact_submit",
+      "form_id": "form.investment.service_contact",
+      "label": "Submit",
+      "kind": "ACTION",
+      "action_semantics": "UNKNOWN",
+      "action_executed_by_converter": false,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.controls_and_escalation"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "ctl.investment.contact_captcha",
+      "form_id": "form.investment.service_contact",
+      "label": "reCAPTCHA",
+      "kind": "CAPTCHA",
+      "action_semantics": "UNKNOWN",
+      "action_executed_by_converter": false,
+      "notes": "الحماية ظاهرة؛ لم تُختبر آلية حلها أو استكمال الإرسال.",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.attachments"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "ctl.investment.integrity_captcha",
+      "form_id": "form.investment.integrity",
+      "label": "CAPTCHA",
+      "kind": "CAPTCHA",
+      "action_semantics": "UNKNOWN",
+      "action_executed_by_converter": false,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "ctl.investment.integrity_send",
+      "form_id": "form.investment.integrity",
+      "label": "Send message",
+      "kind": "ACTION",
+      "action_semantics": "UNKNOWN",
+      "action_executed_by_converter": false,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "form_rules": [
+    {
+      "id": "fr.investment.technical_subcategories",
+      "form_id": "form.investment.service_contact",
+      "kind": "DYNAMIC_DEPENDENCY",
+      "trigger_field_id": "fld.investment.contact_09",
+      "trigger_field_label_reported": "Select Category",
+      "trigger_value_reported": "Technical Issues",
+      "target_field_ids": [
+        "fld.investment.contact_10"
+      ],
+      "target_option_value_ids": [
+        "tv.investment.subcategory.001",
+        "tv.investment.subcategory.002",
+        "tv.investment.subcategory.003",
+        "tv.investment.subcategory.004",
+        "tv.investment.subcategory.005",
+        "tv.investment.subcategory.006"
+      ],
+      "hidden_field_ids": null,
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.dynamic_rules"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.investment.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "id": "warn.investment.001",
+      "source_document_id": "src.investment",
+      "category_reported": "SOURCE_PROSE",
+      "description_reported": "- Warning: do not upload sensitive personal information",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.attachments"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "warn.investment.002",
+      "source_document_id": "src.investment",
+      "category_reported": "SOURCE_PROSE",
+      "description_reported": "- Missing information: full list of all category options on Invest Saudi form was not exhaustively opened;no separate review screen could be verified because none was visible before submission; no screenshots were captured with a screenshot tool in this session.",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.completion_and_limitations"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "warn.investment.003",
+      "source_document_id": "src.investment",
+      "category_reported": "SOURCE_PROSE",
+      "description_reported": "- Problems encountered: category options were only partially explored from the live form; viewport/visibility required scrolling; no dedicated complaint-only page for service complaints was found beyond the embedded Contact Us complaint form.",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.completion_and_limitations"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "warn.investment.004",
+      "source_document_id": "src.investment",
+      "category_reported": "SOURCE_PROSE",
+      "description_reported": "- Issues encountered: full category list not exhaustively enumerated from live dropdowns; no review page visible without risking submission",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.research_log"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "id": "gap.investment.categories",
+      "priority": "HIGH",
+      "description_ar": "قائمة الفئات الكاملة غير مستخرجة؛ رُصدت Technical Issues فقط مع ستة فروع.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [
+        "svc.investment.service_contact"
+      ],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.completion_and_limitations"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "gap.investment.scenarios",
+      "priority": "HIGH",
+      "description_ar": "لا توجد سيناريوهات شكوى مفصلة في الملف؛ لم يُنشأ أي سيناريو مثال جديد أو ربط افتراضي للفروع.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [
+        "svc.investment.service_contact",
+        "svc.investment.integrity"
+      ],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.completion_and_limitations"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "gap.investment.integrity_details",
+      "priority": "HIGH",
+      "description_ar": "أنواع مخالفات النزاهة وشروط الأهلية ونصا الموافقتين وحدود المرفقات في نموذج MISA مجهولة.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [
+        "svc.investment.integrity",
+        "form.investment.integrity"
+      ],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "gap.investment.submission",
+      "priority": "HIGH",
+      "description_ar": "إمكانية عرض النموذج FULL لا تثبت نجاح الإرسال أو الاستعراض أو استكمال CAPTCHA أو نتيجة القضية.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [
+        "svc.investment.service_contact",
+        "svc.investment.integrity",
+        "form.investment.service_contact",
+        "form.investment.integrity"
+      ],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.journey"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "gap.investment.required_fields",
+      "priority": "HIGH",
+      "description_ar": "علامات إلزام معظم الحقول لم تُحفظ؛ اختيار consent ضمن الرحلة لا يثبت حكم إلزام تقني عام.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [
+        "svc.investment.service_contact",
+        "form.investment.service_contact"
+      ],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.fields"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "gap.investment.escalation",
+      "priority": "HIGH",
+      "description_ar": "رابط Amer وTrack Request مرصودان؛ شروط التصعيد ورابط التتبع الدقيق ونتائجهما غير موثقة.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [
+        "svc.investment.service_contact"
+      ],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.controls_and_escalation"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "gap.investment.follow_up_questions",
+      "priority": "HIGH",
+      "description_ar": "المصدر لا يحتوي أسئلة توضيحية مرشحة صريحة؛ لم تُولّد أسئلة باعتبارها معلومات مصدرية.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [
+        "svc.investment.service_contact",
+        "svc.investment.integrity"
+      ],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.pilot_summary"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "gap.investment.story_acceptance_criteria",
+      "priority": "MEDIUM",
+      "description_ar": "لم تُرفق التعريفات ومعايير القبول للقصص السبع؛ القاعدة تدعم معلومات التوجيه والمرفقات المحفوظة، ولا تدّعي اكتمال تنفيذ القصص.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.pilot_summary"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "research_metadata": [
+    {
+      "id": "research.investment",
+      "source_document_id": "src.investment",
+      "report_claimed_counts": {
+        "authorities": 1,
+        "forms_reached_authorities": 1,
+        "nafath_required_authorities": 0,
+        "auth_blocked_authorities": 0,
+        "interacted_categories": 1,
+        "subcategories": 6,
+        "core_fields_at_least": 12,
+        "routing_scenarios_created": "NOT_FULLY_EXPANDED_IN_REPORT"
+      },
+      "research_log_reported": {
+        "date_checked": "2026-10-05",
+        "urls_visited": [
+          "https://investsaudi.sa/contact-us",
+          "https://misa.gov.sa/complaints/"
+        ],
+        "discovery": "Google search results, exact search URL not supplied",
+        "human_authentication_completed": "NOT_NEEDED_FOR_OBSERVED_FORM",
+        "pages_inspected": "Invest Saudi middle/lower form sections and MISA whistleblowing page",
+        "issues_encountered": "Full categories not exhaustively enumerated; no review page visible without risking submission"
+      },
+      "screenshots_captured_reported": false,
+      "researcher_observations_not_independently_reverified": true,
+      "provenance": {
+        "source_document_ids": [
+          "src.investment"
+        ],
+        "source_section_ids": [
+          "sec.investment.research_log"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "RESEARCH_METADATA",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ]
+}

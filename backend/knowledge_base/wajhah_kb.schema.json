@@ -1,0 +1,2753 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wajhah:knowledge-base:schema:1.0.0",
+  "title": "Wajhah research-derived complaint service knowledge base",
+  "description": "Shared normalized structure for each of the five source files and the combined dataset. Unknown factual values are null; UNKNOWN is reserved for evidence/completeness/confidence states. Cross-reference and source audit checks are implemented in validate_kb.py.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "dataset_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "language": {
+      "const": "ar"
+    },
+    "converted_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "verified_at": {
+      "type": "null"
+    },
+    "verification": {
+      "type": "object",
+      "properties": {
+        "factual_sources": {
+          "const": "UPLOADED_DOCUMENTS_ONLY"
+        },
+        "website_verification_performed_by_converter": {
+          "const": false
+        },
+        "source_report_dates_are_not_conversion_verification_dates": {
+          "const": true
+        },
+        "accuracy_claim": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "factual_sources",
+        "website_verification_performed_by_converter",
+        "source_report_dates_are_not_conversion_verification_dates",
+        "accuracy_claim"
+      ],
+      "additionalProperties": false
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "purpose": {
+          "const": "SPRINT_1_COMPLAINT_GUIDANCE_AND_ROUTING"
+        },
+        "sprint_story_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "sprint_story_acceptance_criteria_supplied": {
+          "const": false
+        },
+        "ministry_wide_coverage": {
+          "const": "NOT_ESTABLISHED"
+        },
+        "portal_agent_execution": {
+          "const": "NOT_PERFORMED"
+        }
+      },
+      "required": [
+        "purpose",
+        "sprint_story_ids",
+        "sprint_story_acceptance_criteria_supplied",
+        "ministry_wide_coverage",
+        "portal_agent_execution"
+      ],
+      "additionalProperties": false
+    },
+    "routing_policy": {
+      "type": "object",
+      "properties": {
+        "authority_choice": {
+          "type": "string"
+        },
+        "unsupported_scope": {
+          "type": "string"
+        },
+        "taxonomy_only_match": {
+          "type": "string"
+        },
+        "missing_information": {
+          "type": "string"
+        },
+        "links": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "string"
+        },
+        "follow_up_questions": {
+          "type": "string"
+        },
+        "source_sections": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "authority_choice",
+        "unsupported_scope",
+        "taxonomy_only_match",
+        "missing_information",
+        "links",
+        "keywords",
+        "follow_up_questions",
+        "source_sections"
+      ],
+      "additionalProperties": false
+    },
+    "sectors": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/sector"
+      },
+      "minItems": 0
+    },
+    "source_documents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source_document"
+      },
+      "minItems": 1
+    },
+    "source_sections": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source_section"
+      },
+      "minItems": 1
+    },
+    "authorities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/authority"
+      },
+      "minItems": 1
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/service"
+      },
+      "minItems": 1
+    },
+    "complaint_scenarios": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/scenario"
+      },
+      "minItems": 0
+    },
+    "taxonomies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/taxonomy"
+      },
+      "minItems": 0
+    },
+    "taxonomy_values": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/taxonomy_value"
+      },
+      "minItems": 0
+    },
+    "channels": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/channel"
+      },
+      "minItems": 0
+    },
+    "routing_rules": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/routing_rule"
+      },
+      "minItems": 0
+    },
+    "forms": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/form"
+      },
+      "minItems": 0
+    },
+    "form_fields": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/form_field"
+      },
+      "minItems": 0
+    },
+    "form_controls": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/form_control"
+      },
+      "minItems": 0
+    },
+    "form_rules": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/form_rule"
+      },
+      "minItems": 0
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/warning"
+      },
+      "minItems": 0
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/gap"
+      },
+      "minItems": 0
+    },
+    "research_metadata": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/research"
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "schema_version",
+    "dataset_id",
+    "language",
+    "converted_at",
+    "verified_at",
+    "verification",
+    "scope",
+    "routing_policy",
+    "sectors",
+    "source_documents",
+    "source_sections",
+    "authorities",
+    "services",
+    "complaint_scenarios",
+    "taxonomies",
+    "taxonomy_values",
+    "channels",
+    "routing_rules",
+    "forms",
+    "form_fields",
+    "form_controls",
+    "form_rules",
+    "warnings",
+    "gaps",
+    "research_metadata"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "source_document_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 1
+        },
+        "source_section_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 1
+        },
+        "source_json_pointer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "observed_website_channel_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 0
+        },
+        "evidence_basis": {
+          "enum": [
+            "REPORTED_DIRECT_OBSERVATION",
+            "REPORTED_UNVERIFIED",
+            "RESEARCHER_AUTHORED",
+            "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "RESEARCH_METADATA",
+            "REPORTED_RESEARCH_LIMITATION"
+          ]
+        },
+        "confidence_reported": {
+          "enum": [
+            "HIGH",
+            "MEDIUM",
+            "LOW",
+            "UNKNOWN"
+          ]
+        },
+        "verified_at": {
+          "type": "null"
+        },
+        "source_report_verified_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "verification_status": {
+          "const": "DOCUMENT_ONLY"
+        }
+      },
+      "required": [
+        "source_document_ids",
+        "source_section_ids",
+        "source_json_pointer",
+        "observed_website_channel_ids",
+        "evidence_basis",
+        "confidence_reported",
+        "verified_at",
+        "source_report_verified_at",
+        "verification_status"
+      ],
+      "additionalProperties": false
+    },
+    "sector": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "requested_label_ar": {
+          "type": "string"
+        },
+        "authority_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 1
+        },
+        "source_document_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 1
+        },
+        "coverage_status": {
+          "const": "DOCUMENTED_PATHS_ONLY"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "requested_label_ar",
+        "authority_ids",
+        "source_document_ids",
+        "coverage_status",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "source_document": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "filename": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "source_kind": {
+          "const": "RESEARCH_PILOT_REPORT"
+        },
+        "source_report_verified_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "verified_at": {
+          "type": "null"
+        },
+        "full_text_extracted": {
+          "type": "boolean"
+        },
+        "paragraph_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nonempty_paragraph_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "table_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "embedded_image_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "external_hyperlink_relationship_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "extraction_method": {
+          "type": "string"
+        },
+        "source_encoding": {
+          "type": "string"
+        },
+        "source_content_trusted_as_instructions": {
+          "const": false
+        }
+      },
+      "required": [
+        "id",
+        "filename",
+        "sha256",
+        "source_kind",
+        "source_report_verified_at",
+        "verified_at",
+        "full_text_extracted",
+        "paragraph_count",
+        "nonempty_paragraph_count",
+        "table_count",
+        "embedded_image_count",
+        "external_hyperlink_relationship_count",
+        "extraction_method",
+        "source_encoding",
+        "source_content_trusted_as_instructions"
+      ],
+      "additionalProperties": false
+    },
+    "source_section": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "source_document_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "section_name": {
+          "type": "string"
+        },
+        "locator": {
+          "type": "object",
+          "properties": {
+            "part": {
+              "type": "string"
+            },
+            "paragraph_start": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "paragraph_end": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "part",
+            "paragraph_start",
+            "paragraph_end"
+          ],
+          "additionalProperties": false
+        },
+        "raw_text": {
+          "type": "string"
+        },
+        "interpretation": {
+          "type": "string"
+        },
+        "reported_claims": {
+          "type": [
+            "object",
+            "array",
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "source_document_id",
+        "section_name",
+        "locator",
+        "raw_text",
+        "interpretation",
+        "reported_claims"
+      ],
+      "additionalProperties": false
+    },
+    "authority": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "name_ar": {
+          "type": "string"
+        },
+        "name_en": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "kind": {
+          "enum": [
+            "MINISTRY",
+            "REGULATOR"
+          ]
+        },
+        "sector_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "official_website_channel_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ministry_wide_coverage": {
+          "const": "NOT_ESTABLISHED"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "id",
+        "name_ar",
+        "name_en",
+        "kind",
+        "sector_id",
+        "official_website_channel_id",
+        "ministry_wide_coverage",
+        "notes",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "prerequisite": {
+      "type": "object",
+      "properties": {
+        "requirement": {
+          "type": "string"
+        },
+        "mandatory": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "scope": {
+          "type": "string"
+        },
+        "details": {
+          "type": "string"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "requirement",
+        "mandatory",
+        "scope",
+        "details",
+        "notes",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "eligibility": {
+      "type": "object",
+      "properties": {
+        "criteria": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": [
+                  "object",
+                  "array",
+                  "string",
+                  "number",
+                  "boolean",
+                  "null"
+                ]
+              },
+              "minItems": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "knowledge_state": {
+          "enum": [
+            "UNKNOWN",
+            "DOCUMENTED"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "criteria",
+        "knowledge_state",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "escalation": {
+      "type": "object",
+      "properties": {
+        "prior_provider_complaint_required": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "reference_number_required": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "waiting_period": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "escalation_authority_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "exceptions": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": [
+                  "object",
+                  "array",
+                  "string",
+                  "number",
+                  "boolean",
+                  "null"
+                ]
+              },
+              "minItems": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "policy_evidence_status": {
+          "enum": [
+            "NOT_ESTABLISHED",
+            "LINK_AND_WORDING_ONLY",
+            "DOCUMENTED"
+          ]
+        },
+        "channel_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_initial_entity_label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_claims": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "prior_provider_complaint_required",
+        "reference_number_required",
+        "waiting_period",
+        "escalation_authority_id",
+        "exceptions",
+        "policy_evidence_status",
+        "source_initial_entity_label",
+        "source_claims",
+        "notes",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "service": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "authority_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "name_ar": {
+          "type": "string"
+        },
+        "name_en": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "name_basis": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "platform_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "platform_channel_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "entry_channel_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "scope_description": {
+          "type": "string"
+        },
+        "coverage_status": {
+          "enum": [
+            "DOCUMENTED_LIMITED_SCOPE",
+            "DOCUMENTED_FULL_SCOPE"
+          ]
+        },
+        "guidance_suitability": {
+          "enum": [
+            "DOCUMENTED_WITH_LIMITATIONS",
+            "DOCUMENTED",
+            "NOT_ESTABLISHED"
+          ]
+        },
+        "agent_readiness": {
+          "enum": [
+            "UNVERIFIED_END_TO_END",
+            "PARTIALLY_INSPECTED",
+            "VERIFIED_END_TO_END"
+          ]
+        },
+        "supported_scenario_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 0
+        },
+        "taxonomy_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 0
+        },
+        "form_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 1
+        },
+        "prerequisites": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/prerequisite"
+          },
+          "minItems": 0
+        },
+        "eligibility": {
+          "$ref": "#/$defs/eligibility"
+        },
+        "escalation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/escalation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "follow_up_question_candidates": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "follow_up_question_status": {
+          "enum": [
+            "NOT_PROVIDED_IN_SOURCE",
+            "EXPLICITLY_PROVIDED_IN_SOURCE"
+          ]
+        },
+        "gap_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 0
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        },
+        "tracking": {
+          "type": "object",
+          "properties": {
+            "button_label_reported": {
+              "type": "string"
+            },
+            "channel_id": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9_.-]*$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "availability": {
+              "type": "string"
+            },
+            "provenance": {
+              "$ref": "#/$defs/provenance"
+            }
+          },
+          "required": [
+            "button_label_reported",
+            "channel_id",
+            "availability",
+            "provenance"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "authority_id",
+        "name_ar",
+        "name_en",
+        "platform_name",
+        "platform_channel_id",
+        "entry_channel_id",
+        "scope_description",
+        "coverage_status",
+        "guidance_suitability",
+        "agent_readiness",
+        "supported_scenario_ids",
+        "taxonomy_ids",
+        "form_ids",
+        "prerequisites",
+        "eligibility",
+        "escalation",
+        "follow_up_question_candidates",
+        "follow_up_question_status",
+        "gap_ids",
+        "notes",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "routing_example": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        },
+        "detected_issue_reported": {
+          "type": "string"
+        },
+        "first_action": {
+          "type": "string"
+        },
+        "prerequisite_advice_reported": {
+          "type": "string"
+        },
+        "documents_to_prepare": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0
+        },
+        "channel_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "suggested_response_ar_reported": {
+          "type": "string"
+        },
+        "not_an_official_requirement_list": {
+          "const": true
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "message",
+        "detected_issue_reported",
+        "first_action",
+        "prerequisite_advice_reported",
+        "documents_to_prepare",
+        "channel_id",
+        "suggested_response_ar_reported",
+        "not_an_official_requirement_list",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "scenario": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "original_scenario_id": {
+          "type": "string"
+        },
+        "service_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "authority_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "issue_domain": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "example_user_message_ar": {
+          "type": "string"
+        },
+        "channel_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "example_kind": {
+          "const": "RESEARCHER_AUTHORED_ILLUSTRATION"
+        },
+        "routing_evidence_status": {
+          "enum": [
+            "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+            "SELECTED_CATEGORY_AND_REVIEW_REPORTED; NO_SUBMISSION_OR_ROUTING_EVALUATION",
+            "SERVICE_AND_OPTIONS_REPORTED_OBSERVED; NO_VALID_SUBMISSION_TEST"
+          ]
+        },
+        "taxonomy_value_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 0
+        },
+        "taxonomy_alignment_basis": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "guidance_suitability": {
+          "enum": [
+            "DOCUMENTED_WITH_LIMITATIONS",
+            "DOCUMENTED",
+            "NOT_ESTABLISHED"
+          ]
+        },
+        "follow_up_question_candidates": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "follow_up_question_status": {
+          "enum": [
+            "NOT_PROVIDED_IN_SOURCE",
+            "EXPLICITLY_PROVIDED_IN_SOURCE"
+          ]
+        },
+        "routing_examples": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/routing_example"
+          },
+          "minItems": 0
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "id",
+        "original_scenario_id",
+        "service_id",
+        "authority_id",
+        "issue_domain",
+        "description",
+        "example_user_message_ar",
+        "channel_id",
+        "example_kind",
+        "routing_evidence_status",
+        "taxonomy_value_ids",
+        "taxonomy_alignment_basis",
+        "guidance_suitability",
+        "follow_up_question_candidates",
+        "follow_up_question_status",
+        "routing_examples",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "taxonomy": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "service_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "label": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "COMPLAINT_CATEGORY",
+            "COMPLAINT_SUBCATEGORY",
+            "FORM_OPTION",
+            "PROVIDER_TYPE",
+            "OPERATOR_TYPE",
+            "OBSERVED_SELECTED_VALUE",
+            "RECEIVING_ENTITY_OPTION",
+            "OBSERVED_CONTEXT_VALUE",
+            "COMPLAINT_DOMAIN",
+            "COMPLAINT_SERVICE_OPTION"
+          ]
+        },
+        "completeness": {
+          "enum": [
+            "PARTIAL",
+            "COMPLETE",
+            "UNKNOWN"
+          ]
+        },
+        "observed_context": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "value_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 0
+        },
+        "routing_rule_equivalence": {
+          "const": false
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "id",
+        "service_id",
+        "label",
+        "kind",
+        "completeness",
+        "observed_context",
+        "value_ids",
+        "routing_rule_equivalence",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "taxonomy_value": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "taxonomy_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "label": {
+          "type": "string"
+        },
+        "source_labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "parent_value_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "observed_context": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "routing_evidence_status": {
+          "enum": [
+            "OBSERVED_OPTION_ONLY",
+            "SELECTED_CATEGORY_IN_REPORTED_PATH"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "id",
+        "taxonomy_id",
+        "label",
+        "source_labels",
+        "parent_value_id",
+        "observed_context",
+        "routing_evidence_status",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "channel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "authority_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "kind": {
+          "enum": [
+            "DISCOVERY",
+            "WEBSITE",
+            "WEB_FORM",
+            "ESCALATION_LINK",
+            "PHONE",
+            "EMAIL"
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "contact_value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "availability": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "official_status": {
+          "enum": [
+            "REPORTED_OFFICIAL",
+            "NON_OFFICIAL_DISCOVERY",
+            "UNVERIFIED",
+            "AMBIGUOUS"
+          ]
+        },
+        "verification_state": {
+          "const": "REPORTED_OBSERVED_NOT_RECHECKED"
+        },
+        "usage_status": {
+          "enum": [
+            "DISCOVERY_ONLY",
+            "DOCUMENTED"
+          ]
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "id",
+        "authority_id",
+        "kind",
+        "url",
+        "contact_value",
+        "label",
+        "availability",
+        "official_status",
+        "verification_state",
+        "usage_status",
+        "notes",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "routing_rule": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "service_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "authority_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "scenario_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 0
+        },
+        "issue_domain": {
+          "type": "string"
+        },
+        "keywords_ar": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0
+        },
+        "keywords_en": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0
+        },
+        "entities_involved_reported": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0
+        },
+        "keywords_are_hints_not_sufficient_conditions": {
+          "const": true
+        },
+        "channel_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "prerequisite_advice_reported": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "escalation_condition": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "verified_routing_exclusions": {
+          "type": "null"
+        },
+        "rule_status": {
+          "enum": [
+            "RESEARCHER_AUTHORED_GUIDANCE",
+            "EXPLICIT_ROUTE_DISTINCTION_REPORTED"
+          ]
+        },
+        "conditions": {
+          "type": "object",
+          "properties": {
+            "service_related_complaint_service_id": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            "integrity_or_violation_report_service_id": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            "exact_integrity_type_list": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "service_related_complaint_service_id",
+            "integrity_or_violation_report_service_id",
+            "exact_integrity_type_list"
+          ],
+          "additionalProperties": false
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "id",
+        "service_id",
+        "authority_id",
+        "scenario_ids",
+        "issue_domain",
+        "keywords_ar",
+        "keywords_en",
+        "entities_involved_reported",
+        "keywords_are_hints_not_sufficient_conditions",
+        "channel_id",
+        "prerequisite_advice_reported",
+        "escalation_condition",
+        "verified_routing_exclusions",
+        "rule_status",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "authentication": {
+      "type": "object",
+      "properties": {
+        "required_for_form_access": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "required_for_submission": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "method_label_reported": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "nafath_required": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "nafath_claim_in_source": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "nafath_evidence_status": {
+          "enum": [
+            "NOT_REQUIRED_FOR_OBSERVED_PUBLIC_FORM",
+            "EXACT_PROVIDER_NOT_ESTABLISHED",
+            "NOT_ESTABLISHED_FOR_SUBMISSION"
+          ]
+        },
+        "human_authentication_completed_reported": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "scope": {
+          "type": "string"
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "required_for_form_access",
+        "required_for_submission",
+        "method_label_reported",
+        "nafath_required",
+        "nafath_claim_in_source",
+        "nafath_evidence_status",
+        "human_authentication_completed_reported",
+        "scope",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "journey_step": {
+      "type": "object",
+      "properties": {
+        "step_number": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "page_name": {
+          "type": "string"
+        },
+        "channel_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "page_url_description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "user_action_reported": {
+          "type": "string"
+        },
+        "what_user_sees": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "stage_status": {
+          "enum": [
+            "REPORTED_OBSERVED",
+            "UNVERIFIED"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "step_number",
+        "page_name",
+        "channel_id",
+        "page_url_description",
+        "user_action_reported",
+        "what_user_sees",
+        "notes",
+        "stage_status",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "form_step": {
+      "type": "object",
+      "properties": {
+        "step_number": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "label": {
+          "type": "string"
+        },
+        "field_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 0
+        },
+        "field_labels_reported": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0
+        },
+        "fields_capture_status": {
+          "enum": [
+            "DOCUMENTED",
+            "NOT_CAPTURED"
+          ]
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "step_number",
+        "label",
+        "field_ids",
+        "field_labels_reported",
+        "fields_capture_status",
+        "notes",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "file_size": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unit": {
+          "const": "MB"
+        },
+        "bytes": {
+          "type": "null"
+        },
+        "unit_interpretation": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit",
+        "bytes",
+        "unit_interpretation"
+      ],
+      "additionalProperties": false
+    },
+    "attachment_policy": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "field_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "required": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "requirement_scope": {
+          "type": "string"
+        },
+        "accepted_file_types": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "max_file_size": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/file_size"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "max_files": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "limit_scope": {
+          "enum": [
+            "PER_FILE",
+            "SOURCE_DOES_NOT_SPECIFY_PER_FILE_OR_TOTAL",
+            "UNKNOWN"
+          ]
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "label",
+        "field_id",
+        "required",
+        "requirement_scope",
+        "accepted_file_types",
+        "max_file_size",
+        "max_files",
+        "limit_scope",
+        "notes",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "submission": {
+      "type": "object",
+      "properties": {
+        "visible_action_label_reported": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "review_screen_exists": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "review_evidence_status": {
+          "enum": [
+            "REPORTED_REACHED",
+            "NOT_ESTABLISHED",
+            "NOT_VISIBLE_BEFORE_SUBMIT; NOT_ESTABLISHED_AFTER_SUBMIT"
+          ]
+        },
+        "final_action_semantics_verified": {
+          "const": false
+        },
+        "final_button_label_verified": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "confirmation_checkbox": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "declaration_text_reported": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "extra_otp_required": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "extra_otp_scope_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "action_taken_in_source_pilot": {
+          "enum": [
+            "STOPPED_BEFORE_FINAL_ACTION",
+            "ACCIDENTAL_CLICK_BLOCKED_BY_VALIDATION",
+            "NOT_DOCUMENTED_AS_EXECUTED"
+          ]
+        },
+        "real_complaint_submitted_reported": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "submitted_case_outcome": {
+          "type": "null"
+        },
+        "source_claims": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "visible_action_label_reported",
+        "review_screen_exists",
+        "review_evidence_status",
+        "final_action_semantics_verified",
+        "final_button_label_verified",
+        "confirmation_checkbox",
+        "declaration_text_reported",
+        "extra_otp_required",
+        "extra_otp_scope_note",
+        "action_taken_in_source_pilot",
+        "real_complaint_submitted_reported",
+        "submitted_case_outcome",
+        "source_claims",
+        "notes",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "form": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "service_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "entry_channel_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "access_status_reported": {
+          "enum": [
+            "FULL",
+            "PARTIAL",
+            "UNKNOWN"
+          ]
+        },
+        "actual_form_reached_reported": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "authentication": {
+          "$ref": "#/$defs/authentication"
+        },
+        "journey": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/journey_step"
+          },
+          "minItems": 0
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/form_step"
+          },
+          "minItems": 0
+        },
+        "field_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 0
+        },
+        "control_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 0
+        },
+        "rule_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 0
+        },
+        "attachment_policies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/attachment_policy"
+          },
+          "minItems": 0
+        },
+        "submission": {
+          "$ref": "#/$defs/submission"
+        },
+        "agent_readiness": {
+          "enum": [
+            "UNVERIFIED_END_TO_END",
+            "PARTIALLY_INSPECTED",
+            "VERIFIED_END_TO_END"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        },
+        "inspection_extent": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "service_id",
+        "entry_channel_id",
+        "access_status_reported",
+        "actual_form_reached_reported",
+        "authentication",
+        "journey",
+        "steps",
+        "field_ids",
+        "control_ids",
+        "rule_ids",
+        "attachment_policies",
+        "submission",
+        "agent_readiness",
+        "provenance",
+        "inspection_extent"
+      ],
+      "additionalProperties": false
+    },
+    "form_field": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "form_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "label": {
+          "type": "string"
+        },
+        "label_en": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "label_basis": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "field_kind": {
+          "enum": [
+            "INPUT",
+            "FILE_UPLOAD",
+            "CONSENT",
+            "CONTEXT_SELECTOR",
+            "DISPLAY",
+            "REVIEW_SECTION"
+          ]
+        },
+        "field_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "order_reported": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "required": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "required_scope": {
+          "enum": [
+            "OBSERVED_FORM_PATH_ONLY",
+            "UNKNOWN"
+          ]
+        },
+        "placeholder": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "option_value_ids": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]*$"
+              },
+              "minItems": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "options_completeness": {
+          "enum": [
+            "PARTIAL",
+            "UNKNOWN",
+            "SELECTED_VALUE_ONLY",
+            "COMPLETE"
+          ]
+        },
+        "observed_selected_value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "dependency_field_ids": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]*$"
+              },
+              "minItems": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "depends_on_reported": {
+          "type": [
+            "string",
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "dependency_status": {
+          "enum": [
+            "UNKNOWN",
+            "REPORTED_DEPENDENCY",
+            "UNRESOLVED_LABEL"
+          ]
+        },
+        "visibility_condition": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "validation_description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "constraints": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        },
+        "placeholder_is_ui_example_not_personal_data": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "form_id",
+        "label",
+        "label_en",
+        "field_kind",
+        "field_type",
+        "order_reported",
+        "required",
+        "required_scope",
+        "placeholder",
+        "description",
+        "option_value_ids",
+        "options_completeness",
+        "observed_selected_value",
+        "dependency_field_ids",
+        "depends_on_reported",
+        "dependency_status",
+        "visibility_condition",
+        "validation_description",
+        "constraints",
+        "notes",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "form_control": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "form_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "label": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "kind": {
+          "enum": [
+            "ACTION",
+            "CAPTCHA",
+            "UPLOAD_ACTION"
+          ]
+        },
+        "action_semantics": {
+          "enum": [
+            "UNKNOWN",
+            "REPORTED_FINAL_SUBMISSION"
+          ]
+        },
+        "action_executed_by_converter": {
+          "const": false
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "id",
+        "form_id",
+        "label",
+        "kind",
+        "action_semantics",
+        "action_executed_by_converter",
+        "notes",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "form_rule": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "form_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "kind": {
+          "enum": [
+            "DYNAMIC_DEPENDENCY",
+            "VALIDATION"
+          ]
+        },
+        "trigger_field_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "trigger_field_label_reported": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "trigger_value_reported": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "target_field_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 0
+        },
+        "target_option_value_ids": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]*$"
+              },
+              "minItems": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "hidden_field_ids": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]*$"
+              },
+              "minItems": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        },
+        "target_descriptions_reported": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "form_id",
+        "kind",
+        "trigger_field_id",
+        "trigger_field_label_reported",
+        "trigger_value_reported",
+        "target_field_ids",
+        "target_option_value_ids",
+        "hidden_field_ids",
+        "notes",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "warning": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "source_document_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "category_reported": {
+          "type": "string"
+        },
+        "description_reported": {
+          "type": "string"
+        },
+        "relevance": {
+          "type": "string"
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "id",
+        "source_document_id",
+        "category_reported",
+        "description_reported",
+        "relevance",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "gap": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "priority": {
+          "enum": [
+            "HIGH",
+            "MEDIUM",
+            "LOW"
+          ]
+        },
+        "description_ar": {
+          "type": "string"
+        },
+        "knowledge_state": {
+          "const": "UNKNOWN"
+        },
+        "affected_record_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]*$"
+          },
+          "minItems": 0
+        },
+        "recommended_backend_behavior": {
+          "const": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT"
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "id",
+        "priority",
+        "description_ar",
+        "knowledge_state",
+        "affected_record_ids",
+        "recommended_backend_behavior",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "research": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "source_document_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*$"
+        },
+        "report_claimed_counts": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        },
+        "research_log_reported": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        },
+        "screenshots_captured_reported": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "researcher_observations_not_independently_reverified": {
+          "const": true
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "id",
+        "source_document_id",
+        "report_claimed_counts",
+        "research_log_reported",
+        "screenshots_captured_reported",
+        "researcher_observations_not_independently_reverified",
+        "provenance"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
