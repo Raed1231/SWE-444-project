@@ -1,0 +1,1705 @@
+{
+  "audit_version": "1.0.0",
+  "converted_at": "2026-10-12",
+  "status": "PASSED_DOCUMENT_CONVERSION_CHECKS",
+  "factual_sources": "FIVE_UPLOADED_DOCX_FILES_ONLY",
+  "external_service_web_research_performed": false,
+  "all_five_inputs_accessible_and_read_in_full": true,
+  "source_reports_verified_at_dates": [
+    "2026-10-04",
+    "2026-10-05"
+  ],
+  "converter_website_verified_at": null,
+  "schema_engine": "STDLIB_VALIDATOR_SUPPORTS_EVERY_KEYWORD_USED_BY_BUNDLED_SCHEMA",
+  "conversion_method": "Full OOXML extraction + strict parsing of embedded source JSON sections + manual normalization of prose; source evidence retained with exact paragraph ranges and SHA256.",
+  "normalization_policy": {
+    "encoding": "UTF-8",
+    "directional_controls": "Remove only listed bidi formatting controls; none were present in these inputs.",
+    "arabic_letters": "No automatic Arabic letter folding, spelling replacement or diacritic removal.",
+    "parallel_spelling_variants": "Education canonical labels use the numbered list; exact alternate forms retained.",
+    "missing_values": "null for unknown facts; UNKNOWN only for evidence/confidence/completeness states.",
+    "empty_source_arrays": "Preserved in historical payload; operational options/limits use null when not captured.",
+    "false_source_flags": "Preserved as historical claims; not upgraded into unverified prerequisites, absence of review, provider or post-submit OTP policy.",
+    "pii": "No personal account values in source excerpts; UI placeholder مثال: 0512345678 is retained explicitly as a placeholder, not personal data.",
+    "urls": "Exact source URLs retained, including case/query/fragment; only enclosing prose punctuation recognized as delimiters."
+  },
+  "inputs": [
+    {
+      "source_document_id": "src.media",
+      "filename": "وزارة الاعلام.docx",
+      "sha256": "fba6dd33c4157d990e1c2afae79460ecd3757b61745870eadafa1521f6319b32",
+      "input_structure": {
+        "paragraphs_total": 638,
+        "nonempty_paragraphs": 636,
+        "characters_read": 28265,
+        "tables": 0,
+        "embedded_images": 0,
+        "external_hyperlink_relationships": 0,
+        "bidirectional_control_characters_removed": 0,
+        "tracked_changes": 0,
+        "hidden_runs": 0,
+        "full_document_read": true
+      },
+      "report_claimed_counts": {
+        "authorities": 1,
+        "complaint_categories": 8,
+        "form_fields": 14,
+        "routing_scenarios": 8
+      },
+      "actual_normalized_counts": {
+        "authorities": 1,
+        "services": 1,
+        "complaint_scenarios": 8,
+        "taxonomies": 3,
+        "taxonomy_values": 15,
+        "channels": 5,
+        "forms": 1,
+        "form_fields": 14,
+        "form_controls": 3,
+        "form_rules": 9,
+        "warnings": 13,
+        "gaps": 8,
+        "source_sections": 18,
+        "sectors": 1,
+        "web_urls": 5,
+        "contact_channels": 0,
+        "core_input_records": 14
+      },
+      "taxonomy_counts": [
+        {
+          "taxonomy_id": "tax.media.classification",
+          "label": "تصنيف البلاغ",
+          "kind": "COMPLAINT_CATEGORY",
+          "values": 8,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.media.advertising_type",
+          "label": "نوع البلاغ",
+          "kind": "COMPLAINT_SUBCATEGORY",
+          "values": 6,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.media.offender_type",
+          "label": "نوع المخالف",
+          "kind": "FORM_OPTION",
+          "values": 1,
+          "completeness": "PARTIAL"
+        }
+      ],
+      "audit_checks": {
+        "all_source_urls_retained": true,
+        "all_captured_source_fields_retained": true,
+        "all_captured_source_options_retained": true,
+        "all_captured_taxonomy_labels_retained": true,
+        "long_field_details_matched": true,
+        "warning_evidence_retained": true,
+        "source_field_or_control_labels_checked": [
+          "تصنيف البلاغ",
+          "نوع البلاغ",
+          "نوع المخالف",
+          "المنصة",
+          "رقم هوية المخالف",
+          "اسم المخالف",
+          "رقم جوال المخالف",
+          "البريد الإلكتروني للمخالف",
+          "حساب المخالف",
+          "رابط المخالفة",
+          "تاريخ المخالفة",
+          "وقت المخالفة",
+          "المرفق",
+          "المحتوى"
+        ],
+        "source_option_occurrences_checked": 0,
+        "source_taxonomy_label_occurrences_checked": 19,
+        "structured_warning_checks": [
+          {
+            "source_section_id": "sec.media.pilot_summary",
+            "key": "missing_information",
+            "description": "Could not safely verify whether زر 'حفظ' leads to draft save, review screen, or direct submission without risking creation of a real complaint record.",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.media.pilot_summary",
+            "key": "missing_information",
+            "description": "Could not verify final review screen fields or final submit button text.",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.media.pilot_summary",
+            "key": "missing_information",
+            "description": "Could not verify attachment file type/size/count restrictions because none were visibly shown.",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.media.pilot_summary",
+            "key": "missing_information",
+            "description": "Could not verify exact login method label from the live login page in the final state, only that authenticated access was required and completed manually earlier.",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.media.pilot_summary",
+            "key": "problems_encountered",
+            "description": "Visible technical issue on the complaint form page: reCAPTCHA error 'Invalid domain for site key'.",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.media.pilot_summary",
+            "key": "problems_encountered",
+            "description": "Dynamic dropdown selections were not always reflected in extracted selected_value state, although dependent option lists were observed.",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.media.pilot_summary",
+            "key": "problems_encountered",
+            "description": "Personal account name was visible in-session, so it was intentionally not retained in the knowledgeoutput.",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.media.research_log",
+            "key": "issues_encountered",
+            "description": "reCAPTCHA invalid domain for site key visible on form page",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.media.research_log",
+            "key": "issues_encountered",
+            "description": "Dynamic selected values not always reflected in extraction output",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.media.research_log",
+            "key": "information_that_could_not_be_verified",
+            "description": "Final review screen",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.media.research_log",
+            "key": "information_that_could_not_be_verified",
+            "description": "Final submit button text",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.media.research_log",
+            "key": "information_that_could_not_be_verified",
+            "description": "Attachment restrictions",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.media.research_log",
+            "key": "information_that_could_not_be_verified",
+            "description": "Exact authentication provider label",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          }
+        ],
+        "unmapped_relevant_paragraphs": []
+      },
+      "paragraph_dispositions": {
+        "AGENT_TELEMETRY_OMITTED": 4,
+        "RETAINED_AS_SOURCE_EVIDENCE": 632
+      },
+      "source_evidence_ranges": [
+        {
+          "source_section_id": "sec.media.pilot_summary",
+          "paragraph_start": 5,
+          "paragraph_end": 33
+        },
+        {
+          "source_section_id": "sec.media.identity",
+          "paragraph_start": 34,
+          "paragraph_end": 51
+        },
+        {
+          "source_section_id": "sec.media.scenarios",
+          "paragraph_start": 52,
+          "paragraph_end": 125
+        },
+        {
+          "source_section_id": "sec.media.journey",
+          "paragraph_start": 126,
+          "paragraph_end": 217
+        },
+        {
+          "source_section_id": "sec.media.prerequisites",
+          "paragraph_start": 218,
+          "paragraph_end": 247
+        },
+        {
+          "source_section_id": "sec.media.escalation",
+          "paragraph_start": 248,
+          "paragraph_end": 257
+        },
+        {
+          "source_section_id": "sec.media.form_steps",
+          "paragraph_start": 258,
+          "paragraph_end": 287
+        },
+        {
+          "source_section_id": "sec.media.taxonomy",
+          "paragraph_start": 288,
+          "paragraph_end": 393
+        },
+        {
+          "source_section_id": "sec.media.dynamic_rules",
+          "paragraph_start": 394,
+          "paragraph_end": 436
+        },
+        {
+          "source_section_id": "sec.media.attachments",
+          "paragraph_start": 437,
+          "paragraph_end": 447
+        },
+        {
+          "source_section_id": "sec.media.validation",
+          "paragraph_start": 448,
+          "paragraph_end": 479
+        },
+        {
+          "source_section_id": "sec.media.submission",
+          "paragraph_start": 480,
+          "paragraph_end": 488
+        },
+        {
+          "source_section_id": "sec.media.examples",
+          "paragraph_start": 489,
+          "paragraph_end": 534
+        },
+        {
+          "source_section_id": "sec.media.sources",
+          "paragraph_start": 535,
+          "paragraph_end": 557
+        },
+        {
+          "source_section_id": "sec.media.research_log",
+          "paragraph_start": 558,
+          "paragraph_end": 593
+        },
+        {
+          "source_section_id": "sec.media.routing_rules",
+          "paragraph_start": 594,
+          "paragraph_end": 625
+        },
+        {
+          "source_section_id": "sec.media.reference_index",
+          "paragraph_start": 626,
+          "paragraph_end": 636
+        },
+        {
+          "source_section_id": "sec.media.conclusion",
+          "paragraph_start": 638,
+          "paragraph_end": 638
+        }
+      ],
+      "intentional_omissions": [
+        {
+          "reason": "Agent telemetry/status/token-use logs; no service facts",
+          "paragraphs": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "reason": "Repeated output filename mapping/completion boilerplate only",
+          "paragraphs": []
+        }
+      ],
+      "ambiguous_conversions": [
+        {
+          "issue": "Nafath true conflicts with exact provider not verified",
+          "conversion": "Operational nafath_required=null; source claim=true retained."
+        },
+        {
+          "issue": "Two distinct Other spellings",
+          "conversion": "آخرى and أخرى retained as separate observed values, without invented equivalence."
+        },
+        {
+          "issue": "8 taxonomy categories and 8 scenarios are not one-to-one",
+          "conversion": "8 top values plus 6 ad subtypes; scenario/category alignment labeled semantic only; social-platform scenario has no invented taxonomy selection."
+        },
+        {
+          "issue": "Provider-first and reference-number false flags not backed by observed official policy",
+          "conversion": "Operational escalation requirements=null; historical source claims retained."
+        }
+      ],
+      "high_priority_gaps": [
+        "gap.media.save_semantics",
+        "gap.media.attachment_limits",
+        "gap.media.login_provider",
+        "gap.media.captcha",
+        "gap.media.taxonomy_branches",
+        "gap.media.scenario_mapping",
+        "gap.media.follow_up_questions"
+      ]
+    },
+    {
+      "source_document_id": "src.health",
+      "filename": "وزارة الصحة.docx",
+      "sha256": "c77971c034eff67be241f80432444cc2485a24c052730f6cb4847826a2b92f80",
+      "input_structure": {
+        "paragraphs_total": 471,
+        "nonempty_paragraphs": 466,
+        "characters_read": 20467,
+        "tables": 0,
+        "embedded_images": 0,
+        "external_hyperlink_relationships": 0,
+        "bidirectional_control_characters_removed": 0,
+        "tracked_changes": 0,
+        "hidden_runs": 0,
+        "full_document_read": true
+      },
+      "report_claimed_counts": {
+        "authorities": 1,
+        "provider_type_options": 11,
+        "operator_options": 2,
+        "details_form_fields": 8,
+        "routing_scenarios": 2
+      },
+      "actual_normalized_counts": {
+        "authorities": 1,
+        "services": 1,
+        "complaint_scenarios": 2,
+        "taxonomies": 4,
+        "taxonomy_values": 15,
+        "channels": 6,
+        "forms": 1,
+        "form_fields": 8,
+        "form_controls": 1,
+        "form_rules": 4,
+        "warnings": 15,
+        "gaps": 8,
+        "source_sections": 19,
+        "sectors": 1,
+        "web_urls": 4,
+        "contact_channels": 2,
+        "core_input_records": 8
+      },
+      "taxonomy_counts": [
+        {
+          "taxonomy_id": "tax.health.provider",
+          "label": "مقدم الخدمة",
+          "kind": "PROVIDER_TYPE",
+          "values": 11,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.health.operator",
+          "label": "مشغل الخدمة",
+          "kind": "OPERATOR_TYPE",
+          "values": 2,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.health.field_03_options",
+          "label": "المدينة",
+          "kind": "FORM_OPTION",
+          "values": 1,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.health.sector_selected",
+          "label": "القطاع",
+          "kind": "OBSERVED_SELECTED_VALUE",
+          "values": 1,
+          "completeness": "PARTIAL"
+        }
+      ],
+      "audit_checks": {
+        "all_source_urls_retained": true,
+        "all_captured_source_fields_retained": true,
+        "all_captured_source_options_retained": true,
+        "all_captured_taxonomy_labels_retained": true,
+        "long_field_details_matched": true,
+        "warning_evidence_retained": true,
+        "source_field_or_control_labels_checked": [
+          "مقدم الخدمة",
+          "القطاع",
+          "المدينة",
+          "مشغل الخدمة",
+          "نوع التذكرة",
+          "وصف المشكلة",
+          "وصف الملف",
+          "المرفقات"
+        ],
+        "source_option_occurrences_checked": 14,
+        "source_taxonomy_label_occurrences_checked": 14,
+        "structured_warning_checks": [
+          {
+            "source_section_id": "sec.health.research_log",
+            "key": "issues_encountered",
+            "description": "Authentication gate",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.health.research_log",
+            "key": "issues_encountered",
+            "description": "Repeated unlabeled combobox interactions",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.health.research_log",
+            "key": "issues_encountered",
+            "description": "Sensitive personal data visible after login",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.health.research_log",
+            "key": "issues_encountered",
+            "description": "Could not safely verify full ticket-type taxonomy or review step beforestep limit",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.health.research_log",
+            "key": "information_not_verified",
+            "description": "Full نوع التذكرة options",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.health.research_log",
+            "key": "information_not_verified",
+            "description": "Whether ارسال الشكوى opens review or submitsdirectly",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.health.research_log",
+            "key": "information_not_verified",
+            "description": "Accepted file extensions",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.health.research_log",
+            "key": "information_not_verified",
+            "description": "Mandatory markers for each field",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.health.research_log",
+            "key": "information_not_verified",
+            "description": "Evaluation step fields",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          }
+        ],
+        "unmapped_relevant_paragraphs": []
+      },
+      "paragraph_dispositions": {
+        "AGENT_TELEMETRY_OMITTED": 4,
+        "RETAINED_AS_SOURCE_EVIDENCE": 462
+      },
+      "source_evidence_ranges": [
+        {
+          "source_section_id": "sec.health.pilot_summary",
+          "paragraph_start": 5,
+          "paragraph_end": 18
+        },
+        {
+          "source_section_id": "sec.health.identity",
+          "paragraph_start": 19,
+          "paragraph_end": 38
+        },
+        {
+          "source_section_id": "sec.health.scenarios",
+          "paragraph_start": 39,
+          "paragraph_end": 58
+        },
+        {
+          "source_section_id": "sec.health.journey",
+          "paragraph_start": 59,
+          "paragraph_end": 114
+        },
+        {
+          "source_section_id": "sec.health.prerequisites",
+          "paragraph_start": 115,
+          "paragraph_end": 130
+        },
+        {
+          "source_section_id": "sec.health.escalation",
+          "paragraph_start": 131,
+          "paragraph_end": 139
+        },
+        {
+          "source_section_id": "sec.health.form_steps",
+          "paragraph_start": 140,
+          "paragraph_end": 170
+        },
+        {
+          "source_section_id": "sec.health.fields",
+          "paragraph_start": 171,
+          "paragraph_end": 300
+        },
+        {
+          "source_section_id": "sec.health.taxonomy",
+          "paragraph_start": 301,
+          "paragraph_end": 314
+        },
+        {
+          "source_section_id": "sec.health.dynamic_rules",
+          "paragraph_start": 315,
+          "paragraph_end": 340
+        },
+        {
+          "source_section_id": "sec.health.attachments",
+          "paragraph_start": 341,
+          "paragraph_end": 351
+        },
+        {
+          "source_section_id": "sec.health.validation",
+          "paragraph_start": 352,
+          "paragraph_end": 358
+        },
+        {
+          "source_section_id": "sec.health.submission",
+          "paragraph_start": 359,
+          "paragraph_end": 367
+        },
+        {
+          "source_section_id": "sec.health.examples",
+          "paragraph_start": 368,
+          "paragraph_end": 391
+        },
+        {
+          "source_section_id": "sec.health.routing_rules",
+          "paragraph_start": 392,
+          "paragraph_end": 404
+        },
+        {
+          "source_section_id": "sec.health.sources",
+          "paragraph_start": 405,
+          "paragraph_end": 426
+        },
+        {
+          "source_section_id": "sec.health.research_log",
+          "paragraph_start": 427,
+          "paragraph_end": 446
+        },
+        {
+          "source_section_id": "sec.health.narrative_summary",
+          "paragraph_start": 448,
+          "paragraph_end": 463
+        },
+        {
+          "source_section_id": "sec.health.limitations",
+          "paragraph_start": 465,
+          "paragraph_end": 471
+        }
+      ],
+      "intentional_omissions": [
+        {
+          "reason": "Agent telemetry/status/token-use logs; no service facts",
+          "paragraphs": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "reason": "Repeated output filename mapping/completion boilerplate only",
+          "paragraphs": []
+        }
+      ],
+      "ambiguous_conversions": [
+        {
+          "issue": "Nafath=false while narrative says not specifically verified",
+          "conversion": "Operational nafath_required=null; false source claim retained."
+        },
+        {
+          "issue": "11 provider options and 12 source taxonomy path rows",
+          "conversion": "11 unique providers +2 operator values, not 12 verified complaint types."
+        },
+        {
+          "issue": "Selected sector/city/operator are a tested path, not eligibility",
+          "conversion": "Selected values and context retained; no geographic restriction or operator exclusion inferred."
+        },
+        {
+          "issue": "16 MB versus source example advice less than 16 MB",
+          "conversion": "Rule keeps not-exceed-16-MB observation; advice kept verbatim and labeled researcher authored."
+        }
+      ],
+      "high_priority_gaps": [
+        "gap.health.ticket_types",
+        "gap.health.health_coverage",
+        "gap.health.mandatory_fields",
+        "gap.health.submission",
+        "gap.health.nafath",
+        "gap.health.sahhaty",
+        "gap.health.follow_up_questions"
+      ]
+    },
+    {
+      "source_document_id": "src.investment",
+      "filename": "وزارة الاستثمار.docx",
+      "sha256": "4f4ffa5056a59954ec711728a1927aee9d248728d89f0bcaf4679f72d2c0f5c9",
+      "input_structure": {
+        "paragraphs_total": 110,
+        "nonempty_paragraphs": 98,
+        "characters_read": 6016,
+        "tables": 0,
+        "embedded_images": 0,
+        "external_hyperlink_relationships": 0,
+        "bidirectional_control_characters_removed": 0,
+        "tracked_changes": 0,
+        "hidden_runs": 0,
+        "full_document_read": true
+      },
+      "report_claimed_counts": {
+        "authorities": 1,
+        "forms_reached_authorities": 1,
+        "nafath_required_authorities": 0,
+        "auth_blocked_authorities": 0,
+        "interacted_categories": 1,
+        "subcategories": 6,
+        "core_fields_at_least": 12,
+        "routing_scenarios_created": "NOT_FULLY_EXPANDED_IN_REPORT"
+      },
+      "actual_normalized_counts": {
+        "authorities": 1,
+        "services": 2,
+        "complaint_scenarios": 0,
+        "taxonomies": 5,
+        "taxonomy_values": 12,
+        "channels": 3,
+        "forms": 2,
+        "form_fields": 25,
+        "form_controls": 4,
+        "form_rules": 1,
+        "warnings": 4,
+        "gaps": 8,
+        "source_sections": 11,
+        "sectors": 1,
+        "web_urls": 3,
+        "contact_channels": 0,
+        "core_input_records": 25
+      },
+      "taxonomy_counts": [
+        {
+          "taxonomy_id": "tax.investment.investment_type",
+          "label": "Select Investment Type",
+          "kind": "FORM_OPTION",
+          "values": 2,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.investment.reason",
+          "label": "Reason For Contact",
+          "kind": "FORM_OPTION",
+          "values": 2,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.investment.category",
+          "label": "Select Category",
+          "kind": "COMPLAINT_CATEGORY",
+          "values": 1,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.investment.subcategory",
+          "label": "Select Sub-Category",
+          "kind": "COMPLAINT_SUBCATEGORY",
+          "values": 6,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.investment.country_code",
+          "label": "Country code selector",
+          "kind": "OBSERVED_SELECTED_VALUE",
+          "values": 1,
+          "completeness": "PARTIAL"
+        }
+      ],
+      "audit_checks": {
+        "all_source_urls_retained": true,
+        "all_captured_source_fields_retained": true,
+        "all_captured_source_options_retained": true,
+        "all_captured_taxonomy_labels_retained": true,
+        "long_field_details_matched": true,
+        "warning_evidence_retained": true,
+        "source_field_or_control_labels_checked": [
+          "Select Investment Type",
+          "Subject",
+          "First Name",
+          "Last Name",
+          "Email Address",
+          "Country code selector",
+          "Enter Mobile Number",
+          "Reason For Contact",
+          "Select Category",
+          "Select Sub-Category",
+          "Your Message",
+          "Upload File",
+          "Consent checkbox",
+          "Submit",
+          "Full Name",
+          "Email",
+          "Phone",
+          "National ID/Iqama",
+          "Title",
+          "Employer Information",
+          "Entity name",
+          "Type of Complaint",
+          "Complaint Details",
+          "Supporting Documents",
+          "two consentdeclarations",
+          "CAPTCHA",
+          "Send message"
+        ],
+        "source_option_occurrences_checked": 12,
+        "source_taxonomy_label_occurrences_checked": 0,
+        "structured_warning_checks": [],
+        "unmapped_relevant_paragraphs": []
+      },
+      "paragraph_dispositions": {
+        "AGENT_TELEMETRY_OMITTED": 4,
+        "RETAINED_AS_SOURCE_EVIDENCE": 94
+      },
+      "source_evidence_ranges": [
+        {
+          "source_section_id": "sec.investment.pilot_summary",
+          "paragraph_start": 5,
+          "paragraph_end": 15
+        },
+        {
+          "source_section_id": "sec.investment.journey",
+          "paragraph_start": 17,
+          "paragraph_end": 30
+        },
+        {
+          "source_section_id": "sec.investment.fields",
+          "paragraph_start": 32,
+          "paragraph_end": 46
+        },
+        {
+          "source_section_id": "sec.investment.taxonomy",
+          "paragraph_start": 48,
+          "paragraph_end": 56
+        },
+        {
+          "source_section_id": "sec.investment.dynamic_rules",
+          "paragraph_start": 58,
+          "paragraph_end": 59
+        },
+        {
+          "source_section_id": "sec.investment.attachments",
+          "paragraph_start": 61,
+          "paragraph_end": 65
+        },
+        {
+          "source_section_id": "sec.investment.controls_and_escalation",
+          "paragraph_start": 67,
+          "paragraph_end": 72
+        },
+        {
+          "source_section_id": "sec.investment.integrity_route",
+          "paragraph_start": 74,
+          "paragraph_end": 79
+        },
+        {
+          "source_section_id": "sec.investment.completion_and_limitations",
+          "paragraph_start": 81,
+          "paragraph_end": 91
+        },
+        {
+          "source_section_id": "sec.investment.sources",
+          "paragraph_start": 93,
+          "paragraph_end": 96
+        },
+        {
+          "source_section_id": "sec.investment.research_log",
+          "paragraph_start": 98,
+          "paragraph_end": 110
+        }
+      ],
+      "intentional_omissions": [
+        {
+          "reason": "Agent telemetry/status/token-use logs; no service facts",
+          "paragraphs": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "reason": "Repeated output filename mapping/completion boilerplate only",
+          "paragraphs": []
+        }
+      ],
+      "ambiguous_conversions": [
+        {
+          "issue": "Source at-least-12-core-fields count differs from listed controls",
+          "conversion": "12 data inputs + consent + Submit + reCAPTCHA =15 records for service form. 12 field records + CAPTCHA + Send message =14 for integrity form."
+        },
+        {
+          "issue": "No formal scenario JSON expanded",
+          "conversion": "0 formal scenarios created; explicit service versus integrity distinction preserved as a separate source-backed route distinction."
+        },
+        {
+          "issue": "Employer Information might be field or grouped heading",
+          "conversion": "Label retained with field_type=null; no form widget invented."
+        },
+        {
+          "issue": "Consent declarations named only as a count of two",
+          "conversion": "Two indexed placeholders labeled converter-created; exact consent labels/text unknown."
+        },
+        {
+          "issue": "FULL means accessible form view",
+          "conversion": "FULL source access flag retained separately from unknown end-to-end submission compatibility."
+        }
+      ],
+      "high_priority_gaps": [
+        "gap.investment.categories",
+        "gap.investment.scenarios",
+        "gap.investment.integrity_details",
+        "gap.investment.submission",
+        "gap.investment.required_fields",
+        "gap.investment.escalation",
+        "gap.investment.follow_up_questions"
+      ]
+    },
+    {
+      "source_document_id": "src.education",
+      "filename": "وزارة التعليم.docx",
+      "sha256": "dae699ce2af9406c5bad9adf630f6af2f01b0d606bdf99bc46d6646ff6ae3a85",
+      "input_structure": {
+        "paragraphs_total": 476,
+        "nonempty_paragraphs": 457,
+        "characters_read": 21249,
+        "tables": 0,
+        "embedded_images": 0,
+        "external_hyperlink_relationships": 0,
+        "bidirectional_control_characters_removed": 0,
+        "tracked_changes": 0,
+        "hidden_runs": 0,
+        "full_document_read": true
+      },
+      "report_claimed_counts": {
+        "authorities": 1,
+        "main_service_options": 34,
+        "core_fields_claimed": 8,
+        "plus_review_attachment_declaration_controls": true,
+        "routing_scenarios": 1
+      },
+      "actual_normalized_counts": {
+        "authorities": 1,
+        "services": 1,
+        "complaint_scenarios": 1,
+        "taxonomies": 5,
+        "taxonomy_values": 59,
+        "channels": 4,
+        "forms": 1,
+        "form_fields": 14,
+        "form_controls": 4,
+        "form_rules": 12,
+        "warnings": 5,
+        "gaps": 8,
+        "source_sections": 19,
+        "sectors": 1,
+        "web_urls": 4,
+        "contact_channels": 0,
+        "core_input_records": 9
+      },
+      "taxonomy_counts": [
+        {
+          "taxonomy_id": "tax.education.entity",
+          "label": "الجهة",
+          "kind": "RECEIVING_ENTITY_OPTION",
+          "values": 1,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.education.main_service",
+          "label": "الخدمة الرئيسية",
+          "kind": "COMPLAINT_CATEGORY",
+          "values": 34,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.education.field_01_options",
+          "label": "صفة مقدم التذكرة",
+          "kind": "FORM_OPTION",
+          "values": 7,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.education.field_03_options",
+          "label": "إدارة التعليم",
+          "kind": "FORM_OPTION",
+          "values": 16,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.education.ticket_type_context",
+          "label": "نوع التذكرة",
+          "kind": "OBSERVED_CONTEXT_VALUE",
+          "values": 1,
+          "completeness": "PARTIAL"
+        }
+      ],
+      "audit_checks": {
+        "all_source_urls_retained": true,
+        "all_captured_source_fields_retained": true,
+        "all_captured_source_options_retained": true,
+        "all_captured_taxonomy_labels_retained": true,
+        "long_field_details_matched": true,
+        "warning_evidence_retained": true,
+        "source_field_or_control_labels_checked": [
+          "صفة مقدم التذكرة",
+          "الجهة",
+          "إدارة التعليم",
+          "المقر (المنطقة)",
+          "الخدمة الرئيسية",
+          "عنوان التذكرة",
+          "نص التذكرة",
+          "المرفق",
+          "التعهد و الإقرار"
+        ],
+        "source_option_occurrences_checked": 58,
+        "source_taxonomy_label_occurrences_checked": 44,
+        "structured_warning_checks": [],
+        "unmapped_relevant_paragraphs": []
+      },
+      "paragraph_dispositions": {
+        "AGENT_TELEMETRY_OMITTED": 4,
+        "RETAINED_AS_SOURCE_EVIDENCE": 453
+      },
+      "source_evidence_ranges": [
+        {
+          "source_section_id": "sec.education.pilot_summary",
+          "paragraph_start": 5,
+          "paragraph_end": 17
+        },
+        {
+          "source_section_id": "sec.education.identity",
+          "paragraph_start": 19,
+          "paragraph_end": 37
+        },
+        {
+          "source_section_id": "sec.education.identity_verification",
+          "paragraph_start": 39,
+          "paragraph_end": 42
+        },
+        {
+          "source_section_id": "sec.education.category_list",
+          "paragraph_start": 44,
+          "paragraph_end": 79
+        },
+        {
+          "source_section_id": "sec.education.scenarios",
+          "paragraph_start": 81,
+          "paragraph_end": 91
+        },
+        {
+          "source_section_id": "sec.education.journey",
+          "paragraph_start": 93,
+          "paragraph_end": 168
+        },
+        {
+          "source_section_id": "sec.education.fields",
+          "paragraph_start": 170,
+          "paragraph_end": 308
+        },
+        {
+          "source_section_id": "sec.education.taxonomy",
+          "paragraph_start": 310,
+          "paragraph_end": 318
+        },
+        {
+          "source_section_id": "sec.education.dynamic_rules",
+          "paragraph_start": 320,
+          "paragraph_end": 343
+        },
+        {
+          "source_section_id": "sec.education.form_steps",
+          "paragraph_start": 345,
+          "paragraph_end": 362
+        },
+        {
+          "source_section_id": "sec.education.prerequisites",
+          "paragraph_start": 364,
+          "paragraph_end": 384
+        },
+        {
+          "source_section_id": "sec.education.escalation",
+          "paragraph_start": 386,
+          "paragraph_end": 396
+        },
+        {
+          "source_section_id": "sec.education.attachments",
+          "paragraph_start": 398,
+          "paragraph_end": 408
+        },
+        {
+          "source_section_id": "sec.education.validation",
+          "paragraph_start": 410,
+          "paragraph_end": 421
+        },
+        {
+          "source_section_id": "sec.education.submission",
+          "paragraph_start": 423,
+          "paragraph_end": 431
+        },
+        {
+          "source_section_id": "sec.education.examples",
+          "paragraph_start": 433,
+          "paragraph_end": 445
+        },
+        {
+          "source_section_id": "sec.education.routing_rules",
+          "paragraph_start": 447,
+          "paragraph_end": 457
+        },
+        {
+          "source_section_id": "sec.education.research_log",
+          "paragraph_start": 459,
+          "paragraph_end": 473
+        },
+        {
+          "source_section_id": "sec.education.limitations",
+          "paragraph_start": 475,
+          "paragraph_end": 476
+        }
+      ],
+      "intentional_omissions": [
+        {
+          "reason": "Agent telemetry/status/token-use logs; no service facts",
+          "paragraphs": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "reason": "Repeated output filename mapping/completion boilerplate only",
+          "paragraphs": []
+        }
+      ],
+      "ambiguous_conversions": [
+        {
+          "issue": "Summary says 8 core fields; source array lists 9 including declaration",
+          "conversion": "All 9 retained, plus 2 context/display records and 3 review headings. Counts separate core fields from auxiliary records."
+        },
+        {
+          "issue": "34 options but only 5 representative taxonomy rows and 1 supported scenario",
+          "conversion": "All 34 category options normalized; none expanded into invented scenarios."
+        },
+        {
+          "issue": "Required attachment in test versus unknown universal mandatory status",
+          "conversion": "Required=true scoped to observed validation state; service-wide requirement remains unestablished."
+        },
+        {
+          "issue": "Extra OTP=false only observed before submit",
+          "conversion": "Post-submit extra_otp_required=null; original false claim retained."
+        },
+        {
+          "issue": "Parallel category list contains spacing differences",
+          "conversion": "Canonical spelling chosen from the numbered source list; exact variants preserved in source_labels.",
+          "records": [
+            {
+              "id": "tv.education.main_service.025",
+              "source_labels": [
+                "الموهوبين - بنين(شكاوي)",
+                "الموهوبين - بنين (شكاوي)"
+              ],
+              "canonical_label": "الموهوبين - بنين (شكاوي)"
+            },
+            {
+              "id": "tv.education.main_service.029",
+              "source_labels": [
+                "شكاوى التعليمالإلكتروني والتعليم عن بُعد",
+                "شكاوى التعليم الإلكتروني والتعليم عن بُعد"
+              ],
+              "canonical_label": "شكاوى التعليم الإلكتروني والتعليم عن بُعد"
+            }
+          ]
+        }
+      ],
+      "high_priority_gaps": [
+        "gap.education.taxonomy_scope",
+        "gap.education.attachment_mandatory",
+        "gap.education.login_provider",
+        "gap.education.service_description",
+        "gap.education.post_submission",
+        "gap.education.field_count",
+        "gap.education.follow_up_questions"
+      ]
+    },
+    {
+      "source_document_id": "src.hrsd",
+      "filename": "وزارة الموارد البشرية.docx",
+      "sha256": "688ebd4160bb0824aca96efae0bdb274040376e972acd86efd22370b8146c334",
+      "input_structure": {
+        "paragraphs_total": 457,
+        "nonempty_paragraphs": 452,
+        "characters_read": 17487,
+        "tables": 0,
+        "embedded_images": 0,
+        "external_hyperlink_relationships": 0,
+        "bidirectional_control_characters_removed": 0,
+        "tracked_changes": 0,
+        "hidden_runs": 0,
+        "full_document_read": true
+      },
+      "report_claimed_counts": {
+        "authorities": 1,
+        "complaint_type_options": 2,
+        "form_fields": 6,
+        "routing_scenarios": 2
+      },
+      "actual_normalized_counts": {
+        "authorities": 1,
+        "services": 1,
+        "complaint_scenarios": 2,
+        "taxonomies": 5,
+        "taxonomy_values": 29,
+        "channels": 4,
+        "forms": 1,
+        "form_fields": 6,
+        "form_controls": 2,
+        "form_rules": 6,
+        "warnings": 4,
+        "gaps": 8,
+        "source_sections": 19,
+        "sectors": 1,
+        "web_urls": 4,
+        "contact_channels": 0,
+        "core_input_records": 6
+      },
+      "taxonomy_counts": [
+        {
+          "taxonomy_id": "tax.hrsd.domain",
+          "label": "تصنيف الشكاوى",
+          "kind": "COMPLAINT_DOMAIN",
+          "values": 1,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.hrsd.service",
+          "label": "خدمة الشكوى",
+          "kind": "COMPLAINT_SERVICE_OPTION",
+          "values": 1,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.hrsd.complaint_type",
+          "label": "نوع الشكوى",
+          "kind": "COMPLAINT_SUBCATEGORY",
+          "values": 2,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.hrsd.field_03_options",
+          "label": "المنطقة",
+          "kind": "FORM_OPTION",
+          "values": 13,
+          "completeness": "PARTIAL"
+        },
+        {
+          "taxonomy_id": "tax.hrsd.field_04_options",
+          "label": "المدينة",
+          "kind": "FORM_OPTION",
+          "values": 12,
+          "completeness": "PARTIAL"
+        }
+      ],
+      "audit_checks": {
+        "all_source_urls_retained": true,
+        "all_captured_source_fields_retained": true,
+        "all_captured_source_options_retained": true,
+        "all_captured_taxonomy_labels_retained": true,
+        "long_field_details_matched": true,
+        "warning_evidence_retained": true,
+        "source_field_or_control_labels_checked": [
+          "بريد التواصل",
+          "جوال التواصل",
+          "المنطقة",
+          "المدينة",
+          "معلومات البلاغ",
+          "رفع المرفقات"
+        ],
+        "source_option_occurrences_checked": 25,
+        "source_taxonomy_label_occurrences_checked": 6,
+        "structured_warning_checks": [
+          {
+            "source_section_id": "sec.hrsd.research_log",
+            "key": "issues_encountered",
+            "description": "Accidental click on final button 'ارسال الطلب' during inspection; no complaint was submitted because required fields were empty and validation errors appeared",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.hrsd.research_log",
+            "key": "information_not_verified",
+            "description": "Exact authentication method/Nafath requirement",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.hrsd.research_log",
+            "key": "information_not_verified",
+            "description": "Whether hidden non-visible region/city options exist beyond those observed",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          },
+          {
+            "source_section_id": "sec.hrsd.research_log",
+            "key": "information_not_verified",
+            "description": "Whether any later review screen exists after all required fields are completed",
+            "normalized_warning_record": true,
+            "exact_source_evidence_retained": true
+          }
+        ],
+        "unmapped_relevant_paragraphs": []
+      },
+      "paragraph_dispositions": {
+        "AGENT_TELEMETRY_OMITTED": 4,
+        "RETAINED_AS_SOURCE_EVIDENCE": 440,
+        "REPEATED_OUTPUT_MAPPING_OR_COMPLETION_BOILERPLATE_OMITTED": 8
+      },
+      "source_evidence_ranges": [
+        {
+          "source_section_id": "sec.hrsd.pilot_summary",
+          "paragraph_start": 5,
+          "paragraph_end": 7
+        },
+        {
+          "source_section_id": "sec.hrsd.identity",
+          "paragraph_start": 8,
+          "paragraph_end": 25
+        },
+        {
+          "source_section_id": "sec.hrsd.scenarios",
+          "paragraph_start": 26,
+          "paragraph_end": 45
+        },
+        {
+          "source_section_id": "sec.hrsd.journey",
+          "paragraph_start": 46,
+          "paragraph_end": 135
+        },
+        {
+          "source_section_id": "sec.hrsd.prerequisites",
+          "paragraph_start": 136,
+          "paragraph_end": 144
+        },
+        {
+          "source_section_id": "sec.hrsd.escalation",
+          "paragraph_start": 145,
+          "paragraph_end": 153
+        },
+        {
+          "source_section_id": "sec.hrsd.form_steps",
+          "paragraph_start": 154,
+          "paragraph_end": 168
+        },
+        {
+          "source_section_id": "sec.hrsd.taxonomy",
+          "paragraph_start": 169,
+          "paragraph_end": 184
+        },
+        {
+          "source_section_id": "sec.hrsd.dynamic_rules",
+          "paragraph_start": 185,
+          "paragraph_end": 194
+        },
+        {
+          "source_section_id": "sec.hrsd.fields",
+          "paragraph_start": 195,
+          "paragraph_end": 286
+        },
+        {
+          "source_section_id": "sec.hrsd.attachments",
+          "paragraph_start": 287,
+          "paragraph_end": 297
+        },
+        {
+          "source_section_id": "sec.hrsd.validation",
+          "paragraph_start": 298,
+          "paragraph_end": 324
+        },
+        {
+          "source_section_id": "sec.hrsd.submission",
+          "paragraph_start": 325,
+          "paragraph_end": 333
+        },
+        {
+          "source_section_id": "sec.hrsd.examples",
+          "paragraph_start": 334,
+          "paragraph_end": 357
+        },
+        {
+          "source_section_id": "sec.hrsd.routing_rules",
+          "paragraph_start": 358,
+          "paragraph_end": 381
+        },
+        {
+          "source_section_id": "sec.hrsd.sources",
+          "paragraph_start": 382,
+          "paragraph_end": 398
+        },
+        {
+          "source_section_id": "sec.hrsd.research_log",
+          "paragraph_start": 399,
+          "paragraph_end": 434
+        },
+        {
+          "source_section_id": "sec.hrsd.narrative_summary",
+          "paragraph_start": 436,
+          "paragraph_end": 445
+        },
+        {
+          "source_section_id": "sec.hrsd.screenshots",
+          "paragraph_start": 455,
+          "paragraph_end": 455
+        }
+      ],
+      "intentional_omissions": [
+        {
+          "reason": "Agent telemetry/status/token-use logs; no service facts",
+          "paragraphs": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "reason": "Repeated output filename mapping/completion boilerplate only",
+          "paragraphs": [
+            447,
+            448,
+            449,
+            450,
+            451,
+            452,
+            453,
+            457
+          ]
+        }
+      ],
+      "ambiguous_conversions": [
+        {
+          "issue": "review_screen_exists=false and extra_otp_required=false based on invalid form send",
+          "conversion": "Both operational states=null; accidental blocked click preserved as research event, not successful submission."
+        },
+        {
+          "issue": "0/2000 character counter",
+          "conversion": "Observed counter retained; inferred max 2000 labeled inferred; server enforcement unknown."
+        },
+        {
+          "issue": "12 city options only for Eastern region",
+          "conversion": "Conditional city list retained with region cross-link; no full national city coverage implied."
+        },
+        {
+          "issue": "19911 is context of complaint service",
+          "conversion": "Not added as a separate confirmed complaint telephone intake channel."
+        }
+      ],
+      "high_priority_gaps": [
+        "gap.hrsd.ministry_scope",
+        "gap.hrsd.submission",
+        "gap.hrsd.login_provider",
+        "gap.hrsd.geographic_options",
+        "gap.hrsd.attachment_count",
+        "gap.hrsd.counter_limit",
+        "gap.hrsd.follow_up_questions"
+      ]
+    }
+  ],
+  "source_reverification_checks": [
+    {
+      "source_document_id": "src.media",
+      "sha256": "MATCHED",
+      "source_excerpts": "EXACTLY_MATCHED",
+      "paragraphs_read": 638,
+      "unique_urls_checked": 5,
+      "source_fields_checked": 14,
+      "source_field_option_occurrences_checked": 0
+    },
+    {
+      "source_document_id": "src.health",
+      "sha256": "MATCHED",
+      "source_excerpts": "EXACTLY_MATCHED",
+      "paragraphs_read": 471,
+      "unique_urls_checked": 4,
+      "source_fields_checked": 8,
+      "source_field_option_occurrences_checked": 14
+    },
+    {
+      "source_document_id": "src.investment",
+      "sha256": "MATCHED",
+      "source_excerpts": "EXACTLY_MATCHED",
+      "paragraphs_read": 110,
+      "unique_urls_checked": 3,
+      "source_fields_checked": 27,
+      "source_field_option_occurrences_checked": 6
+    },
+    {
+      "source_document_id": "src.education",
+      "sha256": "MATCHED",
+      "source_excerpts": "EXACTLY_MATCHED",
+      "paragraphs_read": 476,
+      "unique_urls_checked": 4,
+      "source_fields_checked": 9,
+      "source_field_option_occurrences_checked": 58
+    },
+    {
+      "source_document_id": "src.hrsd",
+      "sha256": "MATCHED",
+      "source_excerpts": "EXACTLY_MATCHED",
+      "paragraphs_read": 457,
+      "unique_urls_checked": 4,
+      "source_fields_checked": 6,
+      "source_field_option_occurrences_checked": 25
+    }
+  ],
+  "negative_validation_tests": [
+    {
+      "case": "duplicate_id",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "Duplicate ID: auth.gmedia"
+    },
+    {
+      "case": "dangling_authority",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "$/services/0/authority_id: missing authorities reference auth.missing"
+    },
+    {
+      "case": "unknown_boolean_string",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "$/form_fields/0/required: expected ['boolean', 'null'], got str"
+    },
+    {
+      "case": "incorrect_media_recipient",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "Media regulator identity lost"
+    },
+    {
+      "case": "lost_education_option",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "Taxonomy/value inventory mismatch: tax.education.main_service"
+    },
+    {
+      "case": "invented_otp_requirement",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "Unverified post-submit OTP policy: form.media.report"
+    },
+    {
+      "case": "invalid_url",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "$/channels/0/url: no anyOf branch matched: ['$/channels/0/url: invalid HTTP(S) URL', \"$/channels/0/url: expected ['null'], got str\"]"
+    },
+    {
+      "case": "unverified_agent_readiness_upgrade",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "Unsupported agent readiness: svc.media.report"
+    },
+    {
+      "case": "missing_fifth_input",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "$/sectors/4/source_document_ids: missing source_documents reference src.hrsd"
+    }
+  ],
+  "totals": {
+    "sectors": 5,
+    "source_documents": 5,
+    "source_sections": 86,
+    "authorities": 5,
+    "services": 6,
+    "complaint_scenarios": 13,
+    "taxonomies": 22,
+    "taxonomy_values": 130,
+    "channels": 22,
+    "routing_rules": 5,
+    "forms": 6,
+    "form_fields": 67,
+    "form_controls": 14,
+    "form_rules": 32,
+    "warnings": 41,
+    "gaps": 40,
+    "research_metadata": 5
+  },
+  "definition_notes": {
+    "authorities": "5 documented recipients; media regulator is retained instead of inventing Ministry of Media complaint authority.",
+    "services": "6 documented paths: 1 Media, 1 Health, 2 Investment, 1 Education, 1 HRSD.",
+    "scenarios": "13 source-authored scenarios; no invented Investment scenarios.",
+    "taxonomy_values": "130 contextual option/value records, including roles, geography and provider/operator choices. Not 130 validated routing rules.",
+    "fields": "67 field records: 62 core input/consent/upload records, 2 Education context/display records and 3 Education review headings.",
+    "channels": "22 channels: 20 URL records (19 reported official +1 discovery-only Google URL), 937 phone and 937@moh.gov.sa email.",
+    "form_controls": "14 controls kept separately from input fields.",
+    "warnings": "41 warning records include repeated report observations; they are not 41 distinct portal errors."
+  },
+  "high_priority_sprint_1_gaps": [
+    {
+      "id": "gap.media.save_semantics",
+      "description_ar": "دلالة زر حفظ وشاشة المراجعة والإرسال النهائي غير موثقة."
+    },
+    {
+      "id": "gap.media.attachment_limits",
+      "description_ar": "أنواع المرفقات وحدود الحجم والعدد لم تظهر في النموذج."
+    },
+    {
+      "id": "gap.media.login_provider",
+      "description_ar": "التقرير يذكر Nafath=true لكنه يصرّح بأن اسم مزوّد الدخول لم يُتحقق منه؛ الاشتراط الفعلي مجهول."
+    },
+    {
+      "id": "gap.media.captcha",
+      "description_ar": "ظهر خطأ reCAPTCHA: Invalid domain for site key، وقد يؤثر على صلاحية استكمال المسار."
+    },
+    {
+      "id": "gap.media.taxonomy_branches",
+      "description_ar": "فروع تصنيفات غير الإعلانات لم تُستكشف بالكامل؛ خيارا آخرى وأخرى محفوظان كقيمتين كما وردا."
+    },
+    {
+      "id": "gap.media.scenario_mapping",
+      "description_ar": "السيناريو الثامن الخاص بمنصات التواصل ليس تصنيفًا ثامنًا مطابقًا للقائمة؛ لا توجد قاعدة ربط تصنيف موثقة له."
+    },
+    {
+      "id": "gap.media.follow_up_questions",
+      "description_ar": "المصدر لا يحتوي أسئلة توضيحية مرشحة صريحة؛ لم تُولّد أسئلة باعتبارها معلومات مصدرية."
+    },
+    {
+      "id": "gap.health.ticket_types",
+      "description_ar": "خيارات نوع التذكرة لم تُستخرج، وكذلك بيانات خطوة المستفيد وخطوة تقييم."
+    },
+    {
+      "id": "gap.health.health_coverage",
+      "description_ar": "وجود المستشفى والصيدلية وغيرها في قائمة مقدم الخدمة لا يثبت قواعد توجيه لشكاوى العلاج أو الأخطاء الطبية؛ المدعوم توثيقيًا هو المسار التقني المحدود."
+    },
+    {
+      "id": "gap.health.mandatory_fields",
+      "description_ar": "اشتراط معظم حقول النموذج وأنواع المرفقات والحد الأقصى لعددها غير معروف."
+    },
+    {
+      "id": "gap.health.submission",
+      "description_ar": "لم تُتحقق شاشة المراجعة أو دلالة زر ارسال الشكوى أو أي نتيجة لقضية مقدمة."
+    },
+    {
+      "id": "gap.health.nafath",
+      "description_ar": "المصدر يحتوي false لنفاذ، لكنه يقول إن نفاذ تحديدًا غير متحقق؛ القيمة التشغيلية null."
+    },
+    {
+      "id": "gap.health.sahhaty",
+      "description_ar": "كلمة صحتي وردت في تلميحات الكلمات فقط؛ لم يوثّق التقرير خيار مشغّل صحتي أو اختبار مساره."
+    },
+    {
+      "id": "gap.health.follow_up_questions",
+      "description_ar": "المصدر لا يحتوي أسئلة توضيحية مرشحة صريحة؛ لم تُولّد أسئلة باعتبارها معلومات مصدرية."
+    },
+    {
+      "id": "gap.investment.categories",
+      "description_ar": "قائمة الفئات الكاملة غير مستخرجة؛ رُصدت Technical Issues فقط مع ستة فروع."
+    },
+    {
+      "id": "gap.investment.scenarios",
+      "description_ar": "لا توجد سيناريوهات شكوى مفصلة في الملف؛ لم يُنشأ أي سيناريو مثال جديد أو ربط افتراضي للفروع."
+    },
+    {
+      "id": "gap.investment.integrity_details",
+      "description_ar": "أنواع مخالفات النزاهة وشروط الأهلية ونصا الموافقتين وحدود المرفقات في نموذج MISA مجهولة."
+    },
+    {
+      "id": "gap.investment.submission",
+      "description_ar": "إمكانية عرض النموذج FULL لا تثبت نجاح الإرسال أو الاستعراض أو استكمال CAPTCHA أو نتيجة القضية."
+    },
+    {
+      "id": "gap.investment.required_fields",
+      "description_ar": "علامات إلزام معظم الحقول لم تُحفظ؛ اختيار consent ضمن الرحلة لا يثبت حكم إلزام تقني عام."
+    },
+    {
+      "id": "gap.investment.escalation",
+      "description_ar": "رابط Amer وTrack Request مرصودان؛ شروط التصعيد ورابط التتبع الدقيق ونتائجهما غير موثقة."
+    },
+    {
+      "id": "gap.investment.follow_up_questions",
+      "description_ar": "المصدر لا يحتوي أسئلة توضيحية مرشحة صريحة؛ لم تُولّد أسئلة باعتبارها معلومات مصدرية."
+    },
+    {
+      "id": "gap.education.taxonomy_scope",
+      "description_ar": "33 خيارًا إضافيًا للخدمة الرئيسية محفوظة كخيارات مرصودة، ولا تتوفر لها سيناريوهات توجيه مفصلة أو شروط أهلية مثبتة."
+    },
+    {
+      "id": "gap.education.attachment_mandatory",
+      "description_ar": "التقرير يعرض المرفق كإلزامي في الحالة المختبرة، لكنه لا يحسم إلزامه عبر جميع مسارات الشكاوى."
+    },
+    {
+      "id": "gap.education.login_provider",
+      "description_ar": "الدخول مطلوب؛ مزوّد الهوية ونفاذ تحديدًا غير محسومين."
+    },
+    {
+      "id": "gap.education.service_description",
+      "description_ar": "نص تفاصيل Steps/Documents ووصف الفئة المختارة لم يُحفظ كاملًا في التقرير."
+    },
+    {
+      "id": "gap.education.post_submission",
+      "description_ar": "شاشة المراجعة رُصدت؛ لم يُختبر الإرسال أو رقم القضية أو OTP بعده."
+    },
+    {
+      "id": "gap.education.field_count",
+      "description_ar": "الملخص يذكر 8 حقول أساسية مع عناصر إضافية؛ قائمة form_fields الفعلية تضم 9 سجلات تشمل التعهد. حُفظت كلها مع فصل عناصر السياق والمراجعة."
+    },
+    {
+      "id": "gap.education.follow_up_questions",
+      "description_ar": "المصدر لا يحتوي أسئلة توضيحية مرشحة صريحة؛ لم تُولّد أسئلة باعتبارها معلومات مصدرية."
+    },
+    {
+      "id": "gap.hrsd.ministry_scope",
+      "description_ar": "الملف يوثق شكاوى موظفي 19911 فقط؛ لا يصح توجيه أي شكوى عمالية أو اجتماعية إلى هذا المسار لمجرد انتمائها للوزارة."
+    },
+    {
+      "id": "gap.hrsd.submission",
+      "description_ar": "المصدر يذكر review_screen_exists=false وextra_otp_required=false، لكن الإرسال جُرّب بنموذج ناقص فقط؛ وجود مراجعة أو OTP بعد النموذج الصحيح مجهول."
+    },
+    {
+      "id": "gap.hrsd.login_provider",
+      "description_ar": "متطلبات نفاذ ومزوّد الدخول الدقيق غير متحققة."
+    },
+    {
+      "id": "gap.hrsd.geographic_options",
+      "description_ar": "القائمة تشمل 13 منطقة مرئية و12 خيار مدينة للمنطقة الشرقية فقط؛ أي خيارات مخفية أو مدن مناطق أخرى غير موثقة."
+    },
+    {
+      "id": "gap.hrsd.attachment_count",
+      "description_ar": "حد عدد المرفقات وتفسير حجم 3 MB كحد لكل ملف أو للمجموع غير معلومين."
+    },
+    {
+      "id": "gap.hrsd.counter_limit",
+      "description_ar": "عداد 0/2000 مرصود؛ اعتباره حدًا مُنفّذًا على الخادم استنتاج غير مختبر."
+    },
+    {
+      "id": "gap.hrsd.follow_up_questions",
+      "description_ar": "المصدر لا يحتوي أسئلة توضيحية مرشحة صريحة؛ لم تُولّد أسئلة باعتبارها معلومات مصدرية."
+    }
+  ],
+  "delivery": {
+    "local_files": "outputs/",
+    "library_save_status": "NO_PRODUCT_LIBRARY_WRITE_TOOL_AVAILABLE_IN_THIS_SESSION",
+    "originals_overwritten": false,
+    "bundle": "wajhah_knowledge_base_bundle.zip"
+  },
+  "limits": "No claim of 100% factual accuracy. Source-excerpt, label, URL, schema and cross-link checks establish document conversion fidelity only. No live service verification, chatbot evaluation, full ministry coverage, completed submission or case outcome is proven."
+}

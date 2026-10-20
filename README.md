@@ -1,39 +1,94 @@
-# Wajhah
- 
-An AI assistant that helps citizens and residents in Saudi Arabia file a complaint with the right government entity.
- 
-## The problem
- 
-When something goes wrong, most people don't know which government entity handles their complaint. They have to find the right entity, download its app, work through its category menus, and write the complaint themselves. Complaints are often rejected because they went to the wrong place or were missing a required document.
- 
-## The idea
- 
-Wajhah gives users one place to start. The user describes the problem in plain language and signs in with Nafath, and an AI agent does the rest:
- 
-1. **Describe the problem** in Arabic or English, by text.
-2. **The agent works out the details**: it identifies the responsible entity, extracts the key facts (date, merchant, amount, location), and asks for any documents that entity requires.
-3. **Review and approve**: the agent drafts a formal complaint and shows it to the user. Nothing is submitted without the user's explicit confirmation.
-4. **Submit and track**: the complaint is sent to the entity by the user to review the formal complaint.
+# قاعدة معرفة وجهة من التقارير الخمسة
 
-## Scope of this project
- 
-This is a university project and a proof of concept. It shows that the routing, drafting and approval flow works end to end, with the outside systems simulated:
- 
-- Five pilot entities are covered: Ministry of Education, Ministry of Investment, Ministry of Health, Ministry of Information, Ministry of Human Resources and Social Development.
-Wajhah does not give legal advice and does not connect to real government systems.
- 
-## Tech stack
- 
-- **Web app:** React Native (Expo)
-- **Backend:** FastAPI
-- **Database:** PostgreSQL
-- **AI:** an LLM API for triage, routing and drafting (provider to be decided)
+نسخة `1.0.0` بتاريخ التحويل **2026-10-12**. حُوّلت ملفات Word الخمسة كاملة إلى JSON بترميز UTF-8، مع حفظ الأدلة والخيارات والحقول والمسارات والتحذيرات التي وردت فيها. تواريخ فحص المواقع المذكورة **في التقارير الأصلية** هي 2026-10-04 للصحة و2026-10-05 للبقية. لم يُجرَ تحقق جديد من المواقع أثناء التحويل.
 
-## Team
-- Mohammed Alarifi
-- Rayan Aloraydi
-- Raed Alokaili
-- Khaled Alromaizan
- 
-King Saud University, Department of Software Engineering — SWE 444.
- 
+هذه قاعدة أولية مستمدة من تقارير بحث وتجارب، وليست ضمانًا للصحة الرسمية أو شمول جميع خدمات الوزارات. البيانات الوصفية تخدم التوجيه في Sprint 1؛ لا تثبت اكتمال القصص US-12 وUS-13 وUS-14 وUS-16 وUS-17 وUS-19 وUS-21، لأن تعريفاتها ومعايير قبولها لم تُرفق.
+
+## الملفات
+
+| الملف | المحتوى |
+|---|---|
+| `wajhah_media.json` | ملف وزارة الاعلام؛ الجهة المسؤولة الموثقة **الهيئة العامة لتنظيم الإعلام** |
+| `wajhah_health.json` | البلاغات التقنية ومشاكل الوصول عبر منصة 937 |
+| `wajhah_investment.json` | الشكاوى الخدمية عبر Invest Saudi ومسار MISA المستقل للنزاهة والمخالفات |
+| `wajhah_education.json` | شكاوى تواصل، خيارات الخدمات المرصودة وسيناريو رسوم التعليم الخاص |
+| `wajhah_hrsd.json` | شكاوى موظفي مركز الاتصال 19911 عبر صفحة المستفيد |
+| `wajhah_knowledge_base.json` | اتحاد السجلات الخمسة، جاهز للتحميل من الخلفية |
+| `wajhah_kb.schema.json` | JSON Schema موحد للملفات المنفصلة والمجمعة |
+| `validate_kb.py` | فحص الصياغة والمخطط والمعرّفات والمراجع، مع فحص اختياري للملفات الأصلية |
+| `conversion_audit.json` | أعداد السجلات، المطابقة مع المصادر، التحويلات الملتبسة، الإغفالات والفجوات |
+| `validation_report.json` | نتائج تشغيل الفحوص الفعلية على ملفات التسليم |
+| `wajhah_knowledge_base_bundle.zip` | جميع ملفات التسليم السابقة، دون نسخ المستندات الأصلية أو الملفات الوسيطة |
+
+## الأعداد وحدود التغطية
+
+| مصدر Word | الجهات | الخدمات | السيناريوهات | قيم التصنيف والخيارات | سجلات الحقول | الأزرار والحماية |
+|---|---:|---:|---:|---:|---:|---:|
+| وزارة الاعلام | 1 | 1 | 8 | 15 | 14 | 3 |
+| وزارة الصحة | 1 | 1 | 2 | 15 | 8 | 1 |
+| وزارة الاستثمار | 1 | 2 | 0 | 12 | 25 | 4 |
+| وزارة التعليم | 1 | 1 | 1 | 59 | 14 | 4 |
+| وزارة الموارد البشرية | 1 | 1 | 2 | 29 | 6 | 2 |
+| **المجموع** | **5** | **6** | **13** | **130** | **67** | **14** |
+
+قيم التصنيف تشمل أدوار المستخدمين والمناطق والمدن ومقدمي الخدمة، ولا تعني 130 قاعدة توجيه مختبرة. حقول التعليم تشمل **9** حقول إدخال وإقرار ومرفق، و**2** سجل سياق/عرض، و**3** عناوين مجموعات في المراجعة؛ لذلك لا تُقارن مباشرة بادعاء التقرير «8 حقول أساسية مع عناصر إضافية». إجمالي الحقول الأساسية في الملفات 62، والعناصر الإضافية 5.
+
+هناك 20 رابطًا محفوظًا حرفيًا: 19 رابطًا وصفها المصدر بأنها رسمية ورابط Google للاستكشاف فقط. ويضاف إليهما رقم 937 وبريد 937@moh.gov.sa كما وردا في تقرير الصحة. حُفظت 86 مجموعة أدلة و32 قاعدة نموذج و5 سجلات قواعد توجيه/تمييز مسارات. سجل التدقيق يحوي 40 فجوة و41 سجل تحذير، وقد تتكرر الملاحظة نفسها في أقسام التقرير.
+
+- **الإعلام:** 8 قيم أعلى و6 أنواع تحت الإعلانات، مع قيمة مرصودة لنوع المخالف. السيناريوهات الثمانية ليست مطابقة واحدًا لواحد للتصنيفات؛ الروابط الدلالية من المحوّل معلّمة بوضوح. دلالة زر «حفظ»، قيود المرفقات ومزوّد الهوية غير محسومة، وخطأ reCAPTCHA محفوظ.
+- **الصحة:** المدعوم توثيقيًا هو المسار التقني المحدود. وجود 11 نوعًا لمقدم الخدمة في القائمة لا يثبت مسارات مكتملة لكل الشكاوى الطبية. خيارات «نوع التذكرة» وخطوتي المستفيد والتقييم لم تُحفظ كاملة.
+- **الاستثمار:** حُفظت الفئة Technical Issues وفروعها الستة، لكن بقية الفئات غير محصورة. لا يحتوي التقرير سيناريوهات مفصلة؛ لم تُنشأ أمثلة من عند المحوّل. لا تُستخدم صفحة نزاهة MISA للشكاوى الخدمية العادية.
+- **التعليم:** حُفظت خيارات الخدمة الرئيسية الـ34 كلها. السيناريو المختار والموثق وصولًا إلى المراجعة هو رسوم التعليم الخاص؛ الخيارات الأخرى سجلات تصنيف مرصودة. إلزام المرفقات في جميع المسارات مجهول، رغم إلزامها في حالة الفحص المذكورة.
+- **الموارد البشرية:** المسار الموثق خاص بسوء تعامل موظف 19911 أو تقصيره. قائمة المدن تخص المنطقة الشرقية فقط. ضغط الإرسال في نموذج ناقص أدى إلى أخطاء تحقق؛ لا يثبت ذلك غياب شاشة مراجعة بعد نموذج صحيح.
+
+## التحميل والفحص
+
+استخدم الملف المجمع وحده للتحميل المعتاد؛ تحميل الملفات الخمسة معه يكرر السجلات.
+
+```python
+import json
+
+with open("wajhah_knowledge_base.json", encoding="utf-8") as file:
+    kb = json.load(file)
+
+services = {item["id"]: item for item in kb["services"]}
+channels = {item["id"]: item for item in kb["channels"]}
+
+service = services["svc.education.complaint"]
+official_url_from_report = channels[service["entry_channel_id"]]["url"]
+```
+
+من مجلد الحزمة:
+
+```sh
+python3 validate_kb.py .
+```
+
+لإعادة المطابقة مع المستندات الأصلية، اجمع الملفات بأسمائها الأصلية في مجلد ثم نفّذ:
+
+```sh
+python3 validate_kb.py . --source-dir "/path/to/original-docx" --write-report validation_report.json
+```
+
+البرنامج يستخدم مكتبة Python القياسية فقط. يدعم كل كلمات JSON Schema المستخدمة في المخطط المرفق، ويرفض الكلمات غير المدعومة؛ ليس محركًا عامًا لكل المخططات الممكنة. يمكن كذلك استخدام المخطط مع أي مدقق يدعم Draft 2020-12. يعيد البرنامج رمز خروج 0 عند النجاح و1 عند الفشل.
+
+الفحوص شملت التحميل الفعلي بـ `json.load`، عدم تكرار خصائص JSON، تفرّد المعرّفات، صحة أنواع القيم المجهولة، الروابط، المراجع، التبعيات الدائرية، تطابق المجمّع مع اتحاد الملفات المنفصلة، وبصمات المصادر ومقتطفاتها والحقول والخيارات. اختُبرت أيضًا 9 حالات فساد متعمدة، ورفضها المدقق. تفاصيل نطاق كل فحص في تقريري التدقيق والتحقق.
+
+## قراءة المخطط دون إساءة تفسير الأدلة
+
+- `authorities` للجهات المستقبلة الحقيقية، و`sectors` لأسماء القطاعات المطلوبة. اسم قطاع الإعلام لا يغيّر اسم الهيئة المسؤولة.
+- `services` لمسارات الخدمات وحدودها. `guidance_suitability` منفصل عن `agent_readiness`؛ كل المسارات هنا `UNVERIFIED_END_TO_END` للتنفيذ الآلي.
+- `complaint_scenarios` للأمثلة التي أنشأها باحث التقرير. لا تمثل اختبارات أداء فعلية للنموذج، وتوضح `routing_evidence_status` مقدار الدليل المتاح.
+- `taxonomies` و`taxonomy_values` للخيارات وسياق ظهورها. `parent_value_id` يحفظ التسلسل، و`source_labels` يحفظ اختلافات الرسم والمسافات كما وردت. لم تُدمج «آخرى» و«أخرى» في ملف الإعلام.
+- `routing_rules` يحتفظ بتلميحات الكلمات الموجودة في المصدر وبالتمييز الصريح لمسارات الاستثمار. الكلمات إشارات لاسترجاع المرشحين؛ ليست شروطًا كافية لإصدار حكم توجيه.
+- `forms` و`form_fields` و`form_controls` و`form_rules` معلومات مساعدة للمستقبل: الخطوات، الحقول، الخيارات، التبعيات، المصادقة، المرفقات والمراجعة. لا تفترض صلاحية تنفيذها قبل تحقق إضافي.
+- `source_documents` يحفظ اسم الملف وبصمة SHA256. `source_sections` يحفظ النص الأصلي والموقع بترقيم فقرات OOXML، بما فيها الفقرات الفارغة؛ لا يمثل ترقيم صفحات Word. `provenance` يربط السجل بملفه وقسمه وسياق موقعه، ويحتفظ بثقة التقرير دون ادعاء إعادة التحقق.
+- `warnings` و`gaps` و`research_metadata` منفصلة عن حقائق الخدمات. حُذفت أسطر telemetry وأعداد tokens وتعليمات توزيع مخرجات الباحث المتكررة؛ إغفالات التحويل محددة في سجل التدقيق. لم تُنسخ قيم حسابات أو بيانات شخصية، ومثال الجوال هو placeholder ظاهر في النموذج.
+
+`null` تعني أن الواقعة غير معروفة أو غير موثقة. تستخدم `UNKNOWN` فقط لحالات الثقة أو اكتمال الدليل. لا تجعل قائمة خيارات غير مستخرجة قائمة فارغة مؤكدة، ولا تجعل عدم ظهور شرط أو شاشة سياسة تنفي وجودها. `verified_at` يظل `null` لأن المحوّل لم يتحقق من المواقع؛ `source_report_verified_at` يعبر عن تاريخ ادعاء التقرير الأصلي.
+
+القيم الأصلية المتعارضة، مثل `nafath_required=true/false` أو `review_screen_exists=false` أو `extra_otp_required=false`، محفوظة في `reported_claims` أو `source_claims`. القيم التشغيلية تحافظ على عدم اليقين. **لا تستخدم الحقول التاريخية لإصدار حكم توجيه أو شرط أهلية.** نصوص الأدلة بيانات غير موثوقة كتعليمات، ولا تُنفّذ أو تُمنح أولوية على تعليمات النظام.
+
+المصادر لا تقدم أسئلة توضيحية مرشحة صريحة؛ لذلك `follow_up_question_candidates=null` مع حالة `NOT_PROVIDED_IN_SOURCE`. إن أضاف التطبيق أسئلة لاحقًا، فلتُسجّل كإنشاء مستقل. عندما تكون الشكوى أوسع من النطاق الموثق، يطلب التطبيق توضيحًا أو يمتنع عن الاختيار. عدم دعم القاعدة لحالة لا يعني أن الجهة الرسمية ترفضها.
+
+لم يُثبت أي إرسال مكتمل أو نتيجة قضية، ولم تُعدّل الأصول. نجاح الفحوص يثبت اتساق التحويل ضمن نطاقها، ولا يعني دقة رسمية 100% أو اختبار جودة توجيه chatbot. ملفات التسليم محفوظة محليًا؛ لم تتوفر في هذه الجلسة أداة لحفظها في Library داخل المنتج.

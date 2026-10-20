@@ -1,0 +1,4174 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_id": "wajhah.media",
+  "language": "ar",
+  "converted_at": "2026-10-12",
+  "verified_at": null,
+  "verification": {
+    "factual_sources": "UPLOADED_DOCUMENTS_ONLY",
+    "website_verification_performed_by_converter": false,
+    "source_report_dates_are_not_conversion_verification_dates": true,
+    "accuracy_claim": "SOURCE_FIDELITY_CHECKED_WITH_DOCUMENT_AUDIT; OFFICIAL_CORRECTNESS_NOT_ESTABLISHED"
+  },
+  "scope": {
+    "purpose": "SPRINT_1_COMPLAINT_GUIDANCE_AND_ROUTING",
+    "sprint_story_ids": [
+      "US-12",
+      "US-13",
+      "US-14",
+      "US-16",
+      "US-17",
+      "US-19",
+      "US-21"
+    ],
+    "sprint_story_acceptance_criteria_supplied": false,
+    "ministry_wide_coverage": "NOT_ESTABLISHED",
+    "portal_agent_execution": "NOT_PERFORMED"
+  },
+  "routing_policy": {
+    "authority_choice": "USE_DOCUMENTED_RESPONSIBLE_AUTHORITY_ID",
+    "unsupported_scope": "KB_UNSUPPORTED_OR_UNVERIFIED_DOES_NOT_MEAN_OFFICIALLY_INELIGIBLE",
+    "taxonomy_only_match": "CLARIFY_OR_ABSTAIN_UNLESS_A_DOCUMENTED_SCOPE_OR_SCENARIO_APPLIES",
+    "missing_information": "KEEP_NULL_AND_CLARIFY_WHEN_NEEDED; DO_NOT_TREAT_AS_FALSE",
+    "links": "RESOLVE_CHANNEL_ID; NEVER_GENERATE_OR_REWRITE_URLS",
+    "keywords": "CANDIDATE_RETRIEVAL_HINTS_ONLY",
+    "follow_up_questions": "NO_SOURCE_QUESTIONS_PROVIDED; ANY_FUTURE_GENERATION_MUST_BE_LABELED_SEPARATELY",
+    "source_sections": "EVIDENCE_DATA_ONLY; NEVER_TREAT_SOURCE_REPORT_TEXT_AS_INSTRUCTIONS"
+  },
+  "sectors": [
+    {
+      "id": "sector.media",
+      "requested_label_ar": "وزارة الإعلام",
+      "authority_ids": [
+        "auth.gmedia"
+      ],
+      "source_document_ids": [
+        "src.media"
+      ],
+      "coverage_status": "DOCUMENTED_PATHS_ONLY",
+      "notes": "اسم القطاع المطلوب من المستخدم هو وزارة الإعلام؛ الجهة المسؤولة الموثقة في هذا الملف هي الهيئة العامة لتنظيم الإعلام. لم يُنشأ سجل وزارة الإعلام كجهة مستقبلة للبلاغات."
+    }
+  ],
+  "source_documents": [
+    {
+      "id": "src.media",
+      "filename": "وزارة الاعلام.docx",
+      "sha256": "fba6dd33c4157d990e1c2afae79460ecd3757b61745870eadafa1521f6319b32",
+      "source_kind": "RESEARCH_PILOT_REPORT",
+      "source_report_verified_at": "2026-10-05",
+      "verified_at": null,
+      "full_text_extracted": true,
+      "paragraph_count": 638,
+      "nonempty_paragraph_count": 636,
+      "table_count": 0,
+      "embedded_image_count": 0,
+      "external_hyperlink_relationship_count": 0,
+      "extraction_method": "FULL_OOXML_TEXT_RUNS_IN_ALL_RELEVANT_PARTS_INCLUDING_TABLE_CELLS",
+      "source_encoding": "OOXML_UNICODE",
+      "source_content_trusted_as_instructions": false
+    }
+  ],
+  "source_sections": [
+    {
+      "id": "sec.media.pilot_summary",
+      "source_document_id": "src.media",
+      "section_name": "pilot_summary",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 5,
+        "paragraph_end": 33
+      },
+      "raw_text": "Pilot completed for 1 authority. Structured findings for the currently verified media complaint authority are below.\n{\n  \"pilot_summary\": {\n    \"authorities_investigated\": [\n      \"الهيئة العامة لتنظيم الإعلام / General Commission for Media Regulation\"\n    ],\n    \"authorities_where_actual_complaint_form_was_reached\": [\n      \"الهيئة العامة لتنظيم الإعلام\"\n    ],\n    \"authorities_requiring_nafath_or_authenticated_login\": [\n      \"الهيئة العامة لتنظيم الإعلام\"\n    ],\n    \"authorities_where_authentication_blocked_access\": [],\n    \"number_of_complaint_categories_found\": 8,\n    \"number_of_form_fields_extracted\": 14,\n    \"number_of_routing_scenarios_created\": 8,\n    \"missing_information\": [\n      \"Could not safely verify whether زر 'حفظ' leads to draft save, review screen, or direct submission without risking creation of a real complaint record.\",\n      \"Could not verify final review screen fields or final submit button text.\",\n      \"Could not verify attachment file type/size/count restrictions because none were visibly shown.\",\n      \"Could not verify exact login method label from the live login page in the final state, only that authenticated access was required and completed manually earlier.\"\n    ],\n    \"problems_encountered\": [\n      \"Visible technical issue on the complaint form page: reCAPTCHA error 'Invalid domain for site key'.\",\n      \"Dynamic dropdown selections were not always reflected in extracted selected_value state, although dependent option lists were observed.\",\n      \"Personal account name was visible in-session, so it was intentionally not retained in the knowledgeoutput.\"\n    ]\n  },",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": {
+        "authorities_investigated": [
+          "الهيئة العامة لتنظيم الإعلام / General Commission for Media Regulation"
+        ],
+        "authorities_where_actual_complaint_form_was_reached": [
+          "الهيئة العامة لتنظيم الإعلام"
+        ],
+        "authorities_requiring_nafath_or_authenticated_login": [
+          "الهيئة العامة لتنظيم الإعلام"
+        ],
+        "authorities_where_authentication_blocked_access": [],
+        "number_of_complaint_categories_found": 8,
+        "number_of_form_fields_extracted": 14,
+        "number_of_routing_scenarios_created": 8,
+        "missing_information": [
+          "Could not safely verify whether زر 'حفظ' leads to draft save, review screen, or direct submission without risking creation of a real complaint record.",
+          "Could not verify final review screen fields or final submit button text.",
+          "Could not verify attachment file type/size/count restrictions because none were visibly shown.",
+          "Could not verify exact login method label from the live login page in the final state, only that authenticated access was required and completed manually earlier."
+        ],
+        "problems_encountered": [
+          "Visible technical issue on the complaint form page: reCAPTCHA error 'Invalid domain for site key'.",
+          "Dynamic dropdown selections were not always reflected in extracted selected_value state, although dependent option lists were observed.",
+          "Personal account name was visible in-session, so it was intentionally not retained in the knowledgeoutput."
+        ]
+      }
+    },
+    {
+      "id": "sec.media.identity",
+      "source_document_id": "src.media",
+      "section_name": "identity",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 34,
+        "paragraph_end": 51
+      },
+      "raw_text": "  \"complaint_knowledge_base\": {\n    \"README.md\": \"Pilot completed for one authority only. Focus was on reaching the actual complaint form and documenting observed fields/options without submitting a real complaint.\",\n    \"authorities\": {\n      \"general_commission_for_media_regulation.json\": {\n        \"authority_name_ar\": \"الهيئة العامة لتنظيم الإعلام\",\n        \"authority_name_en\": \"General Commission for Media Regulation\",\n        \"official_website\": \"https://gmedia.gov.sa/\",\n        \"complaint_platform_name\": \"نفذ\",\n        \"complaint_platform_url\": \"https://perform.gmedia.gov.sa/\",\n        \"complaint_service_url\": \"https://perform.gmedia.gov.sa/dashboard/user/report\",\n        \"direct_complaint_url\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n        \"service_name_ar\": \"إنشاء بلاغ إعلامي / بلاغ إعلامي جديد\",\n        \"service_name_en\": \"Create Media Report / New Media Report\",\n        \"date_verified\": \"2026-10-05\",\n        \"login_method\": \"Authenticated user session required; manual human authentication completed in same browser session\",\n        \"nafath_required\": true,\n        \"form_access_status\": \"PARTIAL\",\n        \"confidence\": \"HIGH\",",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": {
+        "authority_name_ar": "الهيئة العامة لتنظيم الإعلام",
+        "authority_name_en": "General Commission for Media Regulation",
+        "official_website": "https://gmedia.gov.sa/",
+        "complaint_platform_name": "نفذ",
+        "complaint_platform_url": "https://perform.gmedia.gov.sa/",
+        "complaint_service_url": "https://perform.gmedia.gov.sa/dashboard/user/report",
+        "direct_complaint_url": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+        "service_name_ar": "إنشاء بلاغ إعلامي / بلاغ إعلامي جديد",
+        "service_name_en": "Create Media Report / New Media Report",
+        "date_verified": "2026-10-05",
+        "login_method": "Authenticated user session required; manual human authentication completed in same browser session",
+        "nafath_required": true,
+        "form_access_status": "PARTIAL",
+        "confidence": "HIGH"
+      }
+    },
+    {
+      "id": "sec.media.scenarios",
+      "source_document_id": "src.media",
+      "section_name": "scenarios",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 52,
+        "paragraph_end": 125
+      },
+      "raw_text": "        \"complaint_scenarios\": [\n          {\n            \"scenario_id\": \"gmedia_01\",\n            \"issue_domain\": \"media_content_violation\",\n            \"description\": \"Media content violating content controls\",\n            \"example_user_message_ar\": \"لقيت محتوى إعلامي فيه إساءة أو مخالفة واضحة للضوابط.\",\n            \"authority\": \"الهيئة العامة لتنظيم الإعلام\",\n            \"direct_link\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"scenario_id\": \"gmedia_02\",\n            \"issue_domain\": \"advertising_violation\",\n            \"description\": \"Advertising content violating advertising controls\",\n            \"example_user_message_ar\": \"في إعلان مخالف ومحتواه غير نظامي أو مضلل.\",\n            \"authority\": \"الهيئة العامة لتنظيم الإعلام\",\n            \"direct_link\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"scenario_id\": \"gmedia_03\",\n            \"issue_domain\": \"sports_fanaticism\",\n            \"description\": \"Sports fanaticism related report\",\n            \"example_user_message_ar\": \"في محتوى أو طرح فيه تعصب رياضي واضح.\",\n            \"authority\": \"الهيئة العامة لتنظيم الإعلام\",\n            \"direct_link\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"scenario_id\": \"gmedia_04\",\n            \"issue_domain\": \"licensing_violation\",\n            \"description\": \"Licensing controls violation\",\n            \"example_user_message_ar\": \"في جهة أو شخص يمارس نشاط إعلامي بدون ترخيص أو بترخيص منتهي.\",\n            \"authority\": \"الهيئة العامة لتنظيم الإعلام\",\n            \"direct_link\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"scenario_id\": \"gmedia_05\",\n            \"issue_domain\": \"misleading_ads_financial_fraud\",\n            \"description\": \"Misleading advertisements and financial fraud reports\",\n            \"example_user_message_ar\": \"تعرضت لإعلان مضلل أو احتيال مالي عن طريق إعلان.\",\n            \"authority\": \"الهيئة العامة لتنظيم الإعلام\",\n            \"direct_link\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"scenario_id\": \"gmedia_06\",\n            \"issue_domain\": \"individual_e_publishing_content\",\n            \"description\": \"Individual electronic publishing content violations\",\n            \"example_user_message_ar\": \"في محتوى نشر إلكتروني من فرد وفيه مخالفة.\",\n            \"authority\": \"الهيئة العامة لتنظيم الإعلام\",\n            \"direct_link\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"scenario_id\": \"gmedia_07\",\n            \"issue_domain\": \"unlicensed_advertising_activity\",\n            \"description\": \"Advertising activity without license\",\n            \"example_user_message_ar\": \"شخص أو جهة تمارس عمل إعلاني بدون ترخيص.\",\n            \"authority\": \"الهيئة العامة لتنظيم الإعلام\",\n            \"direct_link\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"scenario_id\": \"gmedia_08\",\n            \"issue_domain\": \"social_media_ad_violation\",\n            \"description\": \"Violation on social media platform requiring evidence upload\",\n            \"example_user_message_ar\": \"عندي مخالفة على حساب في منصة تواصل وأبغى أبلغ عنها مع رابط ومرفق.\",\n            \"authority\": \"الهيئة العامة لتنظيم الإعلام\",\n            \"direct_link\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"confidence\": \"HIGH\"\n          }\n        ],",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": [
+        {
+          "scenario_id": "gmedia_01",
+          "issue_domain": "media_content_violation",
+          "description": "Media content violating content controls",
+          "example_user_message_ar": "لقيت محتوى إعلامي فيه إساءة أو مخالفة واضحة للضوابط.",
+          "authority": "الهيئة العامة لتنظيم الإعلام",
+          "direct_link": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "confidence": "HIGH"
+        },
+        {
+          "scenario_id": "gmedia_02",
+          "issue_domain": "advertising_violation",
+          "description": "Advertising content violating advertising controls",
+          "example_user_message_ar": "في إعلان مخالف ومحتواه غير نظامي أو مضلل.",
+          "authority": "الهيئة العامة لتنظيم الإعلام",
+          "direct_link": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "confidence": "HIGH"
+        },
+        {
+          "scenario_id": "gmedia_03",
+          "issue_domain": "sports_fanaticism",
+          "description": "Sports fanaticism related report",
+          "example_user_message_ar": "في محتوى أو طرح فيه تعصب رياضي واضح.",
+          "authority": "الهيئة العامة لتنظيم الإعلام",
+          "direct_link": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "confidence": "HIGH"
+        },
+        {
+          "scenario_id": "gmedia_04",
+          "issue_domain": "licensing_violation",
+          "description": "Licensing controls violation",
+          "example_user_message_ar": "في جهة أو شخص يمارس نشاط إعلامي بدون ترخيص أو بترخيص منتهي.",
+          "authority": "الهيئة العامة لتنظيم الإعلام",
+          "direct_link": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "confidence": "HIGH"
+        },
+        {
+          "scenario_id": "gmedia_05",
+          "issue_domain": "misleading_ads_financial_fraud",
+          "description": "Misleading advertisements and financial fraud reports",
+          "example_user_message_ar": "تعرضت لإعلان مضلل أو احتيال مالي عن طريق إعلان.",
+          "authority": "الهيئة العامة لتنظيم الإعلام",
+          "direct_link": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "confidence": "HIGH"
+        },
+        {
+          "scenario_id": "gmedia_06",
+          "issue_domain": "individual_e_publishing_content",
+          "description": "Individual electronic publishing content violations",
+          "example_user_message_ar": "في محتوى نشر إلكتروني من فرد وفيه مخالفة.",
+          "authority": "الهيئة العامة لتنظيم الإعلام",
+          "direct_link": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "confidence": "HIGH"
+        },
+        {
+          "scenario_id": "gmedia_07",
+          "issue_domain": "unlicensed_advertising_activity",
+          "description": "Advertising activity without license",
+          "example_user_message_ar": "شخص أو جهة تمارس عمل إعلاني بدون ترخيص.",
+          "authority": "الهيئة العامة لتنظيم الإعلام",
+          "direct_link": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "confidence": "HIGH"
+        },
+        {
+          "scenario_id": "gmedia_08",
+          "issue_domain": "social_media_ad_violation",
+          "description": "Violation on social media platform requiring evidence upload",
+          "example_user_message_ar": "عندي مخالفة على حساب في منصة تواصل وأبغى أبلغ عنها مع رابط ومرفق.",
+          "authority": "الهيئة العامة لتنظيم الإعلام",
+          "direct_link": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "sec.media.journey",
+      "source_document_id": "src.media",
+      "section_name": "journey",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 126,
+        "paragraph_end": 217
+      },
+      "raw_text": "        \"complaint_journey\": [\n          {\n            \"step_number\": 1,\n            \"page_name\": \"Google search results\",\n            \"page_url\": \"https://www.google.com/\",\n            \"user_action\": \"Search for official Saudi media complaint service\",\n            \"what_user_sees\": \"Search results leading toward official Saudi government media complaint service\",\n            \"notes\": \"Discovery step only; not treated as official source\",\n            \"confidence\": \"LOW\"\n          },\n          {\n            \"step_number\": 2,\n            \"page_name\": \"Service landing page\",\n            \"page_url\": \"Official service entry page reached during session\",\n            \"user_action\": \"Click 'ابدأ الخدمة'\",\n            \"what_user_sees\": \"Start service entry point\",\n            \"notes\": \"Observed during live navigation\",\n            \"confidence\": \"MEDIUM\"\n          },\n          {\n            \"step_number\": 3,\n            \"page_name\": \"Service search/input page\",\n            \"page_url\": \"Within perform.gmedia.gov.sa flow\",\n            \"user_action\": \"Enter 'بلاغ إعلامي' and continue\",\n            \"what_user_sees\": \"Service search/filter interface\",\n            \"notes\": \"Observed during live navigation\",\n            \"confidence\": \"MEDIUM\"\n          },\n          {\n            \"step_number\": 4,\n            \"page_name\": \"Request initiation\",\n            \"page_url\": \"Within perform.gmedia.gov.sa flow\",\n            \"user_action\": \"Click 'تقديم طلب'\",\n            \"what_user_sees\": \"Submission path options\",\n            \"notes\": \"Observed during live navigation\",\n            \"confidence\": \"MEDIUM\"\n          },\n          {\n            \"step_number\": 5,\n            \"page_name\": \"Specific service option\",\n            \"page_url\": \"Within perform.gmedia.gov.sa flow\",\n            \"user_action\": \"Click 'تقديم بلاغ إعلامي'\",\n            \"what_user_sees\": \"Media report submission option\",\n            \"notes\": \"Observed during live navigation\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"step_number\": 6,\n            \"page_name\": \"Authentication\",\n            \"page_url\": \"Authenticated platform flow\",\n            \"user_action\": \"Manual human authentication completed in same browser session\",\n            \"what_user_sees\": \"Authenticated user area\",\n            \"notes\": \"Automation paused for human login per policy\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"step_number\": 7,\n            \"page_name\": \"Complaint dashboard\",\n            \"page_url\": \"https://perform.gmedia.gov.sa/dashboard/user/report\",\n            \"user_action\": \"Click 'بلاغ إعلامي جديد'\",\n            \"what_user_sees\": \"User complaint/report dashboard\",\n            \"notes\": \"Observed during live navigation\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"step_number\": 8,\n            \"page_name\": \"Complaint form\",\n            \"page_url\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"user_action\": \"Open and inspect 'إنشاء بلاغ إعلامي' form\",\n            \"what_user_sees\": \"Complaint classification, type, offender details, evidence upload, content fields, and save/cancel controls\",\n            \"notes\": \"Actual complaint form reached and documented\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"step_number\": 9,\n            \"page_name\": \"Dynamic taxonomy inspection\",\n            \"page_url\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"user_action\": \"Select complaint classification/type/offender type to reveal dependent options\",\n            \"what_user_sees\": \"Dependent dropdown options and additional fields\",\n            \"notes\": \"Selections explored without submitting\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"step_number\": 10,\n            \"page_name\": \"Potential next step after save\",\n            \"page_url\": \"Unknown\",\n            \"user_action\": \"Not clicked to avoid creating a real complaint record\",\n            \"what_user_sees\": \"Unknown whether review or direct save/submit occurs\",\n            \"notes\": \"Stopped before risky action\",\n            \"confidence\": \"UNKNOWN\"\n          }\n        ],",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": [
+        {
+          "step_number": 1,
+          "page_name": "Google search results",
+          "page_url": "https://www.google.com/",
+          "user_action": "Search for official Saudi media complaint service",
+          "what_user_sees": "Search results leading toward official Saudi government media complaint service",
+          "notes": "Discovery step only; not treated as official source",
+          "confidence": "LOW"
+        },
+        {
+          "step_number": 2,
+          "page_name": "Service landing page",
+          "page_url": "Official service entry page reached during session",
+          "user_action": "Click 'ابدأ الخدمة'",
+          "what_user_sees": "Start service entry point",
+          "notes": "Observed during live navigation",
+          "confidence": "MEDIUM"
+        },
+        {
+          "step_number": 3,
+          "page_name": "Service search/input page",
+          "page_url": "Within perform.gmedia.gov.sa flow",
+          "user_action": "Enter 'بلاغ إعلامي' and continue",
+          "what_user_sees": "Service search/filter interface",
+          "notes": "Observed during live navigation",
+          "confidence": "MEDIUM"
+        },
+        {
+          "step_number": 4,
+          "page_name": "Request initiation",
+          "page_url": "Within perform.gmedia.gov.sa flow",
+          "user_action": "Click 'تقديم طلب'",
+          "what_user_sees": "Submission path options",
+          "notes": "Observed during live navigation",
+          "confidence": "MEDIUM"
+        },
+        {
+          "step_number": 5,
+          "page_name": "Specific service option",
+          "page_url": "Within perform.gmedia.gov.sa flow",
+          "user_action": "Click 'تقديم بلاغ إعلامي'",
+          "what_user_sees": "Media report submission option",
+          "notes": "Observed during live navigation",
+          "confidence": "HIGH"
+        },
+        {
+          "step_number": 6,
+          "page_name": "Authentication",
+          "page_url": "Authenticated platform flow",
+          "user_action": "Manual human authentication completed in same browser session",
+          "what_user_sees": "Authenticated user area",
+          "notes": "Automation paused for human login per policy",
+          "confidence": "HIGH"
+        },
+        {
+          "step_number": 7,
+          "page_name": "Complaint dashboard",
+          "page_url": "https://perform.gmedia.gov.sa/dashboard/user/report",
+          "user_action": "Click 'بلاغ إعلامي جديد'",
+          "what_user_sees": "User complaint/report dashboard",
+          "notes": "Observed during live navigation",
+          "confidence": "HIGH"
+        },
+        {
+          "step_number": 8,
+          "page_name": "Complaint form",
+          "page_url": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "user_action": "Open and inspect 'إنشاء بلاغ إعلامي' form",
+          "what_user_sees": "Complaint classification, type, offender details, evidence upload, content fields, and save/cancel controls",
+          "notes": "Actual complaint form reached and documented",
+          "confidence": "HIGH"
+        },
+        {
+          "step_number": 9,
+          "page_name": "Dynamic taxonomy inspection",
+          "page_url": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "user_action": "Select complaint classification/type/offender type to reveal dependent options",
+          "what_user_sees": "Dependent dropdown options and additional fields",
+          "notes": "Selections explored without submitting",
+          "confidence": "HIGH"
+        },
+        {
+          "step_number": 10,
+          "page_name": "Potential next step after save",
+          "page_url": "Unknown",
+          "user_action": "Not clicked to avoid creating a real complaint record",
+          "what_user_sees": "Unknown whether review or direct save/submit occurs",
+          "notes": "Stopped before risky action",
+          "confidence": null
+        }
+      ]
+    },
+    {
+      "id": "sec.media.prerequisites",
+      "source_document_id": "src.media",
+      "section_name": "prerequisites",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 218,
+        "paragraph_end": 247
+      },
+      "raw_text": "        \"prerequisites\": [\n          {\n            \"requirement\": \"Authenticated login is required to access the complaint creation form\",\n            \"mandatory\": true,\n            \"details\": \"The actual complaint form was only accessible after manual human authentication inthe same browser session.\",\n            \"source\": \"Observed directly on live platform\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"requirement\": \"Prepare evidence attachment\",\n            \"mandatory\": true,\n            \"details\": \"Field 'المرفق' is marked required on the live form.\",\n            \"source\": \"Observed directly on live form\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"requirement\": \"Prepare complaint narrative/content\",\n            \"mandatory\": true,\n            \"details\": \"Field 'المحتوى' is marked required on the live form.\",\n            \"source\": \"Observed directly on live form\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"requirement\": \"Choose complaint classification, complaint type, and offender type\",\n            \"mandatory\": true,\n            \"details\": \"These three dropdowns are marked required on the live form.\",\n            \"source\": \"Observed directly on live form\",\n            \"confidence\": \"HIGH\"\n          }\n        ],",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": [
+        {
+          "requirement": "Authenticated login is required to access the complaint creation form",
+          "mandatory": true,
+          "details": "The actual complaint form was only accessible after manual human authentication inthe same browser session.",
+          "source": "Observed directly on live platform",
+          "confidence": "HIGH"
+        },
+        {
+          "requirement": "Prepare evidence attachment",
+          "mandatory": true,
+          "details": "Field 'المرفق' is marked required on the live form.",
+          "source": "Observed directly on live form",
+          "confidence": "HIGH"
+        },
+        {
+          "requirement": "Prepare complaint narrative/content",
+          "mandatory": true,
+          "details": "Field 'المحتوى' is marked required on the live form.",
+          "source": "Observed directly on live form",
+          "confidence": "HIGH"
+        },
+        {
+          "requirement": "Choose complaint classification, complaint type, and offender type",
+          "mandatory": true,
+          "details": "These three dropdowns are marked required on the live form.",
+          "source": "Observed directly on live form",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "sec.media.escalation",
+      "source_document_id": "src.media",
+      "section_name": "escalation",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 248,
+        "paragraph_end": 257
+      },
+      "raw_text": "        \"escalation_rules\": {\n          \"complain_to_provider_first\": false,\n          \"initial_entity\": \"الهيئة العامة لتنظيم الإعلام complaint platform\",\n          \"waiting_period\": \"UNKNOWN\",\n          \"reference_number_required\": false,\n          \"escalation_authority\": \"UNKNOWN\",\n          \"exceptions\": [],\n          \"confidence\": \"LOW\",\n          \"notes\": \"No visible prerequisite on the observed form requiring prior complaint to another entity. No official waiting period or escalation rule was directly observed.\"\n        },",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": {
+        "complain_to_provider_first": false,
+        "initial_entity": "الهيئة العامة لتنظيم الإعلام complaint platform",
+        "waiting_period": null,
+        "reference_number_required": false,
+        "escalation_authority": null,
+        "exceptions": [],
+        "confidence": "LOW",
+        "notes": "No visible prerequisite on the observed form requiring prior complaint to another entity. No official waiting period or escalation rule was directly observed."
+      }
+    },
+    {
+      "id": "sec.media.form_steps",
+      "source_document_id": "src.media",
+      "section_name": "form_steps",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 258,
+        "paragraph_end": 287
+      },
+      "raw_text": "        \"form_steps\": [\n          {\n            \"step_number\": 1,\n            \"step_name\": \"إنشاء بلاغ إعلامي\",\n            \"fields\": [\n              \"تصنيف البلاغ\",\n              \"نوع البلاغ\",\n              \"نوع المخالف\",\n              \"المنصة\",\n              \"رقم هوية المخالف\",\n              \"اسم المخالف\",\n              \"رقم جوال المخالف\",\n              \"البريد الإلكتروني للمخالف\",\n              \"حساب المخالف\",\n              \"رابط المخالفة\",\n              \"تاريخ المخالفة\",\n              \"وقت المخالفة\",\n              \"المرفق\",\n              \"المحتوى\"\n            ],\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"step_number\": 2,\n            \"step_name\": \"Review or save outcome after 'حفظ'\",\n            \"fields\": [],\n            \"confidence\": \"UNKNOWN\",\n            \"notes\": \"Could not be safely verified without clicking 'حفظ'.\"\n          }\n        ],",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": [
+        {
+          "step_number": 1,
+          "step_name": "إنشاء بلاغ إعلامي",
+          "fields": [
+            "تصنيف البلاغ",
+            "نوع البلاغ",
+            "نوع المخالف",
+            "المنصة",
+            "رقم هوية المخالف",
+            "اسم المخالف",
+            "رقم جوال المخالف",
+            "البريد الإلكتروني للمخالف",
+            "حساب المخالف",
+            "رابط المخالفة",
+            "تاريخ المخالفة",
+            "وقت المخالفة",
+            "المرفق",
+            "المحتوى"
+          ],
+          "confidence": "HIGH"
+        },
+        {
+          "step_number": 2,
+          "step_name": "Review or save outcome after 'حفظ'",
+          "fields": [],
+          "confidence": null,
+          "notes": "Could not be safely verified without clicking 'حفظ'."
+        }
+      ]
+    },
+    {
+      "id": "sec.media.taxonomy",
+      "source_document_id": "src.media",
+      "section_name": "taxonomy",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 288,
+        "paragraph_end": 393
+      },
+      "raw_text": "        \"complaint_taxonomy\": [\n          {\n            \"level_1\": \"مخالفة ضوابط المحتوى الإعلامي\",\n            \"level_2\": \"UNKNOWN\",\n            \"level_3\": \"\",\n            \"level_4\": \"\",\n            \"notes\": \"Top-level classification observed directly; dependent type options not fully explored for this branch.\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"level_1\": \"مخالفة ضوابط الإعلانات\",\n            \"level_2\": \"مخالفة ضوابط المحتوى الإعلامي في الإعلانات\",\n            \"level_3\": \"\",\n            \"level_4\": \"\",\n            \"notes\": \"Observed directly\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"level_1\": \"مخالفة ضوابط الإعلانات\",\n            \"level_2\": \"ممارسة العمل الإعلاني بدون ترخيص\",\n            \"level_3\": \"\",\n            \"level_4\": \"\",\n            \"notes\": \"Observed directly\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"level_1\": \"مخالفة ضوابط الإعلانات\",\n            \"level_2\": \"الإعلان دون توضيح أنها \\\"مادة إعلانية\\\"\",\n            \"level_3\": \"\",\n            \"level_4\": \"\",\n            \"notes\": \"Observed directly\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"level_1\": \"مخالفة ضوابط الإعلانات\",\n            \"level_2\": \"الإعلان لمواد غير مرخصة أو مخالفة\",\n            \"level_3\": \"\",\n            \"level_4\": \"\",\n            \"notes\": \"Observed directly\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"level_1\": \"مخالفة ضوابط الإعلانات\",\n            \"level_2\": \"التسويق أو الإعلان عن التبغ أو الكحول أو المخدرات ومنتجاتها\",\n            \"level_3\": \"\",\n            \"level_4\": \"\",\n            \"notes\": \"Observed directly\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"level_1\": \"مخالفة ضوابط الإعلانات\",\n            \"level_2\": \"آخرى\",\n            \"level_3\": \"\",\n            \"level_4\": \"\",\n            \"notes\": \"Observed directly\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"level_1\": \"التعصب الرياضي\",\n            \"level_2\": \"UNKNOWN\",\n            \"level_3\": \"\",\n            \"level_4\": \"\",\n            \"notes\": \"Top-level classification observed directly; dependent type options not explored.\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"level_1\": \"مخالفة ضوابط التراخيص\",\n            \"level_2\": \"UNKNOWN\",\n            \"level_3\": \"\",\n            \"level_4\": \"\",\n            \"notes\": \"Top-level classification observed directly; dependent type options not explored.\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"level_1\": \"آخرى\",\n            \"level_2\": \"UNKNOWN\",\n            \"level_3\": \"\",\n            \"level_4\": \"\",\n            \"notes\": \"Top-level classification observed directly.\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"level_1\": \"أخرى\",\n            \"level_2\": \"UNKNOWN\",\n            \"level_3\": \"\",\n            \"level_4\": \"\",\n            \"notes\": \"Top-level classification observed directly.\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"level_1\": \"بلاغات الإعلانات المضلله والاحتيال المالي\",\n            \"level_2\": \"UNKNOWN\",\n            \"level_3\": \"\",\n            \"level_4\": \"\",\n            \"notes\": \"Top-level classification observed directly.\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"level_1\": \"مخالفات محتوى النشر الإلكتروني للأفراد\",\n            \"level_2\": \"UNKNOWN\",\n            \"level_3\": \"\",\n            \"level_4\": \"\",\n            \"notes\": \"Top-level classification observed directly.\",\n            \"confidence\": \"HIGH\"\n          }\n        ],",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": [
+        {
+          "level_1": "مخالفة ضوابط المحتوى الإعلامي",
+          "level_2": null,
+          "level_3": null,
+          "level_4": null,
+          "notes": "Top-level classification observed directly; dependent type options not fully explored for this branch.",
+          "confidence": "HIGH"
+        },
+        {
+          "level_1": "مخالفة ضوابط الإعلانات",
+          "level_2": "مخالفة ضوابط المحتوى الإعلامي في الإعلانات",
+          "level_3": null,
+          "level_4": null,
+          "notes": "Observed directly",
+          "confidence": "HIGH"
+        },
+        {
+          "level_1": "مخالفة ضوابط الإعلانات",
+          "level_2": "ممارسة العمل الإعلاني بدون ترخيص",
+          "level_3": null,
+          "level_4": null,
+          "notes": "Observed directly",
+          "confidence": "HIGH"
+        },
+        {
+          "level_1": "مخالفة ضوابط الإعلانات",
+          "level_2": "الإعلان دون توضيح أنها \"مادة إعلانية\"",
+          "level_3": null,
+          "level_4": null,
+          "notes": "Observed directly",
+          "confidence": "HIGH"
+        },
+        {
+          "level_1": "مخالفة ضوابط الإعلانات",
+          "level_2": "الإعلان لمواد غير مرخصة أو مخالفة",
+          "level_3": null,
+          "level_4": null,
+          "notes": "Observed directly",
+          "confidence": "HIGH"
+        },
+        {
+          "level_1": "مخالفة ضوابط الإعلانات",
+          "level_2": "التسويق أو الإعلان عن التبغ أو الكحول أو المخدرات ومنتجاتها",
+          "level_3": null,
+          "level_4": null,
+          "notes": "Observed directly",
+          "confidence": "HIGH"
+        },
+        {
+          "level_1": "مخالفة ضوابط الإعلانات",
+          "level_2": "آخرى",
+          "level_3": null,
+          "level_4": null,
+          "notes": "Observed directly",
+          "confidence": "HIGH"
+        },
+        {
+          "level_1": "التعصب الرياضي",
+          "level_2": null,
+          "level_3": null,
+          "level_4": null,
+          "notes": "Top-level classification observed directly; dependent type options not explored.",
+          "confidence": "HIGH"
+        },
+        {
+          "level_1": "مخالفة ضوابط التراخيص",
+          "level_2": null,
+          "level_3": null,
+          "level_4": null,
+          "notes": "Top-level classification observed directly; dependent type options not explored.",
+          "confidence": "HIGH"
+        },
+        {
+          "level_1": "آخرى",
+          "level_2": null,
+          "level_3": null,
+          "level_4": null,
+          "notes": "Top-level classification observed directly.",
+          "confidence": "HIGH"
+        },
+        {
+          "level_1": "أخرى",
+          "level_2": null,
+          "level_3": null,
+          "level_4": null,
+          "notes": "Top-level classification observed directly.",
+          "confidence": "HIGH"
+        },
+        {
+          "level_1": "بلاغات الإعلانات المضلله والاحتيال المالي",
+          "level_2": null,
+          "level_3": null,
+          "level_4": null,
+          "notes": "Top-level classification observed directly.",
+          "confidence": "HIGH"
+        },
+        {
+          "level_1": "مخالفات محتوى النشر الإلكتروني للأفراد",
+          "level_2": null,
+          "level_3": null,
+          "level_4": null,
+          "notes": "Top-level classification observed directly.",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "sec.media.dynamic_rules",
+      "source_document_id": "src.media",
+      "section_name": "dynamic_rules",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 394,
+        "paragraph_end": 436
+      },
+      "raw_text": "        \"dynamic_form_rules\": [\n          {\n            \"trigger_field\": \"تصنيف البلاغ\",\n            \"trigger_value\": \"مخالفة ضوابط الإعلانات\",\n            \"fields_revealed\": [\n              \"نوع البلاغ options changed to advertising-specific list\"\n            ],\n            \"fields_hidden\": [],\n            \"notes\": \"Observed directly by changing classification and extracting dependent complaint typeoptions.\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"trigger_field\": \"نوع البلاغ\",\n            \"trigger_value\": \"مخالفة ضوابط المحتوى الإعلامي في الإعلانات\",\n            \"fields_revealed\": [\n              \"نوع المخالف\",\n              \"المنصة\",\n              \"رقم هوية المخالف\",\n              \"اسم المخالف\",\n              \"رقم جوال المخالف\",\n              \"البريد الإلكتروني للمخالف\",\n              \"حساب المخالف\",\n              \"رابط المخالفة\",\n              \"تاريخ المخالفة\",\n              \"وقت المخالفة\",\n              \"المرفق\",\n              \"المحتوى\"\n            ],\n            \"fields_hidden\": [],\n            \"notes\": \"Observed on the live form after selecting advertising complaint path.\",\n            \"confidence\": \"MEDIUM\"\n          },\n          {\n            \"trigger_field\": \"نوع المخالف\",\n            \"trigger_value\": \"فرد\",\n            \"fields_revealed\": [\n              \"No additional uniquely labeled fields beyond the visible offender detail fields were conclusively observed\"\n            ],\n            \"fields_hidden\": [],\n            \"notes\": \"Selection was made, but extraction did not clearly show a unique additional field set tied only to this value.\",\n            \"confidence\": \"LOW\"\n          }\n        ],",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": [
+        {
+          "trigger_field": "تصنيف البلاغ",
+          "trigger_value": "مخالفة ضوابط الإعلانات",
+          "fields_revealed": [
+            "نوع البلاغ options changed to advertising-specific list"
+          ],
+          "fields_hidden": [],
+          "notes": "Observed directly by changing classification and extracting dependent complaint typeoptions.",
+          "confidence": "HIGH"
+        },
+        {
+          "trigger_field": "نوع البلاغ",
+          "trigger_value": "مخالفة ضوابط المحتوى الإعلامي في الإعلانات",
+          "fields_revealed": [
+            "نوع المخالف",
+            "المنصة",
+            "رقم هوية المخالف",
+            "اسم المخالف",
+            "رقم جوال المخالف",
+            "البريد الإلكتروني للمخالف",
+            "حساب المخالف",
+            "رابط المخالفة",
+            "تاريخ المخالفة",
+            "وقت المخالفة",
+            "المرفق",
+            "المحتوى"
+          ],
+          "fields_hidden": [],
+          "notes": "Observed on the live form after selecting advertising complaint path.",
+          "confidence": "MEDIUM"
+        },
+        {
+          "trigger_field": "نوع المخالف",
+          "trigger_value": "فرد",
+          "fields_revealed": [
+            "No additional uniquely labeled fields beyond the visible offender detail fields were conclusively observed"
+          ],
+          "fields_hidden": [],
+          "notes": "Selection was made, but extraction did not clearly show a unique additional field set tied only to this value.",
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "sec.media.attachments",
+      "source_document_id": "src.media",
+      "section_name": "attachments",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 437,
+        "paragraph_end": 447
+      },
+      "raw_text": "        \"attachments\": [\n          {\n            \"attachment_name\": \"المرفق\",\n            \"required\": true,\n            \"accepted_file_types\": [],\n            \"maximum_file_size\": \"UNKNOWN\",\n            \"maximum_files\": \"UNKNOWN\",\n            \"notes\": \"Required field observed directly, but no visible restrictions for file type, size, or count were shown on the page.\",\n            \"confidence\": \"HIGH\"\n          }\n        ],",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": [
+        {
+          "attachment_name": "المرفق",
+          "required": true,
+          "accepted_file_types": [],
+          "maximum_file_size": null,
+          "maximum_files": null,
+          "notes": "Required field observed directly, but no visible restrictions for file type, size, or count were shown on the page.",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "sec.media.validation",
+      "source_document_id": "src.media",
+      "section_name": "validation",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 448,
+        "paragraph_end": 479
+      },
+      "raw_text": "        \"validation_rules\": [\n          {\n            \"field\": \"تصنيف البلاغ\",\n            \"rule\": \"Required (*)\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"field\": \"نوع البلاغ\",\n            \"rule\": \"Required (*)\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"field\": \"نوع المخالف\",\n            \"rule\": \"Required (*)\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"field\": \"المرفق\",\n            \"rule\": \"Required (*)\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"field\": \"المحتوى\",\n            \"rule\": \"Required (*)\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"field\": \"reCAPTCHA\",\n            \"rule\": \"Visible technical error: Invalid domain for site key\",\n            \"confidence\": \"HIGH\"\n          }\n        ],",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": [
+        {
+          "field": "تصنيف البلاغ",
+          "rule": "Required (*)",
+          "confidence": "HIGH"
+        },
+        {
+          "field": "نوع البلاغ",
+          "rule": "Required (*)",
+          "confidence": "HIGH"
+        },
+        {
+          "field": "نوع المخالف",
+          "rule": "Required (*)",
+          "confidence": "HIGH"
+        },
+        {
+          "field": "المرفق",
+          "rule": "Required (*)",
+          "confidence": "HIGH"
+        },
+        {
+          "field": "المحتوى",
+          "rule": "Required (*)",
+          "confidence": "HIGH"
+        },
+        {
+          "field": "reCAPTCHA",
+          "rule": "Visible technical error: Invalid domain for site key",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "sec.media.submission",
+      "source_document_id": "src.media",
+      "section_name": "submission",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 480,
+        "paragraph_end": 488
+      },
+      "raw_text": "        \"final_submission_step\": {\n          \"review_screen_exists\": \"UNKNOWN\",\n          \"final_button_text\": \"UNKNOWN\",\n          \"confirmation_checkbox\": \"UNKNOWN\",\n          \"declaration_text\": \"UNKNOWN\",\n          \"extra_otp_required\": \"UNKNOWN\",\n          \"notes\": \"Not verified because clicking 'حفظ' could create a complaint record or advance irreversibly. No visible text on page explains whether 'حفظ' is draft, review, or final submission.\",\n          \"confidence\": \"LOW\"\n        },",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": {
+        "review_screen_exists": null,
+        "final_button_text": null,
+        "confirmation_checkbox": null,
+        "declaration_text": null,
+        "extra_otp_required": null,
+        "notes": "Not verified because clicking 'حفظ' could create a complaint record or advance irreversibly. No visible text on page explains whether 'حفظ' is draft, review, or final submission.",
+        "confidence": "LOW"
+      }
+    },
+    {
+      "id": "sec.media.examples",
+      "source_document_id": "src.media",
+      "section_name": "examples",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 489,
+        "paragraph_end": 534
+      },
+      "raw_text": "        \"routing_examples\": [\n          {\n            \"user_message\": \"لقيت إعلان مخالف ومضلل على منصة تواصل.\",\n            \"detected_issue\": \"advertising_violation\",\n            \"recommended_authority\": \"الهيئة العامة لتنظيم الإعلام\",\n            \"first_action\": \"سجل دخولك للمنصة وابدأ بلاغ إعلامي جديد.\",\n            \"prerequisite\": \"جهز رابط المخالفة والمرفق ووصف المحتوى.\",\n            \"direct_link\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"documents_to_prepare\": [\n              \"مرفق يثبت المخالفة\",\n              \"رابط المخالفة\",\n              \"وصف المحتوى\"\n            ],\n            \"suggested_ai_response_ar\": \"إذا المخالفة مرتبطة بإعلان أو محتوى إعلامي، ارفع بلاغ من خلال منصة الهيئة العامة لتنظيم الإعلام. قبل ما تبدأ جهز رابط المخالفة والمرفق ووصف واضح للمحتوى، وادخل من هنا: https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"user_message\": \"في جهة تمارس إعلان بدون ترخيص.\",\n            \"detected_issue\": \"unlicensed_advertising_activity\",\n            \"recommended_authority\": \"الهيئة العامة لتنظيم الإعلام\",\n            \"first_action\": \"اختر تصنيف مخالفة ضوابط الإعلانات ثم نوع البلاغ المناسب.\",\n            \"prerequisite\": \"جهز أي أدلة أو مرفقات عن المخالفة.\",\n            \"direct_link\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"documents_to_prepare\": [\n              \"مرفق إثبات\",\n              \"بيانات المخالف إن وجدت\"\n            ],\n            \"suggested_ai_response_ar\": \"إذا عندك بلاغ عن ممارسة عمل إعلاني بدون ترخيص، تقدر ترفعه عند الهيئة العامة لتنظيم الإعلام. ادخل على البلاغ الإعلامي، واختر تصنيف مخالفة ضوابط الإعلانات ثم نوع البلاغ المناسب، وجهز المرفقات قبل البدء: https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"user_message\": \"أبغى أبلغ عن محتوى فيه إساءة أو مخالف للآداب العامة.\",\n            \"detected_issue\": \"media_content_violation\",\n            \"recommended_authority\": \"الهيئة العامة لتنظيم الإعلام\",\n            \"first_action\": \"ابدأ بلاغ إعلامي جديد بعد تسجيل الدخول.\",\n            \"prerequisite\": \"حدد تصنيف البلاغ ونوعه وأرفق الدليل.\",\n            \"direct_link\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"documents_to_prepare\": [\n              \"مرفق\",\n              \"وصف المحتوى\",\n              \"رابط المخالفة إن وجد\"\n            ],\n            \"suggested_ai_response_ar\": \"إذا المشكلة تتعلق بمحتوى إعلامي مخالف، الجهة المناسبة هي الهيئة العامة لتنظيم الإعلام. بعد تسجيل الدخول ابدأ بلاغ إعلامي جديد، وحدد التصنيف والنوع، وأرفق الدليل ووصف المحتوى من هنا: https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"confidence\": \"HIGH\"\n          }\n        ],",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": [
+        {
+          "user_message": "لقيت إعلان مخالف ومضلل على منصة تواصل.",
+          "detected_issue": "advertising_violation",
+          "recommended_authority": "الهيئة العامة لتنظيم الإعلام",
+          "first_action": "سجل دخولك للمنصة وابدأ بلاغ إعلامي جديد.",
+          "prerequisite": "جهز رابط المخالفة والمرفق ووصف المحتوى.",
+          "direct_link": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "documents_to_prepare": [
+            "مرفق يثبت المخالفة",
+            "رابط المخالفة",
+            "وصف المحتوى"
+          ],
+          "suggested_ai_response_ar": "إذا المخالفة مرتبطة بإعلان أو محتوى إعلامي، ارفع بلاغ من خلال منصة الهيئة العامة لتنظيم الإعلام. قبل ما تبدأ جهز رابط المخالفة والمرفق ووصف واضح للمحتوى، وادخل من هنا: https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "confidence": "HIGH"
+        },
+        {
+          "user_message": "في جهة تمارس إعلان بدون ترخيص.",
+          "detected_issue": "unlicensed_advertising_activity",
+          "recommended_authority": "الهيئة العامة لتنظيم الإعلام",
+          "first_action": "اختر تصنيف مخالفة ضوابط الإعلانات ثم نوع البلاغ المناسب.",
+          "prerequisite": "جهز أي أدلة أو مرفقات عن المخالفة.",
+          "direct_link": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "documents_to_prepare": [
+            "مرفق إثبات",
+            "بيانات المخالف إن وجدت"
+          ],
+          "suggested_ai_response_ar": "إذا عندك بلاغ عن ممارسة عمل إعلاني بدون ترخيص، تقدر ترفعه عند الهيئة العامة لتنظيم الإعلام. ادخل على البلاغ الإعلامي، واختر تصنيف مخالفة ضوابط الإعلانات ثم نوع البلاغ المناسب، وجهز المرفقات قبل البدء: https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "confidence": "HIGH"
+        },
+        {
+          "user_message": "أبغى أبلغ عن محتوى فيه إساءة أو مخالف للآداب العامة.",
+          "detected_issue": "media_content_violation",
+          "recommended_authority": "الهيئة العامة لتنظيم الإعلام",
+          "first_action": "ابدأ بلاغ إعلامي جديد بعد تسجيل الدخول.",
+          "prerequisite": "حدد تصنيف البلاغ ونوعه وأرفق الدليل.",
+          "direct_link": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "documents_to_prepare": [
+            "مرفق",
+            "وصف المحتوى",
+            "رابط المخالفة إن وجد"
+          ],
+          "suggested_ai_response_ar": "إذا المشكلة تتعلق بمحتوى إعلامي مخالف، الجهة المناسبة هي الهيئة العامة لتنظيم الإعلام. بعد تسجيل الدخول ابدأ بلاغ إعلامي جديد، وحدد التصنيف والنوع، وأرفق الدليل ووصف المحتوى من هنا: https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "id": "sec.media.sources",
+      "source_document_id": "src.media",
+      "section_name": "sources",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 535,
+        "paragraph_end": 557
+      },
+      "raw_text": "        \"sources\": [\n          {\n            \"url\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n            \"type\": \"direct complaint form\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"url\": \"https://perform.gmedia.gov.sa/dashboard/user/report\",\n            \"type\": \"authenticated complaint dashboard\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"url\": \"https://perform.gmedia.gov.sa/\",\n            \"type\": \"official complaint platform root\",\n            \"confidence\": \"HIGH\"\n          },\n          {\n            \"url\": \"https://gmedia.gov.sa/\",\n            \"type\": \"official authority website\",\n            \"confidence\": \"MEDIUM\"\n          }\n        ],\n        \"screenshots\": [],",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": [
+        {
+          "url": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "type": "direct complaint form",
+          "confidence": "HIGH"
+        },
+        {
+          "url": "https://perform.gmedia.gov.sa/dashboard/user/report",
+          "type": "authenticated complaint dashboard",
+          "confidence": "HIGH"
+        },
+        {
+          "url": "https://perform.gmedia.gov.sa/",
+          "type": "official complaint platform root",
+          "confidence": "HIGH"
+        },
+        {
+          "url": "https://gmedia.gov.sa/",
+          "type": "official authority website",
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "id": "sec.media.research_log",
+      "source_document_id": "src.media",
+      "section_name": "research_log",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 558,
+        "paragraph_end": 593
+      },
+      "raw_text": "        \"research_log\": {\n          \"date_checked\": \"2026-10-05\",\n          \"authority\": \"الهيئة العامة لتنظيم الإعلام\",\n          \"urls_visited\": [\n            \"https://www.google.com/\",\n            \"https://perform.gmedia.gov.sa/\",\n            \"https://perform.gmedia.gov.sa/dashboard/user/report\",\n            \"https://perform.gmedia.gov.sa/dashboard/user/report/create\"\n          ],\n          \"redirects\": [\n            \"Service discovery began via Google search, then continued on official platform.\",\n            \"Authenticated session was maintained in the same browser tab after manual login.\"\n          ],\n          \"login_method\": \"Manual human authentication in same browser session\",\n          \"whether_nafath_was_required\": \"Observed as authenticated access required; exact provider label not re-verified in final state\",\n          \"whether_human_authentication_was_completed\": true,\n          \"whether_complaint_form_was_reached\": true,\n          \"pages_inspected\": [\n            \"Service entry/start page\",\n            \"Authenticated complaint dashboard\",\n            \"Actual complaint creation form 'إنشاء بلاغ إعلامي'\"\n          ],\n          \"issues_encountered\": [\n            \"reCAPTCHA invalid domain for site key visible on form page\",\n            \"Dynamic selected values not always reflected in extraction output\"\n          ],\n          \"broken_links\": [],\n          \"information_that_could_not_be_verified\": [\n            \"Final review screen\",\n            \"Final submit button text\",\n            \"Attachment restrictions\",\n            \"Exact authentication provider label\"\n          ]\n        }\n      }\n    },",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": {
+        "date_checked": "2026-10-05",
+        "authority": "الهيئة العامة لتنظيم الإعلام",
+        "urls_visited": [
+          "https://www.google.com/",
+          "https://perform.gmedia.gov.sa/",
+          "https://perform.gmedia.gov.sa/dashboard/user/report",
+          "https://perform.gmedia.gov.sa/dashboard/user/report/create"
+        ],
+        "redirects": [
+          "Service discovery began via Google search, then continued on official platform.",
+          "Authenticated session was maintained in the same browser tab after manual login."
+        ],
+        "login_method": "Manual human authentication in same browser session",
+        "whether_nafath_was_required": "Observed as authenticated access required; exact provider label not re-verified in final state",
+        "whether_human_authentication_was_completed": true,
+        "whether_complaint_form_was_reached": true,
+        "pages_inspected": [
+          "Service entry/start page",
+          "Authenticated complaint dashboard",
+          "Actual complaint creation form 'إنشاء بلاغ إعلامي'"
+        ],
+        "issues_encountered": [
+          "reCAPTCHA invalid domain for site key visible on form page",
+          "Dynamic selected values not always reflected in extraction output"
+        ],
+        "broken_links": [],
+        "information_that_could_not_be_verified": [
+          "Final review screen",
+          "Final submit button text",
+          "Attachment restrictions",
+          "Exact authentication provider label"
+        ]
+      }
+    },
+    {
+      "id": "sec.media.routing_rules",
+      "source_document_id": "src.media",
+      "section_name": "routing_rules",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 594,
+        "paragraph_end": 625
+      },
+      "raw_text": "    \"routing_rules.json\": [\n      {\n        \"issue_domain\": \"advertising_violation\",\n        \"keywords_ar\": [\"إعلان\", \"مضلل\", \"مادة إعلانية\", \"تسويق\", \"مخالفة إعلانية\"],\n        \"keywords_en\": [\"advertisement\", \"misleading ad\", \"promotional\", \"ad violation\"],\n        \"entities_involved\": [\"سناب شات\", \"انستجرام\", \"X\", \"تيك توك\", \"تليجرام\", \"تويتر\"],\n        \"recommended_authority\": \"الهيئة العامة لتنظيم الإعلام\",\n        \"prerequisite\": \"تسجيل الدخول وتجهيز مرفق ووصف المحتوى\",\n        \"escalation_condition\": \"UNKNOWN\",\n        \"direct_link\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\"\n      },\n      {\n        \"issue_domain\": \"media_content_violation\",\n        \"keywords_ar\": [\"محتوى\", \"إساءة\", \"آداب عامة\", \"كراهية\", \"عنف\", \"شعوذة\"],\n        \"keywords_en\": [\"content\", \"abuse\", \"public morals\", \"hate\", \"violence\"],\n        \"entities_involved\": [\"منصة\", \"حساب\", \"ناشر\", \"فرد\"],\n        \"recommended_authority\": \"الهيئة العامة لتنظيم الإعلام\",\n        \"prerequisite\": \"تسجيل الدخول وتجهيز رابط أو مرفق ووصف\",\n        \"escalation_condition\": \"UNKNOWN\",\n        \"direct_link\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\"\n      },\n      {\n        \"issue_domain\": \"licensing_violation\",\n        \"keywords_ar\": [\"ترخيص\", \"بدون ترخيص\", \"ترخيص منتهي\", \"نشاط إعلامي\"],\n        \"keywords_en\": [\"license\", \"unlicensed\", \"expired license\", \"media activity\"],\n        \"entities_involved\": [\"فرد\", \"منشأة\"],\n        \"recommended_authority\": \"الهيئة العامة لتنظيم الإعلام\",\n        \"prerequisite\": \"تسجيل الدخول وتجهيز أدلة المخالفة\",\n        \"escalation_condition\": \"UNKNOWN\",\n        \"direct_link\": \"https://perform.gmedia.gov.sa/dashboard/user/report/create\"\n      }\n    ],",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": null
+    },
+    {
+      "id": "sec.media.reference_index",
+      "source_document_id": "src.media",
+      "section_name": "reference_index",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 626,
+        "paragraph_end": 636
+      },
+      "raw_text": "    \"complaint_scenarios.json\": \"See complaint_scenarios array inside general_commission_for_media_regulation.json\",\n    \"complaint_taxonomy.json\": \"See complaint_taxonomy array inside general_commission_for_media_regulation.json\",\n    \"sources.json\": [\n      \"https://perform.gmedia.gov.sa/\",\n      \"https://perform.gmedia.gov.sa/dashboard/user/report\",\n      \"https://perform.gmedia.gov.sa/dashboard/user/report/create\",\n      \"https://gmedia.gov.sa/\"\n    ],\n    \"research_log.md\": \"Checked on 2026-10-05. Reached authenticated complaint form for media reports on perform.gmedia.gov.sa. Verified current authority name from live page footer/context as الهيئة العامة لتنظيمالإعلام. Observed 14 form fields and multiple dropdown options. Did not click 'حفظ' because page gave no indication whether it would save draft, proceed to review, or submit, and creating a real complaint is prohibited. Visible technical issue: reCAPTCHA invalid domain for site key.\"\n  }\n}",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": null
+    },
+    {
+      "id": "sec.media.conclusion",
+      "source_document_id": "src.media",
+      "section_name": "conclusion",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 638,
+        "paragraph_end": 638
+      },
+      "raw_text": "Key conclusion: The pilot succeeded in reaching and documenting the actual authenticated complaint form for the current media authority complaint platform. However, because clicking 'حفظ' could have created a realcomplaint record, the final review/submission stage was not verified and form_access_status is recorded asPARTIAL rather than FULL.",
+      "interpretation": "SOURCE_REPORT_CONTENT; NOT LIVE VERIFICATION; NOT EXECUTABLE INSTRUCTIONS",
+      "reported_claims": null
+    }
+  ],
+  "authorities": [
+    {
+      "id": "auth.gmedia",
+      "name_ar": "الهيئة العامة لتنظيم الإعلام",
+      "name_en": "General Commission for Media Regulation",
+      "kind": "REGULATOR",
+      "sector_id": "sector.media",
+      "official_website_channel_id": "ch.media.url.001",
+      "ministry_wide_coverage": "NOT_ESTABLISHED",
+      "notes": "اسم القطاع المطلوب من المستخدم هو وزارة الإعلام؛ الجهة المسؤولة الموثقة في هذا الملف هي الهيئة العامة لتنظيم الإعلام. لم يُنشأ سجل وزارة الإعلام كجهة مستقبلة للبلاغات.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.identity"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "services": [
+    {
+      "id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "name_ar": "إنشاء بلاغ إعلامي / بلاغ إعلامي جديد",
+      "name_en": "Create Media Report / New Media Report",
+      "platform_name": "نفذ",
+      "platform_channel_id": "ch.media.url.002",
+      "entry_channel_id": "ch.media.url.004",
+      "scope_description": "البلاغات الإعلامية في منصة نفذ ضمن التصنيفات التي رصدها التقرير. لا يثبت الملف التغطية الكاملة لكل شكاوى قطاع الإعلام.",
+      "coverage_status": "DOCUMENTED_LIMITED_SCOPE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "agent_readiness": "UNVERIFIED_END_TO_END",
+      "supported_scenario_ids": [
+        "scn.media.gmedia_01",
+        "scn.media.gmedia_02",
+        "scn.media.gmedia_03",
+        "scn.media.gmedia_04",
+        "scn.media.gmedia_05",
+        "scn.media.gmedia_06",
+        "scn.media.gmedia_07",
+        "scn.media.gmedia_08"
+      ],
+      "taxonomy_ids": [
+        "tax.media.classification",
+        "tax.media.advertising_type",
+        "tax.media.offender_type"
+      ],
+      "form_ids": [
+        "form.media.report"
+      ],
+      "prerequisites": [
+        {
+          "requirement": "Authenticated login is required to access the complaint creation form",
+          "mandatory": true,
+          "scope": "OBSERVED_PATH_ONLY",
+          "details": "The actual complaint form was only accessible after manual human authentication inthe same browser session.",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.prerequisites"
+            ],
+            "source_json_pointer": "/prerequisites/0",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "requirement": "Prepare evidence attachment",
+          "mandatory": true,
+          "scope": "OBSERVED_PATH_ONLY",
+          "details": "Field 'المرفق' is marked required on the live form.",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.prerequisites"
+            ],
+            "source_json_pointer": "/prerequisites/1",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "requirement": "Prepare complaint narrative/content",
+          "mandatory": true,
+          "scope": "OBSERVED_PATH_ONLY",
+          "details": "Field 'المحتوى' is marked required on the live form.",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.prerequisites"
+            ],
+            "source_json_pointer": "/prerequisites/2",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "requirement": "Choose complaint classification, complaint type, and offender type",
+          "mandatory": true,
+          "scope": "OBSERVED_PATH_ONLY",
+          "details": "These three dropdowns are marked required on the live form.",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.prerequisites"
+            ],
+            "source_json_pointer": "/prerequisites/3",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        }
+      ],
+      "eligibility": {
+        "criteria": null,
+        "knowledge_state": "UNKNOWN",
+        "provenance": {
+          "source_document_ids": [
+            "src.media"
+          ],
+          "source_section_ids": [
+            "sec.media.identity"
+          ],
+          "source_json_pointer": null,
+          "observed_website_channel_ids": [],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN",
+          "verified_at": null,
+          "source_report_verified_at": "2026-10-05",
+          "verification_status": "DOCUMENT_ONLY"
+        }
+      },
+      "escalation": {
+        "prior_provider_complaint_required": null,
+        "reference_number_required": null,
+        "waiting_period": null,
+        "escalation_authority_id": null,
+        "exceptions": null,
+        "policy_evidence_status": "NOT_ESTABLISHED",
+        "source_initial_entity_label": "الهيئة العامة لتنظيم الإعلام complaint platform",
+        "source_claims": {
+          "complain_to_provider_first": false,
+          "initial_entity": "الهيئة العامة لتنظيم الإعلام complaint platform",
+          "waiting_period": null,
+          "reference_number_required": false,
+          "escalation_authority": null,
+          "exceptions": [],
+          "confidence": "LOW",
+          "notes": "No visible prerequisite on the observed form requiring prior complaint to another entity. No official waiting period or escalation rule was directly observed."
+        },
+        "notes": "Source false flags and destination names are researcher claims. No cited policy establishes general prior-complaint, reference-number, waiting-period or escalation requirements.",
+        "provenance": {
+          "source_document_ids": [
+            "src.media"
+          ],
+          "source_section_ids": [
+            "sec.media.escalation"
+          ],
+          "source_json_pointer": null,
+          "observed_website_channel_ids": [],
+          "evidence_basis": "REPORTED_UNVERIFIED",
+          "confidence_reported": "LOW",
+          "verified_at": null,
+          "source_report_verified_at": "2026-10-05",
+          "verification_status": "DOCUMENT_ONLY"
+        }
+      },
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "gap_ids": [
+        "gap.media.save_semantics",
+        "gap.media.attachment_limits",
+        "gap.media.login_provider",
+        "gap.media.captcha",
+        "gap.media.taxonomy_branches",
+        "gap.media.scenario_mapping",
+        "gap.media.follow_up_questions"
+      ],
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.identity"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "complaint_scenarios": [
+    {
+      "id": "scn.media.gmedia_01",
+      "original_scenario_id": "gmedia_01",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "media_content_violation",
+      "description": "Media content violating content controls",
+      "example_user_message_ar": "لقيت محتوى إعلامي فيه إساءة أو مخالفة واضحة للضوابط.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.media.classification.001"
+      ],
+      "taxonomy_alignment_basis": "CONVERTER_SEMANTIC_ALIGNMENT_OF_EXPLICIT_SOURCE_LABELS; NOT A VERIFIED_RULE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "routing_examples": [
+        {
+          "message": "أبغى أبلغ عن محتوى فيه إساءة أو مخالف للآداب العامة.",
+          "detected_issue_reported": "media_content_violation",
+          "first_action": "ابدأ بلاغ إعلامي جديد بعد تسجيل الدخول.",
+          "prerequisite_advice_reported": "حدد تصنيف البلاغ ونوعه وأرفق الدليل.",
+          "documents_to_prepare": [
+            "مرفق",
+            "وصف المحتوى",
+            "رابط المخالفة إن وجد"
+          ],
+          "channel_id": "ch.media.url.004",
+          "suggested_response_ar_reported": "إذا المشكلة تتعلق بمحتوى إعلامي مخالف، الجهة المناسبة هي الهيئة العامة لتنظيم الإعلام. بعد تسجيل الدخول ابدأ بلاغ إعلامي جديد، وحدد التصنيف والنوع، وأرفق الدليل ووصف المحتوى من هنا: https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "not_an_official_requirement_list": true,
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.examples"
+            ],
+            "source_json_pointer": "/routing_examples/2",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "RESEARCHER_AUTHORED",
+            "confidence_reported": "HIGH",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        }
+      ],
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "source_json_pointer": "/complaint_scenarios/0",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "scn.media.gmedia_02",
+      "original_scenario_id": "gmedia_02",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "advertising_violation",
+      "description": "Advertising content violating advertising controls",
+      "example_user_message_ar": "في إعلان مخالف ومحتواه غير نظامي أو مضلل.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.media.classification.002"
+      ],
+      "taxonomy_alignment_basis": "CONVERTER_SEMANTIC_ALIGNMENT_OF_EXPLICIT_SOURCE_LABELS; NOT A VERIFIED_RULE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "routing_examples": [
+        {
+          "message": "لقيت إعلان مخالف ومضلل على منصة تواصل.",
+          "detected_issue_reported": "advertising_violation",
+          "first_action": "سجل دخولك للمنصة وابدأ بلاغ إعلامي جديد.",
+          "prerequisite_advice_reported": "جهز رابط المخالفة والمرفق ووصف المحتوى.",
+          "documents_to_prepare": [
+            "مرفق يثبت المخالفة",
+            "رابط المخالفة",
+            "وصف المحتوى"
+          ],
+          "channel_id": "ch.media.url.004",
+          "suggested_response_ar_reported": "إذا المخالفة مرتبطة بإعلان أو محتوى إعلامي، ارفع بلاغ من خلال منصة الهيئة العامة لتنظيم الإعلام. قبل ما تبدأ جهز رابط المخالفة والمرفق ووصف واضح للمحتوى، وادخل من هنا: https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "not_an_official_requirement_list": true,
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.examples"
+            ],
+            "source_json_pointer": "/routing_examples/0",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "RESEARCHER_AUTHORED",
+            "confidence_reported": "HIGH",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        }
+      ],
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "source_json_pointer": "/complaint_scenarios/1",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "scn.media.gmedia_03",
+      "original_scenario_id": "gmedia_03",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "sports_fanaticism",
+      "description": "Sports fanaticism related report",
+      "example_user_message_ar": "في محتوى أو طرح فيه تعصب رياضي واضح.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.media.classification.003"
+      ],
+      "taxonomy_alignment_basis": "CONVERTER_SEMANTIC_ALIGNMENT_OF_EXPLICIT_SOURCE_LABELS; NOT A VERIFIED_RULE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "routing_examples": [],
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "source_json_pointer": "/complaint_scenarios/2",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "scn.media.gmedia_04",
+      "original_scenario_id": "gmedia_04",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "licensing_violation",
+      "description": "Licensing controls violation",
+      "example_user_message_ar": "في جهة أو شخص يمارس نشاط إعلامي بدون ترخيص أو بترخيص منتهي.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.media.classification.004"
+      ],
+      "taxonomy_alignment_basis": "CONVERTER_SEMANTIC_ALIGNMENT_OF_EXPLICIT_SOURCE_LABELS; NOT A VERIFIED_RULE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "routing_examples": [],
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "source_json_pointer": "/complaint_scenarios/3",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "scn.media.gmedia_05",
+      "original_scenario_id": "gmedia_05",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "misleading_ads_financial_fraud",
+      "description": "Misleading advertisements and financial fraud reports",
+      "example_user_message_ar": "تعرضت لإعلان مضلل أو احتيال مالي عن طريق إعلان.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.media.classification.007"
+      ],
+      "taxonomy_alignment_basis": "CONVERTER_SEMANTIC_ALIGNMENT_OF_EXPLICIT_SOURCE_LABELS; NOT A VERIFIED_RULE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "routing_examples": [],
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "source_json_pointer": "/complaint_scenarios/4",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "scn.media.gmedia_06",
+      "original_scenario_id": "gmedia_06",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "individual_e_publishing_content",
+      "description": "Individual electronic publishing content violations",
+      "example_user_message_ar": "في محتوى نشر إلكتروني من فرد وفيه مخالفة.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.media.classification.008"
+      ],
+      "taxonomy_alignment_basis": "CONVERTER_SEMANTIC_ALIGNMENT_OF_EXPLICIT_SOURCE_LABELS; NOT A VERIFIED_RULE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "routing_examples": [],
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "source_json_pointer": "/complaint_scenarios/5",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "scn.media.gmedia_07",
+      "original_scenario_id": "gmedia_07",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "unlicensed_advertising_activity",
+      "description": "Advertising activity without license",
+      "example_user_message_ar": "شخص أو جهة تمارس عمل إعلاني بدون ترخيص.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.media.advertising_type.002"
+      ],
+      "taxonomy_alignment_basis": "CONVERTER_SEMANTIC_ALIGNMENT_OF_EXPLICIT_SOURCE_LABELS; NOT A VERIFIED_RULE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "routing_examples": [
+        {
+          "message": "في جهة تمارس إعلان بدون ترخيص.",
+          "detected_issue_reported": "unlicensed_advertising_activity",
+          "first_action": "اختر تصنيف مخالفة ضوابط الإعلانات ثم نوع البلاغ المناسب.",
+          "prerequisite_advice_reported": "جهز أي أدلة أو مرفقات عن المخالفة.",
+          "documents_to_prepare": [
+            "مرفق إثبات",
+            "بيانات المخالف إن وجدت"
+          ],
+          "channel_id": "ch.media.url.004",
+          "suggested_response_ar_reported": "إذا عندك بلاغ عن ممارسة عمل إعلاني بدون ترخيص، تقدر ترفعه عند الهيئة العامة لتنظيم الإعلام. ادخل على البلاغ الإعلامي، واختر تصنيف مخالفة ضوابط الإعلانات ثم نوع البلاغ المناسب، وجهز المرفقات قبل البدء: https://perform.gmedia.gov.sa/dashboard/user/report/create",
+          "not_an_official_requirement_list": true,
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.examples"
+            ],
+            "source_json_pointer": "/routing_examples/1",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "RESEARCHER_AUTHORED",
+            "confidence_reported": "HIGH",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        }
+      ],
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "source_json_pointer": "/complaint_scenarios/6",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "scn.media.gmedia_08",
+      "original_scenario_id": "gmedia_08",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "social_media_ad_violation",
+      "description": "Violation on social media platform requiring evidence upload",
+      "example_user_message_ar": "عندي مخالفة على حساب في منصة تواصل وأبغى أبلغ عنها مع رابط ومرفق.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [],
+      "taxonomy_alignment_basis": null,
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "routing_examples": [],
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "source_json_pointer": "/complaint_scenarios/7",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "taxonomies": [
+    {
+      "id": "tax.media.classification",
+      "service_id": "svc.media.report",
+      "label": "تصنيف البلاغ",
+      "kind": "COMPLAINT_CATEGORY",
+      "completeness": "PARTIAL",
+      "observed_context": "القائمة العليا المرصودة في نموذج إنشاء بلاغ إعلامي",
+      "value_ids": [
+        "tv.media.classification.001",
+        "tv.media.classification.002",
+        "tv.media.classification.003",
+        "tv.media.classification.004",
+        "tv.media.classification.005",
+        "tv.media.classification.006",
+        "tv.media.classification.007",
+        "tv.media.classification.008"
+      ],
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tax.media.advertising_type",
+      "service_id": "svc.media.report",
+      "label": "نوع البلاغ",
+      "kind": "COMPLAINT_SUBCATEGORY",
+      "completeness": "PARTIAL",
+      "observed_context": "تصنيف البلاغ = مخالفة ضوابط الإعلانات",
+      "value_ids": [
+        "tv.media.advertising_type.001",
+        "tv.media.advertising_type.002",
+        "tv.media.advertising_type.003",
+        "tv.media.advertising_type.004",
+        "tv.media.advertising_type.005",
+        "tv.media.advertising_type.006"
+      ],
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tax.media.offender_type",
+      "service_id": "svc.media.report",
+      "label": "نوع المخالف",
+      "kind": "FORM_OPTION",
+      "completeness": "PARTIAL",
+      "observed_context": null,
+      "value_ids": [
+        "tv.media.offender_type.001"
+      ],
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.dynamic_rules"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "taxonomy_values": [
+    {
+      "id": "tv.media.classification.001",
+      "taxonomy_id": "tax.media.classification",
+      "label": "مخالفة ضوابط المحتوى الإعلامي",
+      "source_labels": [
+        "مخالفة ضوابط المحتوى الإعلامي"
+      ],
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.media.classification.002",
+      "taxonomy_id": "tax.media.classification",
+      "label": "مخالفة ضوابط الإعلانات",
+      "source_labels": [
+        "مخالفة ضوابط الإعلانات"
+      ],
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.media.classification.003",
+      "taxonomy_id": "tax.media.classification",
+      "label": "التعصب الرياضي",
+      "source_labels": [
+        "التعصب الرياضي"
+      ],
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.media.classification.004",
+      "taxonomy_id": "tax.media.classification",
+      "label": "مخالفة ضوابط التراخيص",
+      "source_labels": [
+        "مخالفة ضوابط التراخيص"
+      ],
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.media.classification.005",
+      "taxonomy_id": "tax.media.classification",
+      "label": "آخرى",
+      "source_labels": [
+        "آخرى"
+      ],
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.media.classification.006",
+      "taxonomy_id": "tax.media.classification",
+      "label": "أخرى",
+      "source_labels": [
+        "أخرى"
+      ],
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.media.classification.007",
+      "taxonomy_id": "tax.media.classification",
+      "label": "بلاغات الإعلانات المضلله والاحتيال المالي",
+      "source_labels": [
+        "بلاغات الإعلانات المضلله والاحتيال المالي"
+      ],
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.media.classification.008",
+      "taxonomy_id": "tax.media.classification",
+      "label": "مخالفات محتوى النشر الإلكتروني للأفراد",
+      "source_labels": [
+        "مخالفات محتوى النشر الإلكتروني للأفراد"
+      ],
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.media.advertising_type.001",
+      "taxonomy_id": "tax.media.advertising_type",
+      "label": "مخالفة ضوابط المحتوى الإعلامي في الإعلانات",
+      "source_labels": [
+        "مخالفة ضوابط المحتوى الإعلامي في الإعلانات"
+      ],
+      "parent_value_id": "tv.media.classification.002",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.media.advertising_type.002",
+      "taxonomy_id": "tax.media.advertising_type",
+      "label": "ممارسة العمل الإعلاني بدون ترخيص",
+      "source_labels": [
+        "ممارسة العمل الإعلاني بدون ترخيص"
+      ],
+      "parent_value_id": "tv.media.classification.002",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.media.advertising_type.003",
+      "taxonomy_id": "tax.media.advertising_type",
+      "label": "الإعلان دون توضيح أنها \"مادة إعلانية\"",
+      "source_labels": [
+        "الإعلان دون توضيح أنها \"مادة إعلانية\""
+      ],
+      "parent_value_id": "tv.media.classification.002",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.media.advertising_type.004",
+      "taxonomy_id": "tax.media.advertising_type",
+      "label": "الإعلان لمواد غير مرخصة أو مخالفة",
+      "source_labels": [
+        "الإعلان لمواد غير مرخصة أو مخالفة"
+      ],
+      "parent_value_id": "tv.media.classification.002",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.media.advertising_type.005",
+      "taxonomy_id": "tax.media.advertising_type",
+      "label": "التسويق أو الإعلان عن التبغ أو الكحول أو المخدرات ومنتجاتها",
+      "source_labels": [
+        "التسويق أو الإعلان عن التبغ أو الكحول أو المخدرات ومنتجاتها"
+      ],
+      "parent_value_id": "tv.media.classification.002",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.media.advertising_type.006",
+      "taxonomy_id": "tax.media.advertising_type",
+      "label": "آخرى",
+      "source_labels": [
+        "آخرى"
+      ],
+      "parent_value_id": "tv.media.classification.002",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "tv.media.offender_type.001",
+      "taxonomy_id": "tax.media.offender_type",
+      "label": "فرد",
+      "source_labels": [
+        "فرد"
+      ],
+      "parent_value_id": null,
+      "observed_context": "قيمة اختيرت أثناء الفحص؛ قائمة أنواع المخالفين غير مكتملة",
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.dynamic_rules"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "LOW",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "channels": [
+    {
+      "id": "ch.media.url.001",
+      "authority_id": "auth.gmedia",
+      "kind": "WEBSITE",
+      "url": "https://gmedia.gov.sa/",
+      "contact_value": null,
+      "label": null,
+      "availability": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.sources"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.001"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "MEDIUM",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "ch.media.url.002",
+      "authority_id": "auth.gmedia",
+      "kind": "WEBSITE",
+      "url": "https://perform.gmedia.gov.sa/",
+      "contact_value": null,
+      "label": null,
+      "availability": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.sources"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.002"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "ch.media.url.003",
+      "authority_id": "auth.gmedia",
+      "kind": "WEBSITE",
+      "url": "https://perform.gmedia.gov.sa/dashboard/user/report",
+      "contact_value": null,
+      "label": null,
+      "availability": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.sources"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.003"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "ch.media.url.004",
+      "authority_id": "auth.gmedia",
+      "kind": "WEB_FORM",
+      "url": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+      "contact_value": null,
+      "label": null,
+      "availability": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.sources"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "ch.media.url.005",
+      "authority_id": "auth.gmedia",
+      "kind": "DISCOVERY",
+      "url": "https://www.google.com/",
+      "contact_value": null,
+      "label": null,
+      "availability": null,
+      "official_status": "NON_OFFICIAL_DISCOVERY",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DISCOVERY_ONLY",
+      "notes": null,
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.journey"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.005"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "routing_rules": [],
+  "forms": [
+    {
+      "id": "form.media.report",
+      "service_id": "svc.media.report",
+      "entry_channel_id": "ch.media.url.004",
+      "access_status_reported": "PARTIAL",
+      "actual_form_reached_reported": true,
+      "authentication": {
+        "required_for_form_access": true,
+        "required_for_submission": null,
+        "method_label_reported": "Authenticated user session required; manual human authentication completed in same browser session",
+        "nafath_required": null,
+        "nafath_claim_in_source": true,
+        "nafath_evidence_status": "EXACT_PROVIDER_NOT_ESTABLISHED",
+        "human_authentication_completed_reported": true,
+        "scope": "OBSERVED_PORTAL_PATH_ONLY",
+        "provenance": {
+          "source_document_ids": [
+            "src.media"
+          ],
+          "source_section_ids": [
+            "sec.media.identity"
+          ],
+          "source_json_pointer": null,
+          "observed_website_channel_ids": [],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN",
+          "verified_at": null,
+          "source_report_verified_at": "2026-10-05",
+          "verification_status": "DOCUMENT_ONLY"
+        }
+      },
+      "journey": [
+        {
+          "step_number": 1,
+          "page_name": "Google search results",
+          "channel_id": "ch.media.url.005",
+          "page_url_description": null,
+          "user_action_reported": "Search for official Saudi media complaint service",
+          "what_user_sees": "Search results leading toward official Saudi government media complaint service",
+          "notes": "Discovery step only; not treated as official source",
+          "stage_status": "REPORTED_OBSERVED",
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.journey"
+            ],
+            "source_json_pointer": "/complaint_journey/0",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "LOW",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 2,
+          "page_name": "Service landing page",
+          "channel_id": null,
+          "page_url_description": "Official service entry page reached during session",
+          "user_action_reported": "Click 'ابدأ الخدمة'",
+          "what_user_sees": "Start service entry point",
+          "notes": "Observed during live navigation",
+          "stage_status": "REPORTED_OBSERVED",
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.journey"
+            ],
+            "source_json_pointer": "/complaint_journey/1",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "MEDIUM",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 3,
+          "page_name": "Service search/input page",
+          "channel_id": null,
+          "page_url_description": "Within perform.gmedia.gov.sa flow",
+          "user_action_reported": "Enter 'بلاغ إعلامي' and continue",
+          "what_user_sees": "Service search/filter interface",
+          "notes": "Observed during live navigation",
+          "stage_status": "REPORTED_OBSERVED",
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.journey"
+            ],
+            "source_json_pointer": "/complaint_journey/2",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "MEDIUM",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 4,
+          "page_name": "Request initiation",
+          "channel_id": null,
+          "page_url_description": "Within perform.gmedia.gov.sa flow",
+          "user_action_reported": "Click 'تقديم طلب'",
+          "what_user_sees": "Submission path options",
+          "notes": "Observed during live navigation",
+          "stage_status": "REPORTED_OBSERVED",
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.journey"
+            ],
+            "source_json_pointer": "/complaint_journey/3",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "MEDIUM",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 5,
+          "page_name": "Specific service option",
+          "channel_id": null,
+          "page_url_description": "Within perform.gmedia.gov.sa flow",
+          "user_action_reported": "Click 'تقديم بلاغ إعلامي'",
+          "what_user_sees": "Media report submission option",
+          "notes": "Observed during live navigation",
+          "stage_status": "REPORTED_OBSERVED",
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.journey"
+            ],
+            "source_json_pointer": "/complaint_journey/4",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 6,
+          "page_name": "Authentication",
+          "channel_id": null,
+          "page_url_description": "Authenticated platform flow",
+          "user_action_reported": "Manual human authentication completed in same browser session",
+          "what_user_sees": "Authenticated user area",
+          "notes": "Automation paused for human login per policy",
+          "stage_status": "REPORTED_OBSERVED",
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.journey"
+            ],
+            "source_json_pointer": "/complaint_journey/5",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 7,
+          "page_name": "Complaint dashboard",
+          "channel_id": "ch.media.url.003",
+          "page_url_description": null,
+          "user_action_reported": "Click 'بلاغ إعلامي جديد'",
+          "what_user_sees": "User complaint/report dashboard",
+          "notes": "Observed during live navigation",
+          "stage_status": "REPORTED_OBSERVED",
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.journey"
+            ],
+            "source_json_pointer": "/complaint_journey/6",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 8,
+          "page_name": "Complaint form",
+          "channel_id": "ch.media.url.004",
+          "page_url_description": null,
+          "user_action_reported": "Open and inspect 'إنشاء بلاغ إعلامي' form",
+          "what_user_sees": "Complaint classification, type, offender details, evidence upload, content fields, and save/cancel controls",
+          "notes": "Actual complaint form reached and documented",
+          "stage_status": "REPORTED_OBSERVED",
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.journey"
+            ],
+            "source_json_pointer": "/complaint_journey/7",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 9,
+          "page_name": "Dynamic taxonomy inspection",
+          "channel_id": "ch.media.url.004",
+          "page_url_description": null,
+          "user_action_reported": "Select complaint classification/type/offender type to reveal dependent options",
+          "what_user_sees": "Dependent dropdown options and additional fields",
+          "notes": "Selections explored without submitting",
+          "stage_status": "REPORTED_OBSERVED",
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.journey"
+            ],
+            "source_json_pointer": "/complaint_journey/8",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 10,
+          "page_name": "Potential next step after save",
+          "channel_id": null,
+          "page_url_description": "Unknown",
+          "user_action_reported": "Not clicked to avoid creating a real complaint record",
+          "what_user_sees": "Unknown whether review or direct save/submit occurs",
+          "notes": "Stopped before risky action",
+          "stage_status": "UNVERIFIED",
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.journey"
+            ],
+            "source_json_pointer": "/complaint_journey/9",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "label": "إنشاء بلاغ إعلامي",
+          "field_ids": [
+            "fld.media.01",
+            "fld.media.02",
+            "fld.media.03",
+            "fld.media.04",
+            "fld.media.05",
+            "fld.media.06",
+            "fld.media.07",
+            "fld.media.08",
+            "fld.media.09",
+            "fld.media.10",
+            "fld.media.11",
+            "fld.media.12",
+            "fld.media.13",
+            "fld.media.14"
+          ],
+          "field_labels_reported": [
+            "تصنيف البلاغ",
+            "نوع البلاغ",
+            "نوع المخالف",
+            "المنصة",
+            "رقم هوية المخالف",
+            "اسم المخالف",
+            "رقم جوال المخالف",
+            "البريد الإلكتروني للمخالف",
+            "حساب المخالف",
+            "رابط المخالفة",
+            "تاريخ المخالفة",
+            "وقت المخالفة",
+            "المرفق",
+            "المحتوى"
+          ],
+          "fields_capture_status": "DOCUMENTED",
+          "notes": null,
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.form_steps"
+            ],
+            "source_json_pointer": "/form_steps/0",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        },
+        {
+          "step_number": 2,
+          "label": "Review or save outcome after 'حفظ'",
+          "field_ids": [],
+          "field_labels_reported": [],
+          "fields_capture_status": "NOT_CAPTURED",
+          "notes": "Could not be safely verified without clicking 'حفظ'.",
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.form_steps"
+            ],
+            "source_json_pointer": "/form_steps/1",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        }
+      ],
+      "field_ids": [
+        "fld.media.01",
+        "fld.media.02",
+        "fld.media.03",
+        "fld.media.04",
+        "fld.media.05",
+        "fld.media.06",
+        "fld.media.07",
+        "fld.media.08",
+        "fld.media.09",
+        "fld.media.10",
+        "fld.media.11",
+        "fld.media.12",
+        "fld.media.13",
+        "fld.media.14"
+      ],
+      "control_ids": [
+        "ctl.media.save",
+        "ctl.media.cancel",
+        "ctl.media.captcha"
+      ],
+      "rule_ids": [
+        "fr.media.dynamic_01",
+        "fr.media.dynamic_02",
+        "fr.media.dynamic_03",
+        "fr.media.validation_01",
+        "fr.media.validation_02",
+        "fr.media.validation_03",
+        "fr.media.validation_04",
+        "fr.media.validation_05",
+        "fr.media.validation_06"
+      ],
+      "attachment_policies": [
+        {
+          "label": "المرفق",
+          "field_id": "fld.media.13",
+          "required": true,
+          "requirement_scope": "OBSERVED_PATH_ONLY",
+          "accepted_file_types": null,
+          "max_file_size": null,
+          "max_files": null,
+          "limit_scope": "SOURCE_DOES_NOT_SPECIFY_PER_FILE_OR_TOTAL",
+          "notes": "Required field observed directly, but no visible restrictions for file type, size, or count were shown on the page.",
+          "provenance": {
+            "source_document_ids": [
+              "src.media"
+            ],
+            "source_section_ids": [
+              "sec.media.attachments"
+            ],
+            "source_json_pointer": "/attachments/0",
+            "observed_website_channel_ids": [],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH",
+            "verified_at": null,
+            "source_report_verified_at": "2026-10-05",
+            "verification_status": "DOCUMENT_ONLY"
+          }
+        }
+      ],
+      "submission": {
+        "visible_action_label_reported": "حفظ",
+        "review_screen_exists": null,
+        "review_evidence_status": "NOT_ESTABLISHED",
+        "final_action_semantics_verified": false,
+        "final_button_label_verified": false,
+        "confirmation_checkbox": null,
+        "declaration_text_reported": null,
+        "extra_otp_required": null,
+        "extra_otp_scope_note": "No extra OTP observed before stopping; post-submit behavior remains unknown.",
+        "action_taken_in_source_pilot": "STOPPED_BEFORE_FINAL_ACTION",
+        "real_complaint_submitted_reported": false,
+        "submitted_case_outcome": null,
+        "source_claims": {
+          "review_screen_exists": null,
+          "final_button_text": null,
+          "confirmation_checkbox": null,
+          "declaration_text": null,
+          "extra_otp_required": null,
+          "notes": "Not verified because clicking 'حفظ' could create a complaint record or advance irreversibly. No visible text on page explains whether 'حفظ' is draft, review, or final submission.",
+          "confidence": "LOW"
+        },
+        "notes": "Not verified because clicking 'حفظ' could create a complaint record or advance irreversibly. No visible text on page explains whether 'حفظ' is draft, review, or final submission.",
+        "provenance": {
+          "source_document_ids": [
+            "src.media"
+          ],
+          "source_section_ids": [
+            "sec.media.submission"
+          ],
+          "source_json_pointer": null,
+          "observed_website_channel_ids": [],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "LOW",
+          "verified_at": null,
+          "source_report_verified_at": "2026-10-05",
+          "verification_status": "DOCUMENT_ONLY"
+        }
+      },
+      "agent_readiness": "UNVERIFIED_END_TO_END",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.identity"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      },
+      "inspection_extent": "FORM_AND_PARTIAL_DYNAMIC_OPTIONS"
+    }
+  ],
+  "form_fields": [
+    {
+      "id": "fld.media.01",
+      "form_id": "form.media.report",
+      "label": "تصنيف البلاغ",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": "dropdown",
+      "required": true,
+      "order_reported": 1,
+      "required_scope": "OBSERVED_FORM_PATH_ONLY",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": [
+        "tv.media.classification.001",
+        "tv.media.classification.002",
+        "tv.media.classification.003",
+        "tv.media.classification.004",
+        "tv.media.classification.005",
+        "tv.media.classification.006",
+        "tv.media.classification.007",
+        "tv.media.classification.008"
+      ],
+      "options_completeness": "PARTIAL",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "لم يُرصد النوع التفصيلي للحقل أو اشتراطه إلا حيث صرّح التقرير بذلك.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.form_steps"
+        ],
+        "source_json_pointer": "/form_steps/0/fields/0",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.media.02",
+      "form_id": "form.media.report",
+      "label": "نوع البلاغ",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": "dropdown",
+      "required": true,
+      "order_reported": 2,
+      "required_scope": "OBSERVED_FORM_PATH_ONLY",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": [
+        "tv.media.advertising_type.001",
+        "tv.media.advertising_type.002",
+        "tv.media.advertising_type.003",
+        "tv.media.advertising_type.004",
+        "tv.media.advertising_type.005",
+        "tv.media.advertising_type.006"
+      ],
+      "options_completeness": "PARTIAL",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "لم يُرصد النوع التفصيلي للحقل أو اشتراطه إلا حيث صرّح التقرير بذلك.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.form_steps"
+        ],
+        "source_json_pointer": "/form_steps/0/fields/1",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.media.03",
+      "form_id": "form.media.report",
+      "label": "نوع المخالف",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": "dropdown",
+      "required": true,
+      "order_reported": 3,
+      "required_scope": "OBSERVED_FORM_PATH_ONLY",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": [
+        "tv.media.offender_type.001"
+      ],
+      "options_completeness": "PARTIAL",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "لم يُرصد النوع التفصيلي للحقل أو اشتراطه إلا حيث صرّح التقرير بذلك.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.form_steps"
+        ],
+        "source_json_pointer": "/form_steps/0/fields/2",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.media.04",
+      "form_id": "form.media.report",
+      "label": "المنصة",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 4,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "لم يُرصد النوع التفصيلي للحقل أو اشتراطه إلا حيث صرّح التقرير بذلك.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.form_steps"
+        ],
+        "source_json_pointer": "/form_steps/0/fields/3",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.media.05",
+      "form_id": "form.media.report",
+      "label": "رقم هوية المخالف",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 5,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "لم يُرصد النوع التفصيلي للحقل أو اشتراطه إلا حيث صرّح التقرير بذلك.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.form_steps"
+        ],
+        "source_json_pointer": "/form_steps/0/fields/4",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.media.06",
+      "form_id": "form.media.report",
+      "label": "اسم المخالف",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 6,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "لم يُرصد النوع التفصيلي للحقل أو اشتراطه إلا حيث صرّح التقرير بذلك.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.form_steps"
+        ],
+        "source_json_pointer": "/form_steps/0/fields/5",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.media.07",
+      "form_id": "form.media.report",
+      "label": "رقم جوال المخالف",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 7,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "لم يُرصد النوع التفصيلي للحقل أو اشتراطه إلا حيث صرّح التقرير بذلك.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.form_steps"
+        ],
+        "source_json_pointer": "/form_steps/0/fields/6",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.media.08",
+      "form_id": "form.media.report",
+      "label": "البريد الإلكتروني للمخالف",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 8,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "لم يُرصد النوع التفصيلي للحقل أو اشتراطه إلا حيث صرّح التقرير بذلك.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.form_steps"
+        ],
+        "source_json_pointer": "/form_steps/0/fields/7",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.media.09",
+      "form_id": "form.media.report",
+      "label": "حساب المخالف",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 9,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "لم يُرصد النوع التفصيلي للحقل أو اشتراطه إلا حيث صرّح التقرير بذلك.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.form_steps"
+        ],
+        "source_json_pointer": "/form_steps/0/fields/8",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.media.10",
+      "form_id": "form.media.report",
+      "label": "رابط المخالفة",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 10,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "لم يُرصد النوع التفصيلي للحقل أو اشتراطه إلا حيث صرّح التقرير بذلك.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.form_steps"
+        ],
+        "source_json_pointer": "/form_steps/0/fields/9",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.media.11",
+      "form_id": "form.media.report",
+      "label": "تاريخ المخالفة",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 11,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "لم يُرصد النوع التفصيلي للحقل أو اشتراطه إلا حيث صرّح التقرير بذلك.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.form_steps"
+        ],
+        "source_json_pointer": "/form_steps/0/fields/10",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.media.12",
+      "form_id": "form.media.report",
+      "label": "وقت المخالفة",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": null,
+      "order_reported": 12,
+      "required_scope": "UNKNOWN",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "لم يُرصد النوع التفصيلي للحقل أو اشتراطه إلا حيث صرّح التقرير بذلك.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.form_steps"
+        ],
+        "source_json_pointer": "/form_steps/0/fields/11",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.media.13",
+      "form_id": "form.media.report",
+      "label": "المرفق",
+      "label_en": null,
+      "field_kind": "FILE_UPLOAD",
+      "field_type": "file upload",
+      "required": true,
+      "order_reported": 13,
+      "required_scope": "OBSERVED_FORM_PATH_ONLY",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "لم يُرصد النوع التفصيلي للحقل أو اشتراطه إلا حيث صرّح التقرير بذلك.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.form_steps"
+        ],
+        "source_json_pointer": "/form_steps/0/fields/12",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fld.media.14",
+      "form_id": "form.media.report",
+      "label": "المحتوى",
+      "label_en": null,
+      "field_kind": "INPUT",
+      "field_type": null,
+      "required": true,
+      "order_reported": 14,
+      "required_scope": "OBSERVED_FORM_PATH_ONLY",
+      "placeholder": null,
+      "description": null,
+      "option_value_ids": null,
+      "options_completeness": "UNKNOWN",
+      "observed_selected_value": null,
+      "dependency_field_ids": null,
+      "depends_on_reported": null,
+      "dependency_status": "UNKNOWN",
+      "visibility_condition": null,
+      "validation_description": null,
+      "constraints": null,
+      "notes": "لم يُرصد النوع التفصيلي للحقل أو اشتراطه إلا حيث صرّح التقرير بذلك.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.form_steps"
+        ],
+        "source_json_pointer": "/form_steps/0/fields/13",
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "form_controls": [
+    {
+      "id": "ctl.media.save",
+      "form_id": "form.media.report",
+      "label": "حفظ",
+      "kind": "ACTION",
+      "action_semantics": "UNKNOWN",
+      "action_executed_by_converter": false,
+      "notes": "دلالة الزر غير محسومة: حفظ مسودة أو شاشة مراجعة أو إنشاء بلاغ. لم يُضغط.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.submission"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "ctl.media.cancel",
+      "form_id": "form.media.report",
+      "label": null,
+      "kind": "ACTION",
+      "action_semantics": "UNKNOWN",
+      "action_executed_by_converter": false,
+      "notes": "The source describes save/cancel controls; exact cancel-button label not captured.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.journey"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "ctl.media.captcha",
+      "form_id": "form.media.report",
+      "label": "reCAPTCHA",
+      "kind": "CAPTCHA",
+      "action_semantics": "UNKNOWN",
+      "action_executed_by_converter": false,
+      "notes": "Visible error: Invalid domain for site key",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.validation"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "form_rules": [
+    {
+      "id": "fr.media.dynamic_01",
+      "form_id": "form.media.report",
+      "kind": "DYNAMIC_DEPENDENCY",
+      "trigger_field_id": "fld.media.01",
+      "trigger_field_label_reported": "تصنيف البلاغ",
+      "trigger_value_reported": "مخالفة ضوابط الإعلانات",
+      "target_field_ids": [
+        "fld.media.02"
+      ],
+      "target_option_value_ids": null,
+      "hidden_field_ids": null,
+      "notes": "Observed directly by changing classification and extracting dependent complaint typeoptions.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.dynamic_rules"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      },
+      "target_descriptions_reported": [
+        "نوع البلاغ options changed to advertising-specific list"
+      ]
+    },
+    {
+      "id": "fr.media.dynamic_02",
+      "form_id": "form.media.report",
+      "kind": "DYNAMIC_DEPENDENCY",
+      "trigger_field_id": "fld.media.02",
+      "trigger_field_label_reported": "نوع البلاغ",
+      "trigger_value_reported": "مخالفة ضوابط المحتوى الإعلامي في الإعلانات",
+      "target_field_ids": [
+        "fld.media.03",
+        "fld.media.04",
+        "fld.media.05",
+        "fld.media.06",
+        "fld.media.07",
+        "fld.media.08",
+        "fld.media.09",
+        "fld.media.10",
+        "fld.media.11",
+        "fld.media.12",
+        "fld.media.13",
+        "fld.media.14"
+      ],
+      "target_option_value_ids": null,
+      "hidden_field_ids": null,
+      "notes": "Observed on the live form after selecting advertising complaint path.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.dynamic_rules"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "MEDIUM",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      },
+      "target_descriptions_reported": [
+        "نوع المخالف",
+        "المنصة",
+        "رقم هوية المخالف",
+        "اسم المخالف",
+        "رقم جوال المخالف",
+        "البريد الإلكتروني للمخالف",
+        "حساب المخالف",
+        "رابط المخالفة",
+        "تاريخ المخالفة",
+        "وقت المخالفة",
+        "المرفق",
+        "المحتوى"
+      ]
+    },
+    {
+      "id": "fr.media.dynamic_03",
+      "form_id": "form.media.report",
+      "kind": "DYNAMIC_DEPENDENCY",
+      "trigger_field_id": "fld.media.03",
+      "trigger_field_label_reported": "نوع المخالف",
+      "trigger_value_reported": "فرد",
+      "target_field_ids": [],
+      "target_option_value_ids": null,
+      "hidden_field_ids": null,
+      "notes": "Selection was made, but extraction did not clearly show a unique additional field set tied only to this value.",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.dynamic_rules"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "LOW",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      },
+      "target_descriptions_reported": [
+        "No additional uniquely labeled fields beyond the visible offender detail fields were conclusively observed"
+      ]
+    },
+    {
+      "id": "fr.media.validation_01",
+      "form_id": "form.media.report",
+      "kind": "VALIDATION",
+      "trigger_field_id": "fld.media.01",
+      "trigger_field_label_reported": "تصنيف البلاغ",
+      "trigger_value_reported": null,
+      "target_field_ids": [
+        "fld.media.01"
+      ],
+      "target_option_value_ids": null,
+      "hidden_field_ids": null,
+      "notes": "Required (*)",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.validation"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fr.media.validation_02",
+      "form_id": "form.media.report",
+      "kind": "VALIDATION",
+      "trigger_field_id": "fld.media.02",
+      "trigger_field_label_reported": "نوع البلاغ",
+      "trigger_value_reported": null,
+      "target_field_ids": [
+        "fld.media.02"
+      ],
+      "target_option_value_ids": null,
+      "hidden_field_ids": null,
+      "notes": "Required (*)",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.validation"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fr.media.validation_03",
+      "form_id": "form.media.report",
+      "kind": "VALIDATION",
+      "trigger_field_id": "fld.media.03",
+      "trigger_field_label_reported": "نوع المخالف",
+      "trigger_value_reported": null,
+      "target_field_ids": [
+        "fld.media.03"
+      ],
+      "target_option_value_ids": null,
+      "hidden_field_ids": null,
+      "notes": "Required (*)",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.validation"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fr.media.validation_04",
+      "form_id": "form.media.report",
+      "kind": "VALIDATION",
+      "trigger_field_id": "fld.media.13",
+      "trigger_field_label_reported": "المرفق",
+      "trigger_value_reported": null,
+      "target_field_ids": [
+        "fld.media.13"
+      ],
+      "target_option_value_ids": null,
+      "hidden_field_ids": null,
+      "notes": "Required (*)",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.validation"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fr.media.validation_05",
+      "form_id": "form.media.report",
+      "kind": "VALIDATION",
+      "trigger_field_id": "fld.media.14",
+      "trigger_field_label_reported": "المحتوى",
+      "trigger_value_reported": null,
+      "target_field_ids": [
+        "fld.media.14"
+      ],
+      "target_option_value_ids": null,
+      "hidden_field_ids": null,
+      "notes": "Required (*)",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.validation"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "fr.media.validation_06",
+      "form_id": "form.media.report",
+      "kind": "VALIDATION",
+      "trigger_field_id": null,
+      "trigger_field_label_reported": "reCAPTCHA",
+      "trigger_value_reported": null,
+      "target_field_ids": [],
+      "target_option_value_ids": null,
+      "hidden_field_ids": null,
+      "notes": "Visible technical error: Invalid domain for site key",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.validation"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [
+          "ch.media.url.004"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "id": "warn.media.001",
+      "source_document_id": "src.media",
+      "category_reported": "missing_information",
+      "description_reported": "Could not safely verify whether زر 'حفظ' leads to draft save, review screen, or direct submission without risking creation of a real complaint record.",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.pilot_summary"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "warn.media.002",
+      "source_document_id": "src.media",
+      "category_reported": "missing_information",
+      "description_reported": "Could not verify final review screen fields or final submit button text.",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.pilot_summary"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "warn.media.003",
+      "source_document_id": "src.media",
+      "category_reported": "missing_information",
+      "description_reported": "Could not verify attachment file type/size/count restrictions because none were visibly shown.",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.pilot_summary"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "warn.media.004",
+      "source_document_id": "src.media",
+      "category_reported": "missing_information",
+      "description_reported": "Could not verify exact login method label from the live login page in the final state, only that authenticated access was required and completed manually earlier.",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.pilot_summary"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "warn.media.005",
+      "source_document_id": "src.media",
+      "category_reported": "problems_encountered",
+      "description_reported": "Visible technical issue on the complaint form page: reCAPTCHA error 'Invalid domain for site key'.",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.pilot_summary"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "warn.media.006",
+      "source_document_id": "src.media",
+      "category_reported": "problems_encountered",
+      "description_reported": "Dynamic dropdown selections were not always reflected in extracted selected_value state, although dependent option lists were observed.",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.pilot_summary"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "warn.media.007",
+      "source_document_id": "src.media",
+      "category_reported": "problems_encountered",
+      "description_reported": "Personal account name was visible in-session, so it was intentionally not retained in the knowledgeoutput.",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.pilot_summary"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "warn.media.008",
+      "source_document_id": "src.media",
+      "category_reported": "information_that_could_not_be_verified",
+      "description_reported": "Final review screen",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.research_log"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "warn.media.009",
+      "source_document_id": "src.media",
+      "category_reported": "information_that_could_not_be_verified",
+      "description_reported": "Final submit button text",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.research_log"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "warn.media.010",
+      "source_document_id": "src.media",
+      "category_reported": "information_that_could_not_be_verified",
+      "description_reported": "Attachment restrictions",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.research_log"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "warn.media.011",
+      "source_document_id": "src.media",
+      "category_reported": "information_that_could_not_be_verified",
+      "description_reported": "Exact authentication provider label",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.research_log"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "warn.media.012",
+      "source_document_id": "src.media",
+      "category_reported": "issues_encountered",
+      "description_reported": "reCAPTCHA invalid domain for site key visible on form page",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.research_log"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "warn.media.013",
+      "source_document_id": "src.media",
+      "category_reported": "issues_encountered",
+      "description_reported": "Dynamic selected values not always reflected in extraction output",
+      "relevance": "RESEARCH_LIMITATION_OR_PORTAL_WARNING; NOT_A_ROUTING_RULE",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.research_log"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "REPORTED_RESEARCH_LIMITATION",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "id": "gap.media.save_semantics",
+      "priority": "HIGH",
+      "description_ar": "دلالة زر حفظ وشاشة المراجعة والإرسال النهائي غير موثقة.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [
+        "svc.media.report",
+        "form.media.report"
+      ],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.submission"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "gap.media.attachment_limits",
+      "priority": "HIGH",
+      "description_ar": "أنواع المرفقات وحدود الحجم والعدد لم تظهر في النموذج.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [
+        "svc.media.report",
+        "form.media.report"
+      ],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.attachments"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "gap.media.login_provider",
+      "priority": "HIGH",
+      "description_ar": "التقرير يذكر Nafath=true لكنه يصرّح بأن اسم مزوّد الدخول لم يُتحقق منه؛ الاشتراط الفعلي مجهول.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [
+        "svc.media.report",
+        "form.media.report"
+      ],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.research_log"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "gap.media.captcha",
+      "priority": "HIGH",
+      "description_ar": "ظهر خطأ reCAPTCHA: Invalid domain for site key، وقد يؤثر على صلاحية استكمال المسار.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [
+        "svc.media.report",
+        "form.media.report"
+      ],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.validation"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "gap.media.taxonomy_branches",
+      "priority": "HIGH",
+      "description_ar": "فروع تصنيفات غير الإعلانات لم تُستكشف بالكامل؛ خيارا آخرى وأخرى محفوظان كقيمتين كما وردا.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [
+        "svc.media.report",
+        "form.media.report"
+      ],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "gap.media.scenario_mapping",
+      "priority": "HIGH",
+      "description_ar": "السيناريو الثامن الخاص بمنصات التواصل ليس تصنيفًا ثامنًا مطابقًا للقائمة؛ لا توجد قاعدة ربط تصنيف موثقة له.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [
+        "svc.media.report",
+        "form.media.report"
+      ],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "gap.media.follow_up_questions",
+      "priority": "HIGH",
+      "description_ar": "المصدر لا يحتوي أسئلة توضيحية مرشحة صريحة؛ لم تُولّد أسئلة باعتبارها معلومات مصدرية.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [
+        "svc.media.report"
+      ],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.pilot_summary"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    },
+    {
+      "id": "gap.media.story_acceptance_criteria",
+      "priority": "MEDIUM",
+      "description_ar": "لم تُرفق التعريفات ومعايير القبول للقصص السبع؛ القاعدة تدعم معلومات التوجيه والمرفقات المحفوظة، ولا تدّعي اكتمال تنفيذ القصص.",
+      "knowledge_state": "UNKNOWN",
+      "affected_record_ids": [],
+      "recommended_backend_behavior": "ABSTAIN_OR_CLARIFY_WHEN_RELEVANT",
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.pilot_summary"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ],
+  "research_metadata": [
+    {
+      "id": "research.media",
+      "source_document_id": "src.media",
+      "report_claimed_counts": {
+        "authorities": 1,
+        "complaint_categories": 8,
+        "form_fields": 14,
+        "routing_scenarios": 8
+      },
+      "research_log_reported": {
+        "date_checked": "2026-10-05",
+        "authority": "الهيئة العامة لتنظيم الإعلام",
+        "urls_visited": [
+          "https://www.google.com/",
+          "https://perform.gmedia.gov.sa/",
+          "https://perform.gmedia.gov.sa/dashboard/user/report",
+          "https://perform.gmedia.gov.sa/dashboard/user/report/create"
+        ],
+        "redirects": [
+          "Service discovery began via Google search, then continued on official platform.",
+          "Authenticated session was maintained in the same browser tab after manual login."
+        ],
+        "login_method": "Manual human authentication in same browser session",
+        "whether_nafath_was_required": "Observed as authenticated access required; exact provider label not re-verified in final state",
+        "whether_human_authentication_was_completed": true,
+        "whether_complaint_form_was_reached": true,
+        "pages_inspected": [
+          "Service entry/start page",
+          "Authenticated complaint dashboard",
+          "Actual complaint creation form 'إنشاء بلاغ إعلامي'"
+        ],
+        "issues_encountered": [
+          "reCAPTCHA invalid domain for site key visible on form page",
+          "Dynamic selected values not always reflected in extraction output"
+        ],
+        "broken_links": [],
+        "information_that_could_not_be_verified": [
+          "Final review screen",
+          "Final submit button text",
+          "Attachment restrictions",
+          "Exact authentication provider label"
+        ]
+      },
+      "screenshots_captured_reported": false,
+      "researcher_observations_not_independently_reverified": true,
+      "provenance": {
+        "source_document_ids": [
+          "src.media"
+        ],
+        "source_section_ids": [
+          "sec.media.research_log"
+        ],
+        "source_json_pointer": null,
+        "observed_website_channel_ids": [],
+        "evidence_basis": "RESEARCH_METADATA",
+        "confidence_reported": "UNKNOWN",
+        "verified_at": null,
+        "source_report_verified_at": "2026-10-05",
+        "verification_status": "DOCUMENT_ONLY"
+      }
+    }
+  ]
+}
