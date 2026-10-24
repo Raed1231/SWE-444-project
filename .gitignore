@@ -1,0 +1,32 @@
+# Credentials and local environments
+**/.env
+**/.env.*
+!**/.env.example
+**/.venv/
+**/node_modules/
+
+# Generated files and test output
+**/dist/
+**/dist-ssr/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.vite/
+**/.cache/
+**/.coverage
+**/htmlcov/
+**/coverage/
+**/tests/reports/
+*.log
+*.bak
+.DS_Store
+
+# Archive and macOS metadata
+**/__MACOSX/
+**/._*
+
+# Local editor metadata
+**/.idea/
+**/.vscode/

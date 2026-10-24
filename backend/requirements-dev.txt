@@ -1,0 +1,3 @@
+-r requirements.lock
+# Needed only to regenerate static synthetic PDF fixtures, not to run tests.
+reportlab==4.4.9

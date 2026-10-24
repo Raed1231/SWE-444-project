@@ -1,0 +1,51 @@
+{
+  "synthetic": true,
+  "contains_personal_data": false,
+  "facts": {
+    "document_type": "Private-school fee change notice",
+    "previous_tuition_sar": 10000,
+    "new_tuition_sar": 12000,
+    "change_percent": 20,
+    "issue": "A parent disputes the increase and requests review of tuition fees."
+  },
+  "files": {
+    "image.png": {
+      "bytes": 82683,
+      "sha256": "32ab936bcdf0c33cc254838ddf62ed0f37eb37c484f4b2a5db97acdda029a9f6",
+      "width": 1275,
+      "height": 1650,
+      "format": "PNG"
+    },
+    "image-only.pdf": {
+      "bytes": 99810,
+      "sha256": "7f912871e2f0e3824857f351c42235a216b073b9b6265ff1dc3305c87682ef27",
+      "pages": 1,
+      "text_characters": 0,
+      "embedded_images": 1,
+      "encrypted": false
+    },
+    "text-based.pdf": {
+      "bytes": 2075,
+      "sha256": "5df0c6e05aed7a50853604738f42d0a8fd0f8b3cfb6c363a9b6ce47d223c86b8",
+      "pages": 1,
+      "text_characters": 360,
+      "embedded_images": 0,
+      "encrypted": false
+    },
+    "blank.png": {
+      "bytes": 1884,
+      "sha256": "3838173660a5a69c9a5e48a2b8b2a49ec95fb666ff9d1407257962890b704e0f",
+      "width": 600,
+      "height": 600,
+      "format": "PNG"
+    },
+    "corrupt.pdf": {
+      "bytes": 55,
+      "sha256": "3eb43dce37aa889ef88bb56cd148e1beb54461d4396b8695b6b61ed2eace8eb2"
+    },
+    "corrupt.png": {
+      "bytes": 42,
+      "sha256": "f41a98476666999351301a001ad249361f81b28d5cab33d0a7ccfa37df9de949"
+    }
+  }
+}

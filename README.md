@@ -1,226 +1,202 @@
-# Wajhah | وجهة
+# Wajhah — Sprint 1 Source Code
 
-**A smart platform for routing complaints to the right authority.**
+Wajhah is an Arabic/English prototype that helps users identify a documented Saudi government complaint service. Users describe their issue, optionally attach evidence, and receive a supported service suggestion, a clarification question, or an explanation that the current knowledge base does not cover the case.
 
-People in Saudi Arabia are often unsure which authority handles their complaint or what they need to submit. Wajhah lets a user describe their problem in Arabic or English, identifies the responsible authority and complaint service, shows the official channel with its steps and required documents, and produces an editable formal complaint draft.
+The application uses React 19 and Vite on the frontend, FastAPI on the backend, and Gemini for analysis. Suggested routes must pass a strict local knowledge-base (KB) guard before a service is displayed. Wajhah provides guidance; it does not submit complaints or operate government portals.
 
-> SWE 444 – Software Construction Laboratory · King Saud University · College of Computer and Information Sciences · Academic year 2026–2027
-> Instructor and supervisor: Abdulaziz Alrashidi
+## Sprint 1 scope
 
----
+| User story | Implemented behavior |
+| --- | --- |
+| US-12 | Submit a free-text complaint with input validation. |
+| US-13 | Optionally upload one attachment. |
+| US-14 | Validate attachment format, size, and parsed contents. |
+| US-16 | Analyze Arabic/English complaints and readable image/PDF evidence. |
+| US-17 | Ask clarification questions and retain relevant complaint facts. |
+| US-19 | Identify a supported KB service and reject unverifiable routes. |
+| US-21 | Display the registered official submission link for a matched service. |
 
-## Contents
+The existing post-result conversation also supports questions, fact corrections, and safe reassessment without uploading the original attachment again. These descriptions explain implemented functionality; they are not a guarantee of every live AI answer.
 
-- [Pilot authorities](#pilot-authorities)
-- [Tech stack](#tech-stack)
-- [Architecture](#architecture)
-- [Repository structure](#repository-structure)
-- [Getting started](#getting-started)
-- [Knowledge base](#knowledge-base)
-- [Scope](#scope)
-- [Team](#team)
-- [Links](#links)
+Only the services and scenarios in `backend/wajhah_routing_kb.json` are supported. `NOT_SUPPORTED` means the available KB cannot support a route; it does not establish official ineligibility. Accounts, official complaint drafting, government login, automated submission, portal navigation, and complaint-status tracking are outside this version.
 
----
+## Project structure
 
-## Pilot authorities
-
-The first release covers five sectors. Each one currently documents a **limited** complaint path. Problems outside these paths get a clarification request or a clear "unsupported" result.
-
-| Sector (Sprint 0) | Receiving authority / platform | Documented path | Service ID |
-|---|---|---|---|
-| Ministry of Education | Tawasul — `tawasul.moe.gov.sa` | General complaint tickets (34 service options; private-school tuition fees verified end to end) | `svc.education.complaint` |
-| Ministry of Health | 937 platform — `937.moh.gov.sa` | Technical reports and access issues | `svc.health.technical_access` |
-| Ministry of Human Resources and Social Development | Beneficiary self-service — `selfservice.hrsd.gov.sa` | Complaints about 19911 call-centre staff | `svc.hrsd.call_center_19911` |
-| Ministry of Investment | Invest Saudi Contact Us — `investsaudi.sa` | Service complaints | `svc.investment.service_contact` |
-| Ministry of Investment | MISA — `misa.gov.sa/complaints` | Integrity and violations reports only | `svc.investment.integrity` |
-| Ministry of Media | General Commission for Media Regulation — `perform.gmedia.gov.sa` | Media content and advertising reports | `svc.media.report` |
-
-Media complaints are received by the **General Commission for Media Regulation**, not by the ministry itself. The knowledge base stores the sector name and the receiving authority separately.
-
-## Tech stack
-
-| Layer | Technology |
-|---|---|
-| Frontend | React + Vite, Node.js 22 |
-| Backend | Python 3.12, FastAPI, Uvicorn |
-| Database | PostgreSQL 16 (separate development and test databases) |
-| AI provider | Gemini 3.8 Flash |
-| Browser automation | [Browser Use](https://github.com/browser-use/browser-use), one visible local session at a time |
-
-## Architecture
-
-Wajhah is a layered, multi-tier application. A React frontend talks over HTTPS to a single FastAPI backend made of seven internal modules.
-
-```
-React frontend
-      │  HTTPS / REST
-      ▼
-FastAPI backend
- ├── Authentication module      → accounts, OTP, sessions
- ├── Complaint module           → requests, drafts, history, ratings
- ├── AI module                  → topic/fact extraction, follow-ups, drafting ──► OpenAI
- ├── Authority Knowledge module → routing rules, channels, steps, required items
- ├── Attachment module          → validation, extraction, private storage
- ├── Agent module               → approved submissions ──► Browser Use ──► official portal
- └── Notification module        → in-app notice after confirmed submission
-      │
-      ▼
-PostgreSQL 16 + private file storage
-```
-
-Key rules:
-
-- The AI chooses from the knowledge base. Channels, URLs, and requirements always come from stored records, never from model output.
-- Every AI-assisted submission requires an active account, an eligible supported service, complete mandatory items, and explicit user approval. Any change to the reviewed package requires fresh approval.
-- Government authentication is completed by the user on the official site. Wajhah never stores government credentials.
-- Success is shown only after official confirmation. An uncertain result is reported as **unconfirmed**.
-
-## Repository structure
-
-Planned layout (update as the code lands):
-
-```
-Wajhah/
-├── frontend/                 React + Vite app
+```text
+Wajhah-Sprint1-Final/
+├── README.md
+├── .gitignore
 ├── backend/
-│   ├── app/
-│   │   ├── auth/
-│   │   ├── complaints/
-│   │   ├── ai/
-│   │   ├── knowledge/
-│   │   ├── attachments/
-│   │   ├── agent/
-│   │   └── notifications/
-│   ├── knowledge_base/       Pilot knowledge base (see below)
-│   └── tests/
-├── docs/
-│   ├── training/             TR-01 … TR-08 exercises
-│   └── testing/              Test evidence, one record per AC ID
-└── README.md
+│   ├── main.py                         # FastAPI endpoints
+│   ├── ai_gateway.py                   # Gemini calls and transient-error handling
+│   ├── conversation.py                 # Contextual follow-up and reassessment
+│   ├── kb_routing.py, contracts.py      # KB guard and structured contracts
+│   ├── attachments.py, attachment_analysis.py
+│   ├── body_limits.py, request_deadline.py
+│   ├── observability.py, service_errors.py
+│   ├── wajhah_routing_kb.json
+│   ├── requirements.txt, requirements.lock, requirements-dev.txt
+│   ├── .env.example
+│   └── tests/                          # Automated tests and synthetic fixtures
+└── frontend/
+    ├── src/                            # Interface, API client, state, translations
+    ├── public/wajhah.svg                # Application branding
+    ├── tests/
+    ├── .gitignore
+    ├── index.html, package.json, package-lock.json
+    └── vite.config.js, eslint.config.js
 ```
 
-## Getting started
+## Prerequisites
 
-> The exact commands and dependency locks are produced by **TF-02**. Update this section once the first integration build passes.
+- Python 3.12, Node.js 24, and npm.
+- Internet access to install dependencies; a Gemini API key and provider connectivity for live AI requests.
+- No API key, external fonts, Poppler, or ReportLab are needed for the normal offline tests.
 
-### Prerequisites
+Commands below are for macOS/Linux and start from the extracted project root unless stated otherwise. On Windows, use `py -3.12` to create the environment and `.venv\Scripts\python.exe` instead of `.venv/bin/python`. Windows has not been verified in this delivery.
 
-- Node.js 22
-- Python 3.12
-- PostgreSQL 16
-- An Google Gemini API key (for AI features)
+## Installation and configuration
 
-### 1. Clone
+From the project root:
 
-```bash
-git clone https://github.com/Raed1231/Wajhah.git
-cd Wajhah
-```
-
-### 2. Backend
-
-```bash
+```sh
 cd backend
-python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-cp .env.example .env             # then fill in the values
-uvicorn app.main:app --reload
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements.lock
+.venv/bin/python -m pip check
 ```
 
-Expected `.env` values:
+`requirements.txt` records direct dependencies; `requirements.lock` pins the complete tested environment. Use the lockfile for reproducible installation.
 
-| Variable | Purpose |
-|---|---|
-| `DATABASE_URL` | Development database connection string |
-| `TEST_DATABASE_URL` | Separate test database |
-| `GEMINI_API_KEY` | AI provider key; never commit it |
-| `GEMINI_MODEL` | `Gemini 3.8 Flash` |
-| `UPLOAD_DIR` | Private attachment directory, outside any public folder |
+For live analysis, copy `backend/.env.example` to `backend/.env` only if no local `.env` already exists. Enter your own key in that file. The example contains:
 
-### 3. Validate the knowledge base
-
-```bash
-python backend/knowledge_base/validate_kb.py backend/knowledge_base
+```dotenv
+GEMINI_API_KEY=
+GEMINI_MODEL=gemini-3.5-flash-lite
+WAJHAH_COMBINED_ATTACHMENTS=false
 ```
 
-### 4. Frontend
+The model and default attachment pipeline are preserved from the working application. Keep the key on the backend: never put it in React, a `VITE_` variable, source code, command history, or Git. Offline tests require no `.env` file.
 
-```bash
+In a second terminal, from the project root:
+
+```sh
 cd frontend
-npm ci
+npm ci --include=dev --include=optional
+```
+
+## Run locally
+
+In the backend terminal, from `backend/`:
+
+```sh
+.venv/bin/python -m uvicorn main:app --host 127.0.0.1 --port 8000
+```
+
+In the frontend terminal, from `frontend/`:
+
+```sh
 npm run dev
 ```
 
-## Knowledge base
+Open [Wajhah](http://127.0.0.1:5173/). The backend exposes [health](http://127.0.0.1:8000/health) and [API documentation](http://127.0.0.1:8000/docs). Use one server per port. `/health` tests API liveness, not Gemini availability.
 
-The pilot knowledge base (schema version `1.0.0`, converted 2026-10-12) lives in `backend/knowledge_base/`. It was converted from the five authority research reports into UTF-8 JSON and is validated against a JSON Schema (Draft 2020-12).
+Vite forwards `/api/*` to the backend on port 8000. A production frontend build needs a running backend and an equivalent same-origin `/api` proxy; `npm run preview` alone does not run the full application. No deployment is included.
 
-| File | Contents |
-|---|---|
-| `wajhah_knowledge_base.json` | All five authorities combined. **The backend loads this file only.** Loading the per-authority files as well duplicates records |
-| `wajhah_education.json`, `wajhah_health.json`, `wajhah_hrsd.json`, `wajhah_investment.json`, `wajhah_media.json` | One file per sector, for review and editing |
-| `wajhah_kb.schema.json` | JSON Schema shared by the combined and per-sector files |
-| `validate_kb.py` | Checks schema, unique IDs, references, cycles, and that the combined file matches the per-sector files. Standard library only; exits `0` on success, `1` on failure |
-| `conversion_audit.json` | Record counts, ambiguous conversions, omissions, and known gaps |
-| `validation_report.json` | Latest validator results |
+## Basic usage
 
-Main record types: `authorities`, `sectors`, `services`, `channels`, `complaint_scenarios`, `taxonomies` / `taxonomy_values`, `routing_rules`, `forms` / `form_fields` / `form_controls` / `form_rules`, and the provenance records `source_documents`, `source_sections`, `warnings`, and `gaps`.
+1. Choose Arabic or English; the interface uses RTL or LTR accordingly.
+2. Enter a complaint and optionally select one supported attachment.
+3. Submit once and wait for the response. Loading begins immediately; additional messages appear after 10 and 30 seconds without percentage progress.
+4. Read `MATCHED`, `NEEDS_CLARIFICATION`, or `NOT_SUPPORTED`. For a match, use the displayed official link; for clarification, answer in the conversation.
+5. Ask related questions, correct facts, or request reassessment. Use the new-complaint control to reset the current context. Failed requests retain the draft, attachment, and conversation for a manual retry.
 
-Current coverage: 5 authorities, 6 services, 22 channels, 13 scenarios, 130 taxonomy values, 67 form fields, 5 routing rules, plus 40 recorded gaps.
+## Routing, attachments, and conversation
 
-Loading example:
+Service IDs, names, and official links are resolved from the local KB rather than trusted from model-generated text. A schema-valid response can still be rejected by the KB guard. Unsupported or invalid decisions are not silently accepted. Link records include their verification status; they are not a promise that every portal or procedure is currently unchanged.
 
-```python
-import json
+| Endpoint | Purpose |
+| --- | --- |
+| `GET /health` | Liveness without an AI call. |
+| `POST /route` | JSON `{message, history}` for initial routing and legacy clarification. |
+| `POST /attachments` | Multipart `file` validation without AI. |
+| `POST /analyze-attachment` | Multipart `complaint, file` for attachment analysis. |
+| `POST /route-with-attachment` | Multipart `complaint, file`; returns routing, attachment analysis, and conversation context. |
+| `POST /follow-up` | JSON `{message, conversation_token, language}` for contextual follow-up. |
 
-with open("wajhah_knowledge_base.json", encoding="utf-8") as f:
-    kb = json.load(f)
+The frontend uses `/route` or `/route-with-attachment` initially, then `/follow-up`, including clarification replies. Extracted facts remain available without re-uploading. Once follow-up starts, keep using its conversation token instead of switching back to legacy history, which may omit fact updates. A different attachment requires a new complaint.
 
-services = {s["id"]: s for s in kb["services"]}
-channels = {c["id"]: c for c in kb["channels"]}
+Ordinary questions do not automatically reroute a complaint. Fact updates and reassessment pass the same KB guard. Answers distinguish documented information from general preparation advice and unavailable information; they must not invent official documents, fees, eligibility rules, or portal procedures. The initial routing answer or official service names may remain Arabic; contextual follow-up supports both languages.
 
-service = services["svc.education.complaint"]
-url = channels[service["entry_channel_id"]]["url"]
+- Complaint text: 1–6,000 characters.
+- Attachment: one non-empty JPG/JPEG/PNG/PDF, at most 5 MiB. PDFs must be unencrypted and contain 1–20 pages; static images are limited to 20 million pixels. Parsed contents and signatures are checked, not only extensions.
+- Conversation: at most 40 follow-ups and 12 fact updates, with bounded recent history. Resource limits reject excessive context instead of silently dropping important facts.
+- The signed conversation token is not encrypted and contains complaint context. Do not share or log it. It expires after two hours and is invalidated by a backend restart. This prototype uses one backend process, not independently keyed workers.
+- Conversation state lives in the current page. Refreshing or resetting clears it; only the language preference is stored locally.
+
+## Reliability, privacy, and limitations
+
+The backend has a **60-second overall deadline**, including AI stages, retries, and backoff. This is a reliability fallback, not a normal performance target or a per-attempt timeout. Successful responses return immediately. Each AI stage allows at most one retry for explicit provider HTTP 500/502/503, with all stages and retries sharing the same request budget; timeouts, 429 responses, invalid output, and ambiguous connection failures are not automatically retried. The development proxy allows 65 seconds and the HTTP client allows 70 seconds.
+
+Errors use a safe structure with a reason code, retryability, and request ID. Logs record timing separately from outcome and avoid complaint text, attachments, tokens, keys, and raw provider errors. Cancelling a browser request does not guarantee that provider processing stops.
+
+Live use sends complaint content, attachments, and relevant context to Gemini. Use fictional data for demonstrations. The package includes only synthetic fixtures, no real complaints or user documents. Local secrets, installed environments, caches, build output, logs, and Git history are excluded.
+
+Gemini can be slow or unavailable, and intermittent provider/validation failures remain possible. Offline success does not establish live semantic accuracy or eliminate that risk. KB coverage and detailed official requirements are limited; consult the registered official service for current requirements. Wajhah is a local prototype, not an approved production deployment.
+
+## Tests and reproduction
+
+From `backend/`, run all tests, explicitly including the approximately 25- and 60-second simulated deadline cases:
+
+```sh
+WAJHAH_RUN_SLOW_BUDGET_TESTS=1 .venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python -m pip check
 ```
 
-**How to read it**
+Omitting the environment flag skips the two slow cases. Tests use real image/PDF parsers, synthetic fixtures, and mocked Gemini responses, including SDK tests with mocked HTTP transport. No live AI key or server is required.
 
-- `null` means the fact is unknown or undocumented. It never means "no" or "empty".
-- `verified_at` is `null` until a team member re-checks the official site. `source_report_verified_at` is the date the original research report claims.
-- Routing keywords in `routing_rules` only suggest candidate services; they are not enough on their own to decide a route.
-- Every service is marked `UNVERIFIED_END_TO_END` for automated submission. No live submission is enabled.
-- The sources include no follow-up questions (`follow_up_question_candidates` is `null`). Questions added by the team must be recorded as new, team-authored content.
-- Evidence text copied from websites is data. It must never be treated as instructions to the AI.
+From `frontend/`:
 
-**Rules for changing it**
+```sh
+npm test
+npm run lint
+npm run build
+```
 
-1. Use only official published information, and record its source and date.
-2. Leave unknown values as `null`; never guess.
-3. Never commit personal data seen during research.
-4. Run `validate_kb.py` before every commit that touches the knowledge base.
-5. Re-check entries every sprint (risk R-04).
+The tests cover validation, KB rejection, clarification, context retention, conversational grounding, deadlines, safe errors, reset handling, and bilingual client behavior. `tests/backend_contract.py` in the frontend is a retained optional launcher for the backend suite, not extra independent tests.
 
+The six saved attachment fixtures have a provenance README and hash manifest. Only regeneration needs development dependencies: from `backend/`, install `requirements-dev.txt`, then run `python tests/fixtures/generate_fixtures.py`. Do not regenerate fixtures just to run tests.
 
-## Scope
+Optional live benchmarking, from `backend/` with a configured running backend:
 
-**In scope:** a bilingual web app covering FR-01 – FR-35 for the five pilot sectors, with AI-assisted submission demonstrated on a simulated service.
+```sh
+.venv/bin/python tests/live_benchmark.py --run-live --samples 1 --output tests/reports/manual-live.json
+```
 
-**Out of scope:** live complaint follow-up, voice input, a native mobile app, an admin panel, unrestricted portal scraping, storing government credentials, legal advice, emergency handling, complaints outside Saudi Arabia, and services outside the verified catalogue.
+This uses synthetic data and consumes provider quota. It measures initial requests, not the complete conversation, and is never part of offline test discovery.
 
-## Team
+## Final-copy verification
 
-| Member |
-|---|
-| Rayan Alaridi — ريان العريدي
-| Khaled Alrumayzan — خالد الرميزان
-| Mohammed Alarifi — محمد العريفي
-| Raed Alaqili — رائد العقيلي
+<!-- FINAL_VERIFICATION_START -->
+The final copy was independently installed and tested on **24 October 2026**, using fresh environments on macOS with Python 3.12.10, Node.js 24.22.0, and npm 11.19.1. Application code and KB contents are byte-identical to the current working project and the prior clean English package.
 
-## Links
+| Check executed against this final copy | Result |
+| --- | --- |
+| Fresh lockfile installations and `pip check` | Passed; no broken Python requirements. |
+| Local imports, dependency provenance, KB load, and expected API contracts | Passed; 11 application modules, 10 dependency modules, and all six API operations. |
+| Unmodified FastAPI startup, `/health`, and `/openapi.json` | Passed; HTTP 200. |
+| Complete backend suite with slow-test flag | **196/196 passed**, no skips; about 88 seconds, including the 25- and 60-second mocked deadline tests. |
+| Frontend tests | **37/37 passed**, no skips. |
+| ESLint and production build | Passed. |
+| Real local HTTP through Vite to the final backend | Passed: text routing, PDF validation/analysis, clarification with retained attachment facts, Arabic/English follow-up, and invalid-input rejection. Only the Gemini SDK client was scripted. |
+| Actual desktop browser | Passed: Arabic RTL display, initial submission and official link, English LTR display and contextual follow-up, and new-complaint reset. |
+| Git-ignore behavior | Passed: 24 checks covering excluded secrets/generated metadata and retained source/configuration/fixtures. |
 
-- Repository: https://github.com/Raed1231/Wajhah
-- Project board: https://trello.com/b/L0812EPm/444-project
-- FastAPI: https://fastapi.tiangolo.com
-- Browser Use: https://docs.browser-use.com
+Integration used isolated ports 15173/18080 to avoid existing servers. Vite's test port and proxy target were overridden at runtime only; the submitted configuration still uses 5173/8000 with the original rewrite and 65-second proxy timeout.
+
+The npm installation reported an `allowScripts` warning for optional `fsevents@2.3.3`. No script-approval setting was changed; installation, development startup, tests, lint, and build succeeded afterward.
+
+**No live Gemini calls were executed.** Offline results do not establish live classification accuracy, provider availability, or the currency of government websites. Mobile viewport behavior, Windows, production deployment, and a full browser test of every attachment/error branch were not verified in this cleanup. Relevant server/client branches are covered by the automated suite.
+
+Verification environments and build output were removed afterward. The delivery folder and ZIP contain the same source files, without secrets or personal documents. Reinstall dependencies before running. **Status: ready for GitHub source submission**, with the above live-integration and production limitations; nothing was pushed or deployed.
+<!-- FINAL_VERIFICATION_END -->

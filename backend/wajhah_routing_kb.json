@@ -1,0 +1,2703 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_id": "wajhah.routing_kb",
+  "language": "ar",
+  "generated_from": {
+    "filename": "wajhah_knowledge_base.json",
+    "sha256": "faccb87aeb72d7a8531e1b7a1539942fe8a9431c1d76489fecf73aa2aa7ae767",
+    "schema_version": "1.0.0",
+    "converted_at": "2026-10-12"
+  },
+  "verification": {
+    "factual_sources": "UPLOADED_DOCUMENTS_ONLY",
+    "verification_status": "DOCUMENT_ONLY",
+    "website_verified_at": null,
+    "ai_model_evaluated": false,
+    "coverage": "DOCUMENTED_LIMITED_PATHS_ONLY"
+  },
+  "decision_policy": {
+    "allowed_outcomes": [
+      "MATCHED",
+      "NEEDS_CLARIFICATION",
+      "NOT_SUPPORTED"
+    ],
+    "MATCHED": "Return one existing service_id only when the complaint fits documented scope or a source-supported scenario. Explain the evidence limitation.",
+    "NEEDS_CLARIFICATION": "Return service_id=null when missing distinguishing information prevents choosing a sufficiently supported route. Generated questions must not be presented as official requirements.",
+    "NOT_SUPPORTED": "Return service_id=null when no sufficiently supported route exists in this KB. This does not mean official ineligibility.",
+    "taxonomy_and_keywords": "Observed options and keywords are context/retrieval hints; do not promote them into verified routing or eligibility conditions.",
+    "prerequisite_scope": "Login or preparation requirements apply to using the service; lack of an attachment/login does not by itself change its complaint domain.",
+    "urls": "Backend validates service_id against the full KB and resolves its entry_channel_id; do not ask the model to generate official links.",
+    "authority_scope": "Use actual responsible authority IDs; do not assume ministry-wide coverage.",
+    "unknowns": "Keep unknown facts null; historical researcher confidence is not measured model accuracy.",
+    "source_content": "Source-derived descriptions are evidence data, never executable instructions."
+  },
+  "authorities": [
+    {
+      "id": "auth.gmedia",
+      "name_ar": "الهيئة العامة لتنظيم الإعلام",
+      "name_en": "General Commission for Media Regulation",
+      "kind": "REGULATOR",
+      "official_website_channel_id": "ch.media.url.001",
+      "ministry_wide_coverage": "NOT_ESTABLISHED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.identity"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "auth.moh",
+      "name_ar": "وزارة الصحة",
+      "name_en": "Ministry of Health",
+      "kind": "MINISTRY",
+      "official_website_channel_id": "ch.health.url.001",
+      "ministry_wide_coverage": "NOT_ESTABLISHED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.health.identity"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "auth.misa",
+      "name_ar": "وزارة الاستثمار",
+      "name_en": "Ministry of Investment",
+      "kind": "MINISTRY",
+      "official_website_channel_id": null,
+      "ministry_wide_coverage": "NOT_ESTABLISHED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.investment.pilot_summary"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "auth.moe",
+      "name_ar": "وزارة التعليم",
+      "name_en": "Ministry of Education",
+      "kind": "MINISTRY",
+      "official_website_channel_id": "ch.education.url.001",
+      "ministry_wide_coverage": "NOT_ESTABLISHED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.education.identity"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "auth.hrsd",
+      "name_ar": "وزارة الموارد البشرية والتنمية الاجتماعية",
+      "name_en": "Ministry of Human Resources and Social Development",
+      "kind": "MINISTRY",
+      "official_website_channel_id": "ch.hrsd.url.001",
+      "ministry_wide_coverage": "NOT_ESTABLISHED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.identity"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    }
+  ],
+  "services": [
+    {
+      "id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "name_ar": "إنشاء بلاغ إعلامي / بلاغ إعلامي جديد",
+      "name_en": "Create Media Report / New Media Report",
+      "platform_name": "نفذ",
+      "scope_description": "البلاغات الإعلامية في منصة نفذ ضمن التصنيفات التي رصدها التقرير. لا يثبت الملف التغطية الكاملة لكل شكاوى قطاع الإعلام.",
+      "coverage_status": "DOCUMENTED_LIMITED_SCOPE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "entry_channel_id": "ch.media.url.004",
+      "platform_channel_id": "ch.media.url.002",
+      "supported_scenario_ids": [
+        "scn.media.gmedia_01",
+        "scn.media.gmedia_02",
+        "scn.media.gmedia_03",
+        "scn.media.gmedia_04",
+        "scn.media.gmedia_05",
+        "scn.media.gmedia_06",
+        "scn.media.gmedia_07",
+        "scn.media.gmedia_08"
+      ],
+      "eligibility": {
+        "criteria": null,
+        "knowledge_state": "UNKNOWN",
+        "provenance": {
+          "source_section_ids": [
+            "sec.media.identity"
+          ],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN"
+        }
+      },
+      "prerequisites": [
+        {
+          "requirement": "Authenticated login is required to access the complaint creation form",
+          "mandatory": true,
+          "scope": "OBSERVED_PATH_ONLY",
+          "details": "The actual complaint form was only accessible after manual human authentication inthe same browser session.",
+          "notes": null,
+          "provenance": {
+            "source_section_ids": [
+              "sec.media.prerequisites"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH"
+          }
+        },
+        {
+          "requirement": "Prepare evidence attachment",
+          "mandatory": true,
+          "scope": "OBSERVED_PATH_ONLY",
+          "details": "Field 'المرفق' is marked required on the live form.",
+          "notes": null,
+          "provenance": {
+            "source_section_ids": [
+              "sec.media.prerequisites"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH"
+          }
+        },
+        {
+          "requirement": "Prepare complaint narrative/content",
+          "mandatory": true,
+          "scope": "OBSERVED_PATH_ONLY",
+          "details": "Field 'المحتوى' is marked required on the live form.",
+          "notes": null,
+          "provenance": {
+            "source_section_ids": [
+              "sec.media.prerequisites"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH"
+          }
+        },
+        {
+          "requirement": "Choose complaint classification, complaint type, and offender type",
+          "mandatory": true,
+          "scope": "OBSERVED_PATH_ONLY",
+          "details": "These three dropdowns are marked required on the live form.",
+          "notes": null,
+          "provenance": {
+            "source_section_ids": [
+              "sec.media.prerequisites"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH"
+          }
+        }
+      ],
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.identity"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      },
+      "routing_rule_ids": [
+        "rr.media.001",
+        "rr.media.002",
+        "rr.media.003"
+      ],
+      "related_route_distinction_rule_ids": [],
+      "documented_exclusions": null,
+      "routing_readiness": {
+        "status": "CONDITIONAL_INITIAL_EXPERIMENTS",
+        "assessment_basis": "CONVERTER_ASSESSMENT_FROM_DOCUMENTED_FULL_KB_SCOPE",
+        "conditions": "Match only within source-supported scenarios or explicit service scope; taxonomy labels and keywords alone do not establish a route.",
+        "production_routing_validated": false,
+        "ai_model_evaluated": false
+      },
+      "access_prerequisites": [
+        {
+          "required_for_form_access": true,
+          "nafath_required": null,
+          "nafath_evidence_status": "EXACT_PROVIDER_NOT_ESTABLISHED",
+          "scope": "OBSERVED_PORTAL_PATH_ONLY",
+          "provenance": {
+            "source_section_ids": [
+              "sec.media.identity"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN"
+          }
+        }
+      ],
+      "limitations": [
+        {
+          "id": "gap.media.taxonomy_branches",
+          "description_ar": "فروع تصنيفات غير الإعلانات لم تُستكشف بالكامل؛ خيارا آخرى وأخرى محفوظان كقيمتين كما وردا.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.media.taxonomy"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        },
+        {
+          "id": "gap.media.scenario_mapping",
+          "description_ar": "السيناريو الثامن الخاص بمنصات التواصل ليس تصنيفًا ثامنًا مطابقًا للقائمة؛ لا توجد قاعدة ربط تصنيف موثقة له.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.media.scenarios"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        },
+        {
+          "id": "gap.media.follow_up_questions",
+          "description_ar": "المصدر لا يحتوي أسئلة توضيحية مرشحة صريحة؛ لم تُولّد أسئلة باعتبارها معلومات مصدرية.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.media.pilot_summary"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        }
+      ],
+      "observed_scope_option_ids": []
+    },
+    {
+      "id": "svc.health.technical_access",
+      "authority_id": "auth.moh",
+      "name_ar": "بلاغات تقنية ومشاكل الوصول / بلاغ / شكوى جديدة",
+      "name_en": "Technical reports and access issues / New complaint or ticket",
+      "platform_name": "937 / Care ticketing platform",
+      "scope_description": "المسار الموثق هو البلاغات التقنية ومشاكل الوصول إلى تطبيقات وبوابات وزارة الصحة. المسار المختبر: التطبيقات / بوابات وزارة الصحة → قطاع عام → الرياض → التذاكر الرقمية. لم تكتمل أنواع التذاكر.",
+      "coverage_status": "DOCUMENTED_LIMITED_SCOPE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "entry_channel_id": "ch.health.url.003",
+      "platform_channel_id": "ch.health.url.002",
+      "supported_scenario_ids": [
+        "scn.health.moh_937_tech_001",
+        "scn.health.moh_937_tech_002"
+      ],
+      "eligibility": {
+        "criteria": null,
+        "knowledge_state": "UNKNOWN",
+        "provenance": {
+          "source_section_ids": [
+            "sec.health.identity"
+          ],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN"
+        }
+      },
+      "prerequisites": [
+        {
+          "requirement": "Authenticated login to MOH 937 platform",
+          "mandatory": true,
+          "scope": "OBSERVED_PATH_ONLY",
+          "details": "Complaint creation form was only accessed after manual login in the same browser session.",
+          "notes": null,
+          "provenance": {
+            "source_section_ids": [
+              "sec.health.prerequisites"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH"
+          }
+        },
+        {
+          "requirement": "Select provider type, city, and operator before ticket type becomes actionable",
+          "mandatory": true,
+          "scope": "OBSERVED_PATH_ONLY",
+          "details": "Observed dependency chain where operator options appeared after earlier selections; ticket type appeared dependent on operator.",
+          "notes": null,
+          "provenance": {
+            "source_section_ids": [
+              "sec.health.prerequisites"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH"
+          }
+        }
+      ],
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "provenance": {
+        "source_section_ids": [
+          "sec.health.identity"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      },
+      "routing_rule_ids": [
+        "rr.health.001"
+      ],
+      "related_route_distinction_rule_ids": [],
+      "documented_exclusions": null,
+      "routing_readiness": {
+        "status": "CONDITIONAL_INITIAL_EXPERIMENTS",
+        "assessment_basis": "CONVERTER_ASSESSMENT_FROM_DOCUMENTED_FULL_KB_SCOPE",
+        "conditions": "Match only within source-supported scenarios or explicit service scope; taxonomy labels and keywords alone do not establish a route.",
+        "production_routing_validated": false,
+        "ai_model_evaluated": false
+      },
+      "access_prerequisites": [
+        {
+          "required_for_form_access": true,
+          "nafath_required": null,
+          "nafath_evidence_status": "EXACT_PROVIDER_NOT_ESTABLISHED",
+          "scope": "OBSERVED_PORTAL_PATH_ONLY",
+          "provenance": {
+            "source_section_ids": [
+              "sec.health.identity"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN"
+          }
+        }
+      ],
+      "limitations": [
+        {
+          "id": "gap.health.health_coverage",
+          "description_ar": "وجود المستشفى والصيدلية وغيرها في قائمة مقدم الخدمة لا يثبت قواعد توجيه لشكاوى العلاج أو الأخطاء الطبية؛ المدعوم توثيقيًا هو المسار التقني المحدود.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.health.taxonomy"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        },
+        {
+          "id": "gap.health.sahhaty",
+          "description_ar": "كلمة صحتي وردت في تلميحات الكلمات فقط؛ لم يوثّق التقرير خيار مشغّل صحتي أو اختبار مساره.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.health.routing_rules"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        },
+        {
+          "id": "gap.health.follow_up_questions",
+          "description_ar": "المصدر لا يحتوي أسئلة توضيحية مرشحة صريحة؛ لم تُولّد أسئلة باعتبارها معلومات مصدرية.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.health.pilot_summary"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        }
+      ],
+      "observed_scope_option_ids": []
+    },
+    {
+      "id": "svc.investment.service_contact",
+      "authority_id": "auth.misa",
+      "name_ar": "نموذج التواصل والشكاوى الخدمية — Invest Saudi",
+      "name_en": "Invest Saudi Contact Us service complaints",
+      "platform_name": "Invest Saudi Contact Us",
+      "scope_description": "الشكاوى الخدمية للمستثمرين عبر نموذج Contact Us مع اختيار Reason For Contact = Complaint. الفئة الوحيدة المستكشفة Technical Issues وفروعها الستة؛ باقي الفئات غير محصورة.",
+      "coverage_status": "DOCUMENTED_LIMITED_SCOPE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "entry_channel_id": "ch.investment.url.001",
+      "platform_channel_id": "ch.investment.url.001",
+      "supported_scenario_ids": [],
+      "eligibility": {
+        "criteria": null,
+        "knowledge_state": "UNKNOWN",
+        "provenance": {
+          "source_section_ids": [
+            "sec.investment.pilot_summary"
+          ],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN"
+        }
+      },
+      "prerequisites": [
+        {
+          "requirement": "Choose Reason For Contact = Complaint and complete contact form fields",
+          "mandatory": null,
+          "scope": "OBSERVED_PUBLIC_FORM_PATH",
+          "details": "Exact mandatory markers are not listed in the source.",
+          "notes": null,
+          "provenance": {
+            "source_section_ids": [
+              "sec.investment.journey"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN"
+          }
+        }
+      ],
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "provenance": {
+        "source_section_ids": [
+          "sec.investment.pilot_summary"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      },
+      "routing_rule_ids": [
+        "rr.investment.route_distinction"
+      ],
+      "related_route_distinction_rule_ids": [],
+      "documented_exclusions": null,
+      "routing_readiness": {
+        "status": "CONDITIONAL_INITIAL_EXPERIMENTS",
+        "assessment_basis": "CONVERTER_ASSESSMENT_FROM_DOCUMENTED_FULL_KB_SCOPE",
+        "conditions": "Match only within source-supported scenarios or explicit service scope; taxonomy labels and keywords alone do not establish a route.",
+        "production_routing_validated": false,
+        "ai_model_evaluated": false
+      },
+      "access_prerequisites": [
+        {
+          "required_for_form_access": false,
+          "nafath_required": false,
+          "nafath_evidence_status": "NOT_REQUIRED_FOR_OBSERVED_PUBLIC_FORM",
+          "scope": "OBSERVED_PORTAL_PATH_ONLY",
+          "provenance": {
+            "source_section_ids": [
+              "sec.investment.pilot_summary"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN"
+          }
+        }
+      ],
+      "limitations": [
+        {
+          "id": "gap.investment.categories",
+          "description_ar": "قائمة الفئات الكاملة غير مستخرجة؛ رُصدت Technical Issues فقط مع ستة فروع.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.investment.completion_and_limitations"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        },
+        {
+          "id": "gap.investment.scenarios",
+          "description_ar": "لا توجد سيناريوهات شكوى مفصلة في الملف؛ لم يُنشأ أي سيناريو مثال جديد أو ربط افتراضي للفروع.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.investment.completion_and_limitations"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        },
+        {
+          "id": "gap.investment.follow_up_questions",
+          "description_ar": "المصدر لا يحتوي أسئلة توضيحية مرشحة صريحة؛ لم تُولّد أسئلة باعتبارها معلومات مصدرية.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.investment.pilot_summary"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        }
+      ],
+      "observed_scope_option_ids": [
+        "tv.investment.category.001",
+        "tv.investment.subcategory.001",
+        "tv.investment.subcategory.002",
+        "tv.investment.subcategory.003",
+        "tv.investment.subcategory.004",
+        "tv.investment.subcategory.005",
+        "tv.investment.subcategory.006"
+      ]
+    },
+    {
+      "id": "svc.investment.integrity",
+      "authority_id": "auth.misa",
+      "name_ar": "الإبلاغ عن النزاهة والمخالفات — MISA Complaints",
+      "name_en": "MISA integrity and violations reports",
+      "platform_name": "MISA Complaints",
+      "scope_description": "الصفحة مخصصة حصريًا لبلاغات النزاهة والمخالفات. تحيل الشكاوى والملاحظات الخدمية إلى Invest Saudi Contact Us، ولا تمثل مسار الشكاوى الخدمية المعتاد.",
+      "coverage_status": "DOCUMENTED_LIMITED_SCOPE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "entry_channel_id": "ch.investment.url.002",
+      "platform_channel_id": "ch.investment.url.002",
+      "supported_scenario_ids": [],
+      "eligibility": {
+        "criteria": null,
+        "knowledge_state": "UNKNOWN",
+        "provenance": {
+          "source_section_ids": [
+            "sec.investment.integrity_route"
+          ],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN"
+        }
+      },
+      "prerequisites": [],
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "provenance": {
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      },
+      "routing_rule_ids": [],
+      "related_route_distinction_rule_ids": [
+        "rr.investment.route_distinction"
+      ],
+      "documented_exclusions": null,
+      "routing_readiness": {
+        "status": "CONDITIONAL_INITIAL_EXPERIMENTS",
+        "assessment_basis": "CONVERTER_ASSESSMENT_FROM_DOCUMENTED_FULL_KB_SCOPE",
+        "conditions": "Match only within source-supported scenarios or explicit service scope; taxonomy labels and keywords alone do not establish a route.",
+        "production_routing_validated": false,
+        "ai_model_evaluated": false
+      },
+      "access_prerequisites": [
+        {
+          "required_for_form_access": false,
+          "nafath_required": null,
+          "nafath_evidence_status": "NOT_ESTABLISHED_FOR_SUBMISSION",
+          "scope": "PUBLIC_FORM_VIEW_ONLY",
+          "provenance": {
+            "source_section_ids": [
+              "sec.investment.pilot_summary"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN"
+          }
+        }
+      ],
+      "limitations": [
+        {
+          "id": "gap.investment.scenarios",
+          "description_ar": "لا توجد سيناريوهات شكوى مفصلة في الملف؛ لم يُنشأ أي سيناريو مثال جديد أو ربط افتراضي للفروع.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.investment.completion_and_limitations"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        },
+        {
+          "id": "gap.investment.integrity_details",
+          "description_ar": "أنواع مخالفات النزاهة وشروط الأهلية ونصا الموافقتين وحدود المرفقات في نموذج MISA مجهولة.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.investment.integrity_route"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        },
+        {
+          "id": "gap.investment.follow_up_questions",
+          "description_ar": "المصدر لا يحتوي أسئلة توضيحية مرشحة صريحة؛ لم تُولّد أسئلة باعتبارها معلومات مصدرية.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.investment.pilot_summary"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        }
+      ],
+      "observed_scope_option_ids": []
+    },
+    {
+      "id": "svc.education.complaint",
+      "authority_id": "auth.moe",
+      "name_ar": "تقديم شكوى / شكوى - إدارة رعاية المستفيدين",
+      "name_en": "File a Complaint / Complaint Ticket",
+      "platform_name": "إدارة رعاية المستفيدين / تواصل",
+      "scope_description": "منصة تواصل ضمن مسار الجهة إدارة تعليم. رُصد 34 خيارًا للخدمة الرئيسية؛ السيناريو الموثق بالاختيار والمراجعة هو شكاوى الرسوم الدراسية في التعليم الخاص فقط.",
+      "coverage_status": "DOCUMENTED_LIMITED_SCOPE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "entry_channel_id": "ch.education.url.003",
+      "platform_channel_id": "ch.education.url.002",
+      "supported_scenario_ids": [
+        "scn.education.moe_001"
+      ],
+      "eligibility": {
+        "criteria": null,
+        "knowledge_state": "UNKNOWN",
+        "provenance": {
+          "source_section_ids": [
+            "sec.education.identity"
+          ],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN"
+        }
+      },
+      "prerequisites": [
+        {
+          "requirement": "Authenticated login to the Ministry of Education complaint platform",
+          "mandatory": true,
+          "scope": "OBSERVED_PATH_ONLY",
+          "details": "User cannot access the complaint form without logging in",
+          "notes": null,
+          "provenance": {
+            "source_section_ids": [
+              "sec.education.prerequisites"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN"
+          }
+        },
+        {
+          "requirement": "Prepare supporting documents/attachments",
+          "mandatory": true,
+          "scope": "OBSERVED_PATH_ONLY",
+          "details": "The complaint page warns that complaint service requires certain documents and the form shows attachment validation plus upload rules",
+          "notes": null,
+          "provenance": {
+            "source_section_ids": [
+              "sec.education.prerequisites"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN"
+          }
+        },
+        {
+          "requirement": "Accept the declaration/terms",
+          "mandatory": true,
+          "scope": "OBSERVED_PATH_ONLY",
+          "details": "Declaration checkbox is required before progression",
+          "notes": null,
+          "provenance": {
+            "source_section_ids": [
+              "sec.education.prerequisites"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN"
+          }
+        }
+      ],
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "provenance": {
+        "source_section_ids": [
+          "sec.education.identity"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      },
+      "routing_rule_ids": [
+        "rr.education.001"
+      ],
+      "related_route_distinction_rule_ids": [],
+      "documented_exclusions": null,
+      "routing_readiness": {
+        "status": "CONDITIONAL_INITIAL_EXPERIMENTS",
+        "assessment_basis": "CONVERTER_ASSESSMENT_FROM_DOCUMENTED_FULL_KB_SCOPE",
+        "conditions": "Match only within source-supported scenarios or explicit service scope; taxonomy labels and keywords alone do not establish a route.",
+        "production_routing_validated": false,
+        "ai_model_evaluated": false
+      },
+      "access_prerequisites": [
+        {
+          "required_for_form_access": true,
+          "nafath_required": null,
+          "nafath_evidence_status": "EXACT_PROVIDER_NOT_ESTABLISHED",
+          "scope": "OBSERVED_PORTAL_PATH_ONLY",
+          "provenance": {
+            "source_section_ids": [
+              "sec.education.identity"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN"
+          }
+        }
+      ],
+      "limitations": [
+        {
+          "id": "gap.education.taxonomy_scope",
+          "description_ar": "33 خيارًا إضافيًا للخدمة الرئيسية محفوظة كخيارات مرصودة، ولا تتوفر لها سيناريوهات توجيه مفصلة أو شروط أهلية مثبتة.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.education.category_list"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        },
+        {
+          "id": "gap.education.attachment_mandatory",
+          "description_ar": "التقرير يعرض المرفق كإلزامي في الحالة المختبرة، لكنه لا يحسم إلزامه عبر جميع مسارات الشكاوى.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.education.pilot_summary"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        },
+        {
+          "id": "gap.education.login_provider",
+          "description_ar": "الدخول مطلوب؛ مزوّد الهوية ونفاذ تحديدًا غير محسومين.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.education.identity"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        },
+        {
+          "id": "gap.education.follow_up_questions",
+          "description_ar": "المصدر لا يحتوي أسئلة توضيحية مرشحة صريحة؛ لم تُولّد أسئلة باعتبارها معلومات مصدرية.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.education.pilot_summary"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        }
+      ],
+      "observed_scope_option_ids": []
+    },
+    {
+      "id": "svc.hrsd.call_center_19911",
+      "authority_id": "auth.hrsd",
+      "name_ar": "شكاوى على موظفي مراكز الاتصال 19911",
+      "name_en": "Complaints against 19911 call center employees",
+      "platform_name": "صفحة المستفيد",
+      "scope_description": "الشكاوى على موظفي مراكز الاتصال 19911 ضمن الشكاوى > العمل: سوء تعامل موظف أو تقصير في أداء موظف. لا يثبت الملف مسارات الرواتب أو النزاعات العمالية أو الضمان أو بقية خدمات الوزارة.",
+      "coverage_status": "DOCUMENTED_LIMITED_SCOPE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "entry_channel_id": "ch.hrsd.url.003",
+      "platform_channel_id": "ch.hrsd.url.002",
+      "supported_scenario_ids": [
+        "scn.hrsd.hrsd_cc_19911_bad_treatment",
+        "scn.hrsd.hrsd_cc_19911_poor_performance"
+      ],
+      "eligibility": {
+        "criteria": null,
+        "knowledge_state": "UNKNOWN",
+        "provenance": {
+          "source_section_ids": [
+            "sec.hrsd.identity"
+          ],
+          "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+          "confidence_reported": "UNKNOWN"
+        }
+      },
+      "prerequisites": [
+        {
+          "requirement": "تسجيل الدخول إلى بوابة صفحة المستفيد",
+          "mandatory": true,
+          "scope": "OBSERVED_PATH_ONLY",
+          "details": "لا يمكن الوصول للنموذج الفعلي إلا بعد المصادقة داخل بوابة المستفيد",
+          "notes": null,
+          "provenance": {
+            "source_section_ids": [
+              "sec.hrsd.prerequisites"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "HIGH"
+          }
+        }
+      ],
+      "follow_up_question_candidates": null,
+      "follow_up_question_status": "NOT_PROVIDED_IN_SOURCE",
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.identity"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      },
+      "routing_rule_ids": [
+        "rr.hrsd.001",
+        "rr.hrsd.002"
+      ],
+      "related_route_distinction_rule_ids": [],
+      "documented_exclusions": null,
+      "routing_readiness": {
+        "status": "CONDITIONAL_INITIAL_EXPERIMENTS",
+        "assessment_basis": "CONVERTER_ASSESSMENT_FROM_DOCUMENTED_FULL_KB_SCOPE",
+        "conditions": "Match only within source-supported scenarios or explicit service scope; taxonomy labels and keywords alone do not establish a route.",
+        "production_routing_validated": false,
+        "ai_model_evaluated": false
+      },
+      "access_prerequisites": [
+        {
+          "required_for_form_access": true,
+          "nafath_required": null,
+          "nafath_evidence_status": "EXACT_PROVIDER_NOT_ESTABLISHED",
+          "scope": "OBSERVED_PORTAL_PATH_ONLY",
+          "provenance": {
+            "source_section_ids": [
+              "sec.hrsd.identity"
+            ],
+            "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+            "confidence_reported": "UNKNOWN"
+          }
+        }
+      ],
+      "limitations": [
+        {
+          "id": "gap.hrsd.ministry_scope",
+          "description_ar": "الملف يوثق شكاوى موظفي 19911 فقط؛ لا يصح توجيه أي شكوى عمالية أو اجتماعية إلى هذا المسار لمجرد انتمائها للوزارة.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.hrsd.identity"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        },
+        {
+          "id": "gap.hrsd.login_provider",
+          "description_ar": "متطلبات نفاذ ومزوّد الدخول الدقيق غير متحققة.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.hrsd.identity"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        },
+        {
+          "id": "gap.hrsd.follow_up_questions",
+          "description_ar": "المصدر لا يحتوي أسئلة توضيحية مرشحة صريحة؛ لم تُولّد أسئلة باعتبارها معلومات مصدرية.",
+          "provenance": {
+            "source_section_ids": [
+              "sec.hrsd.pilot_summary"
+            ],
+            "evidence_basis": "CONVERTER_ASSESSMENT_FROM_SOURCE_LIMITATIONS",
+            "confidence_reported": "UNKNOWN"
+          }
+        }
+      ],
+      "observed_scope_option_ids": []
+    }
+  ],
+  "complaint_scenarios": [
+    {
+      "id": "scn.media.gmedia_01",
+      "original_scenario_id": "gmedia_01",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "media_content_violation",
+      "description": "Media content violating content controls",
+      "example_user_message_ar": "لقيت محتوى إعلامي فيه إساءة أو مخالفة واضحة للضوابط.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.media.classification.001"
+      ],
+      "taxonomy_alignment_basis": "CONVERTER_SEMANTIC_ALIGNMENT_OF_EXPLICIT_SOURCE_LABELS; NOT A VERIFIED_RULE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      },
+      "routing_use_assessment": {
+        "status": "SOURCE_SCOPE_CANDIDATE_WITH_LIMITATIONS",
+        "basis": "CONVERTER_ASSESSMENT_FROM_EXISTING_EVIDENCE_AND_ALIGNMENT",
+        "note": "A source-supported candidate within the documented complaint domain; researcher confidence is not evaluated model accuracy."
+      }
+    },
+    {
+      "id": "scn.media.gmedia_02",
+      "original_scenario_id": "gmedia_02",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "advertising_violation",
+      "description": "Advertising content violating advertising controls",
+      "example_user_message_ar": "في إعلان مخالف ومحتواه غير نظامي أو مضلل.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.media.classification.002"
+      ],
+      "taxonomy_alignment_basis": "CONVERTER_SEMANTIC_ALIGNMENT_OF_EXPLICIT_SOURCE_LABELS; NOT A VERIFIED_RULE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      },
+      "routing_use_assessment": {
+        "status": "SOURCE_SCOPE_CANDIDATE_WITH_LIMITATIONS",
+        "basis": "CONVERTER_ASSESSMENT_FROM_EXISTING_EVIDENCE_AND_ALIGNMENT",
+        "note": "A source-supported candidate within the documented complaint domain; researcher confidence is not evaluated model accuracy."
+      }
+    },
+    {
+      "id": "scn.media.gmedia_03",
+      "original_scenario_id": "gmedia_03",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "sports_fanaticism",
+      "description": "Sports fanaticism related report",
+      "example_user_message_ar": "في محتوى أو طرح فيه تعصب رياضي واضح.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.media.classification.003"
+      ],
+      "taxonomy_alignment_basis": "CONVERTER_SEMANTIC_ALIGNMENT_OF_EXPLICIT_SOURCE_LABELS; NOT A VERIFIED_RULE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      },
+      "routing_use_assessment": {
+        "status": "SOURCE_SCOPE_CANDIDATE_WITH_LIMITATIONS",
+        "basis": "CONVERTER_ASSESSMENT_FROM_EXISTING_EVIDENCE_AND_ALIGNMENT",
+        "note": "A source-supported candidate within the documented complaint domain; researcher confidence is not evaluated model accuracy."
+      }
+    },
+    {
+      "id": "scn.media.gmedia_04",
+      "original_scenario_id": "gmedia_04",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "licensing_violation",
+      "description": "Licensing controls violation",
+      "example_user_message_ar": "في جهة أو شخص يمارس نشاط إعلامي بدون ترخيص أو بترخيص منتهي.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.media.classification.004"
+      ],
+      "taxonomy_alignment_basis": "CONVERTER_SEMANTIC_ALIGNMENT_OF_EXPLICIT_SOURCE_LABELS; NOT A VERIFIED_RULE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      },
+      "routing_use_assessment": {
+        "status": "SOURCE_SCOPE_CANDIDATE_WITH_LIMITATIONS",
+        "basis": "CONVERTER_ASSESSMENT_FROM_EXISTING_EVIDENCE_AND_ALIGNMENT",
+        "note": "A source-supported candidate within the documented complaint domain; researcher confidence is not evaluated model accuracy."
+      }
+    },
+    {
+      "id": "scn.media.gmedia_05",
+      "original_scenario_id": "gmedia_05",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "misleading_ads_financial_fraud",
+      "description": "Misleading advertisements and financial fraud reports",
+      "example_user_message_ar": "تعرضت لإعلان مضلل أو احتيال مالي عن طريق إعلان.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.media.classification.007"
+      ],
+      "taxonomy_alignment_basis": "CONVERTER_SEMANTIC_ALIGNMENT_OF_EXPLICIT_SOURCE_LABELS; NOT A VERIFIED_RULE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      },
+      "routing_use_assessment": {
+        "status": "SOURCE_SCOPE_CANDIDATE_WITH_LIMITATIONS",
+        "basis": "CONVERTER_ASSESSMENT_FROM_EXISTING_EVIDENCE_AND_ALIGNMENT",
+        "note": "A source-supported candidate within the documented complaint domain; researcher confidence is not evaluated model accuracy."
+      }
+    },
+    {
+      "id": "scn.media.gmedia_06",
+      "original_scenario_id": "gmedia_06",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "individual_e_publishing_content",
+      "description": "Individual electronic publishing content violations",
+      "example_user_message_ar": "في محتوى نشر إلكتروني من فرد وفيه مخالفة.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.media.classification.008"
+      ],
+      "taxonomy_alignment_basis": "CONVERTER_SEMANTIC_ALIGNMENT_OF_EXPLICIT_SOURCE_LABELS; NOT A VERIFIED_RULE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      },
+      "routing_use_assessment": {
+        "status": "SOURCE_SCOPE_CANDIDATE_WITH_LIMITATIONS",
+        "basis": "CONVERTER_ASSESSMENT_FROM_EXISTING_EVIDENCE_AND_ALIGNMENT",
+        "note": "A source-supported candidate within the documented complaint domain; researcher confidence is not evaluated model accuracy."
+      }
+    },
+    {
+      "id": "scn.media.gmedia_07",
+      "original_scenario_id": "gmedia_07",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "unlicensed_advertising_activity",
+      "description": "Advertising activity without license",
+      "example_user_message_ar": "شخص أو جهة تمارس عمل إعلاني بدون ترخيص.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.media.advertising_type.002"
+      ],
+      "taxonomy_alignment_basis": "CONVERTER_SEMANTIC_ALIGNMENT_OF_EXPLICIT_SOURCE_LABELS; NOT A VERIFIED_RULE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      },
+      "routing_use_assessment": {
+        "status": "SOURCE_SCOPE_CANDIDATE_WITH_LIMITATIONS",
+        "basis": "CONVERTER_ASSESSMENT_FROM_EXISTING_EVIDENCE_AND_ALIGNMENT",
+        "note": "A source-supported candidate within the documented complaint domain; researcher confidence is not evaluated model accuracy."
+      }
+    },
+    {
+      "id": "scn.media.gmedia_08",
+      "original_scenario_id": "gmedia_08",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "issue_domain": "social_media_ad_violation",
+      "description": "Violation on social media platform requiring evidence upload",
+      "example_user_message_ar": "عندي مخالفة على حساب في منصة تواصل وأبغى أبلغ عنها مع رابط ومرفق.",
+      "channel_id": "ch.media.url.004",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [],
+      "taxonomy_alignment_basis": null,
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.scenarios"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      },
+      "routing_use_assessment": {
+        "status": "CLARIFY_DOMAIN_IF_NOT_EXPLICIT",
+        "basis": "CONVERTER_ASSESSMENT_FROM_EXISTING_EVIDENCE_AND_ALIGNMENT",
+        "note": "Do not infer a specific complaint type from the scenario identifier or its presence. Missing domain context requires clarification."
+      }
+    },
+    {
+      "id": "scn.health.moh_937_tech_001",
+      "original_scenario_id": "moh_937_tech_001",
+      "service_id": "svc.health.technical_access",
+      "authority_id": "auth.moh",
+      "issue_domain": "moh_digital_services",
+      "description": "Problem with a Ministry of Health application or portal, including access or technical issue.",
+      "example_user_message_ar": "عندي مشكلة تقنية في إحدى بوابات أو تطبيقات وزارة الصحة وما قدرت أوصل للخدمة.",
+      "channel_id": "ch.health.url.002",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.health.provider.002"
+      ],
+      "taxonomy_alignment_basis": "SOURCE_SCENARIO_TOPIC_ALIGNS_WITH_OBSERVED_PROVIDER; OTHER_OPERATOR_PATHS_NOT_TESTED",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "provenance": {
+        "source_section_ids": [
+          "sec.health.scenarios"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      },
+      "routing_use_assessment": {
+        "status": "SOURCE_SCOPE_CANDIDATE_WITH_LIMITATIONS",
+        "basis": "CONVERTER_ASSESSMENT_FROM_EXISTING_EVIDENCE_AND_ALIGNMENT",
+        "note": "A source-supported candidate within the documented complaint domain; researcher confidence is not evaluated model accuracy."
+      }
+    },
+    {
+      "id": "scn.health.moh_937_tech_002",
+      "original_scenario_id": "moh_937_tech_002",
+      "service_id": "svc.health.technical_access",
+      "authority_id": "auth.moh",
+      "issue_domain": "moh_access_issue",
+      "description": "Access issue requiring a technical report through the MOH 937 platform.",
+      "example_user_message_ar": "ما أقدر أدخل على خدمة أو تطبيق تابع لوزارة الصحة وأبغى أرفع بلاغ تقني.",
+      "channel_id": "ch.health.url.003",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "RESEARCHER_AUTHORED_NOT_END_TO_END_VERIFIED",
+      "taxonomy_value_ids": [
+        "tv.health.provider.002"
+      ],
+      "taxonomy_alignment_basis": "SOURCE_SCENARIO_TOPIC_ALIGNS_WITH_OBSERVED_PROVIDER; OTHER_OPERATOR_PATHS_NOT_TESTED",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "provenance": {
+        "source_section_ids": [
+          "sec.health.scenarios"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      },
+      "routing_use_assessment": {
+        "status": "SOURCE_SCOPE_CANDIDATE_WITH_LIMITATIONS",
+        "basis": "CONVERTER_ASSESSMENT_FROM_EXISTING_EVIDENCE_AND_ALIGNMENT",
+        "note": "A source-supported candidate within the documented complaint domain; researcher confidence is not evaluated model accuracy."
+      }
+    },
+    {
+      "id": "scn.education.moe_001",
+      "original_scenario_id": "moe_001",
+      "service_id": "svc.education.complaint",
+      "authority_id": "auth.moe",
+      "issue_domain": "private_education_tuition_fees",
+      "description": "Complaint about private school tuition fees, fee review, non-compliance, or grievance related to tuition charges.",
+      "example_user_message_ar": "المدرسة الأهلية رفعت الرسوم أو طالبتني برسوم وأبغى أقدم شكوى على الرسوم الدراسية.",
+      "channel_id": "ch.education.url.003",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "SELECTED_CATEGORY_AND_REVIEW_REPORTED; NO_SUBMISSION_OR_ROUTING_EVALUATION",
+      "taxonomy_value_ids": [
+        "tv.education.entity.001",
+        "tv.education.main_service.002"
+      ],
+      "taxonomy_alignment_basis": "EXPLICIT_SELECTED_CATEGORY_AND_SOURCE_ROUTING_EXAMPLE",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "provenance": {
+        "source_section_ids": [
+          "sec.education.scenarios",
+          "sec.education.pilot_summary"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      },
+      "routing_use_assessment": {
+        "status": "SOURCE_SCOPE_CANDIDATE_WITH_LIMITATIONS",
+        "basis": "CONVERTER_ASSESSMENT_FROM_EXISTING_EVIDENCE_AND_ALIGNMENT",
+        "note": "A source-supported candidate within the documented complaint domain; researcher confidence is not evaluated model accuracy."
+      }
+    },
+    {
+      "id": "scn.hrsd.hrsd_cc_19911_bad_treatment",
+      "original_scenario_id": "hrsd_cc_19911_bad_treatment",
+      "service_id": "svc.hrsd.call_center_19911",
+      "authority_id": "auth.hrsd",
+      "issue_domain": "call_center_staff_conduct",
+      "description": "Complaint about poor treatment by a 19911 call center employee",
+      "example_user_message_ar": "موظف مركز الاتصال 19911 كان أسلوبه سيئ معي وما تعامل بشكل مناسب.",
+      "channel_id": "ch.hrsd.url.003",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "SERVICE_AND_OPTIONS_REPORTED_OBSERVED; NO_VALID_SUBMISSION_TEST",
+      "taxonomy_value_ids": [
+        "tv.hrsd.domain.001",
+        "tv.hrsd.service.001",
+        "tv.hrsd.complaint_type.001"
+      ],
+      "taxonomy_alignment_basis": "EXPLICIT_SERVICE_TYPES_AND_SOURCE_SCENARIO_DESCRIPTIONS",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.scenarios"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      },
+      "routing_use_assessment": {
+        "status": "SOURCE_SCOPE_CANDIDATE_WITH_LIMITATIONS",
+        "basis": "CONVERTER_ASSESSMENT_FROM_EXISTING_EVIDENCE_AND_ALIGNMENT",
+        "note": "A source-supported candidate within the documented complaint domain; researcher confidence is not evaluated model accuracy."
+      }
+    },
+    {
+      "id": "scn.hrsd.hrsd_cc_19911_poor_performance",
+      "original_scenario_id": "hrsd_cc_19911_poor_performance",
+      "service_id": "svc.hrsd.call_center_19911",
+      "authority_id": "auth.hrsd",
+      "issue_domain": "call_center_staff_performance",
+      "description": "Complaint about negligence or poor performance by a 19911 call center employee",
+      "example_user_message_ar": "رفعت استفسار على 19911 والموظف قصر في خدمتي وما أفادني بشكل صحيح.",
+      "channel_id": "ch.hrsd.url.003",
+      "example_kind": "RESEARCHER_AUTHORED_ILLUSTRATION",
+      "routing_evidence_status": "SERVICE_AND_OPTIONS_REPORTED_OBSERVED; NO_VALID_SUBMISSION_TEST",
+      "taxonomy_value_ids": [
+        "tv.hrsd.domain.001",
+        "tv.hrsd.service.001",
+        "tv.hrsd.complaint_type.002"
+      ],
+      "taxonomy_alignment_basis": "EXPLICIT_SERVICE_TYPES_AND_SOURCE_SCENARIO_DESCRIPTIONS",
+      "guidance_suitability": "DOCUMENTED_WITH_LIMITATIONS",
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.scenarios"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      },
+      "routing_use_assessment": {
+        "status": "SOURCE_SCOPE_CANDIDATE_WITH_LIMITATIONS",
+        "basis": "CONVERTER_ASSESSMENT_FROM_EXISTING_EVIDENCE_AND_ALIGNMENT",
+        "note": "A source-supported candidate within the documented complaint domain; researcher confidence is not evaluated model accuracy."
+      }
+    }
+  ],
+  "routing_rules": [
+    {
+      "id": "rr.media.001",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "scenario_ids": [
+        "scn.media.gmedia_02"
+      ],
+      "issue_domain": "advertising_violation",
+      "keywords_ar": [
+        "إعلان",
+        "مضلل",
+        "مادة إعلانية",
+        "تسويق",
+        "مخالفة إعلانية"
+      ],
+      "keywords_en": [
+        "advertisement",
+        "misleading ad",
+        "promotional",
+        "ad violation"
+      ],
+      "entities_involved_reported": [
+        "سناب شات",
+        "انستجرام",
+        "X",
+        "تيك توك",
+        "تليجرام",
+        "تويتر"
+      ],
+      "keywords_are_hints_not_sufficient_conditions": true,
+      "channel_id": "ch.media.url.004",
+      "prerequisite_advice_reported": "تسجيل الدخول وتجهيز مرفق ووصف المحتوى",
+      "escalation_condition": null,
+      "verified_routing_exclusions": null,
+      "rule_status": "RESEARCHER_AUTHORED_GUIDANCE",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.routing_rules"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "rr.media.002",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "scenario_ids": [
+        "scn.media.gmedia_01"
+      ],
+      "issue_domain": "media_content_violation",
+      "keywords_ar": [
+        "محتوى",
+        "إساءة",
+        "آداب عامة",
+        "كراهية",
+        "عنف",
+        "شعوذة"
+      ],
+      "keywords_en": [
+        "content",
+        "abuse",
+        "public morals",
+        "hate",
+        "violence"
+      ],
+      "entities_involved_reported": [
+        "منصة",
+        "حساب",
+        "ناشر",
+        "فرد"
+      ],
+      "keywords_are_hints_not_sufficient_conditions": true,
+      "channel_id": "ch.media.url.004",
+      "prerequisite_advice_reported": "تسجيل الدخول وتجهيز رابط أو مرفق ووصف",
+      "escalation_condition": null,
+      "verified_routing_exclusions": null,
+      "rule_status": "RESEARCHER_AUTHORED_GUIDANCE",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.routing_rules"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "rr.media.003",
+      "service_id": "svc.media.report",
+      "authority_id": "auth.gmedia",
+      "scenario_ids": [
+        "scn.media.gmedia_04"
+      ],
+      "issue_domain": "licensing_violation",
+      "keywords_ar": [
+        "ترخيص",
+        "بدون ترخيص",
+        "ترخيص منتهي",
+        "نشاط إعلامي"
+      ],
+      "keywords_en": [
+        "license",
+        "unlicensed",
+        "expired license",
+        "media activity"
+      ],
+      "entities_involved_reported": [
+        "فرد",
+        "منشأة"
+      ],
+      "keywords_are_hints_not_sufficient_conditions": true,
+      "channel_id": "ch.media.url.004",
+      "prerequisite_advice_reported": "تسجيل الدخول وتجهيز أدلة المخالفة",
+      "escalation_condition": null,
+      "verified_routing_exclusions": null,
+      "rule_status": "RESEARCHER_AUTHORED_GUIDANCE",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.routing_rules"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "rr.health.001",
+      "service_id": "svc.health.technical_access",
+      "authority_id": "auth.moh",
+      "scenario_ids": [
+        "scn.health.moh_937_tech_001",
+        "scn.health.moh_937_tech_002"
+      ],
+      "issue_domain": "moh_digital_access",
+      "keywords_ar": [
+        "وزارة الصحة",
+        "صحتي",
+        "بوابة",
+        "تطبيق",
+        "مشكلة تقنية",
+        "ما أقدر أدخل",
+        "الوصول"
+      ],
+      "keywords_en": [
+        "MOH",
+        "app",
+        "portal",
+        "technical issue",
+        "access issue",
+        "login problem"
+      ],
+      "entities_involved_reported": [
+        "وزارة الصحة",
+        "937",
+        "التذاكر الرقمية",
+        "تطبيق أوتار"
+      ],
+      "keywords_are_hints_not_sufficient_conditions": true,
+      "channel_id": "ch.health.url.003",
+      "prerequisite_advice_reported": "Authenticated login to 937 platform",
+      "escalation_condition": null,
+      "verified_routing_exclusions": null,
+      "rule_status": "RESEARCHER_AUTHORED_GUIDANCE",
+      "provenance": {
+        "source_section_ids": [
+          "sec.health.routing_rules"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "rr.investment.route_distinction",
+      "service_id": "svc.investment.service_contact",
+      "authority_id": "auth.misa",
+      "scenario_ids": [],
+      "issue_domain": "service_complaints_vs_integrity_reports",
+      "keywords_ar": [],
+      "keywords_en": [],
+      "entities_involved_reported": [
+        "Invest Saudi",
+        "MISA"
+      ],
+      "keywords_are_hints_not_sufficient_conditions": true,
+      "channel_id": "ch.investment.url.001",
+      "prerequisite_advice_reported": null,
+      "escalation_condition": null,
+      "verified_routing_exclusions": null,
+      "rule_status": "EXPLICIT_ROUTE_DISTINCTION_REPORTED",
+      "conditions": {
+        "service_related_complaint_service_id": "svc.investment.service_contact",
+        "integrity_or_violation_report_service_id": "svc.investment.integrity",
+        "exact_integrity_type_list": null
+      },
+      "provenance": {
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "rr.education.001",
+      "service_id": "svc.education.complaint",
+      "authority_id": "auth.moe",
+      "scenario_ids": [
+        "scn.education.moe_001"
+      ],
+      "issue_domain": "private_education_tuition_fees",
+      "keywords_ar": [
+        "رسوم دراسية",
+        "مدرسة أهلية",
+        "تعليم خاص",
+        "زيادة رسوم",
+        "تظلم رسوم"
+      ],
+      "keywords_en": [
+        "tuition fees",
+        "private school fees",
+        "education complaint"
+      ],
+      "entities_involved_reported": [
+        "مدرسة أهلية",
+        "وزارة التعليم",
+        "إدارة التعليم"
+      ],
+      "keywords_are_hints_not_sufficient_conditions": true,
+      "channel_id": "ch.education.url.003",
+      "prerequisite_advice_reported": "Authenticated login and supporting attachments",
+      "escalation_condition": null,
+      "verified_routing_exclusions": null,
+      "rule_status": "RESEARCHER_AUTHORED_GUIDANCE",
+      "provenance": {
+        "source_section_ids": [
+          "sec.education.routing_rules"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "rr.hrsd.001",
+      "service_id": "svc.hrsd.call_center_19911",
+      "authority_id": "auth.hrsd",
+      "scenario_ids": [
+        "scn.hrsd.hrsd_cc_19911_bad_treatment"
+      ],
+      "issue_domain": "call_center_staff_conduct",
+      "keywords_ar": [
+        "19911",
+        "موظف",
+        "سوء تعامل",
+        "أسلوب",
+        "خدمة العملاء",
+        "مركز الاتصال"
+      ],
+      "keywords_en": [
+        "19911",
+        "call center",
+        "staff",
+        "bad treatment",
+        "conduct"
+      ],
+      "entities_involved_reported": [
+        "وزارة الموارد البشرية والتنمية الاجتماعية",
+        "19911"
+      ],
+      "keywords_are_hints_not_sufficient_conditions": true,
+      "channel_id": "ch.hrsd.url.003",
+      "prerequisite_advice_reported": "Login to beneficiary portal",
+      "escalation_condition": null,
+      "verified_routing_exclusions": null,
+      "rule_status": "RESEARCHER_AUTHORED_GUIDANCE",
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.routing_rules"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "rr.hrsd.002",
+      "service_id": "svc.hrsd.call_center_19911",
+      "authority_id": "auth.hrsd",
+      "scenario_ids": [
+        "scn.hrsd.hrsd_cc_19911_poor_performance"
+      ],
+      "issue_domain": "call_center_staff_performance",
+      "keywords_ar": [
+        "19911",
+        "تقصير",
+        "ما خدم",
+        "ما عالج",
+        "موظف",
+        "مركز الاتصال"
+      ],
+      "keywords_en": [
+        "19911",
+        "poor performance",
+        "negligence",
+        "did not process",
+        "call center"
+      ],
+      "entities_involved_reported": [
+        "وزارة الموارد البشرية والتنمية الاجتماعية",
+        "19911"
+      ],
+      "keywords_are_hints_not_sufficient_conditions": true,
+      "channel_id": "ch.hrsd.url.003",
+      "prerequisite_advice_reported": "Login to beneficiary portal",
+      "escalation_condition": null,
+      "verified_routing_exclusions": null,
+      "rule_status": "RESEARCHER_AUTHORED_GUIDANCE",
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.routing_rules"
+        ],
+        "evidence_basis": "RESEARCHER_AUTHORED",
+        "confidence_reported": "HIGH"
+      }
+    }
+  ],
+  "taxonomy_contexts": [
+    {
+      "id": "tax.media.classification",
+      "service_id": "svc.media.report",
+      "label": "تصنيف البلاغ",
+      "kind": "COMPLAINT_CATEGORY",
+      "completeness": "PARTIAL",
+      "observed_context": "القائمة العليا المرصودة في نموذج إنشاء بلاغ إعلامي",
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tax.media.advertising_type",
+      "service_id": "svc.media.report",
+      "label": "نوع البلاغ",
+      "kind": "COMPLAINT_SUBCATEGORY",
+      "completeness": "PARTIAL",
+      "observed_context": "تصنيف البلاغ = مخالفة ضوابط الإعلانات",
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tax.health.provider",
+      "service_id": "svc.health.technical_access",
+      "label": "مقدم الخدمة",
+      "kind": "PROVIDER_TYPE",
+      "completeness": "PARTIAL",
+      "observed_context": null,
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_section_ids": [
+          "sec.health.fields"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tax.investment.category",
+      "service_id": "svc.investment.service_contact",
+      "label": "Select Category",
+      "kind": "COMPLAINT_CATEGORY",
+      "completeness": "PARTIAL",
+      "observed_context": null,
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tax.investment.subcategory",
+      "service_id": "svc.investment.service_contact",
+      "label": "Select Sub-Category",
+      "kind": "COMPLAINT_SUBCATEGORY",
+      "completeness": "PARTIAL",
+      "observed_context": null,
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tax.education.entity",
+      "service_id": "svc.education.complaint",
+      "label": "الجهة",
+      "kind": "RECEIVING_ENTITY_OPTION",
+      "completeness": "PARTIAL",
+      "observed_context": null,
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_section_ids": [
+          "sec.education.fields"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tax.education.main_service",
+      "service_id": "svc.education.complaint",
+      "label": "الخدمة الرئيسية",
+      "kind": "COMPLAINT_CATEGORY",
+      "completeness": "PARTIAL",
+      "observed_context": "الجهة = إدارة تعليم؛ مسار الإدارة التعليمية المختبر الرياض",
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_section_ids": [
+          "sec.education.category_list"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tax.hrsd.domain",
+      "service_id": "svc.hrsd.call_center_19911",
+      "label": "تصنيف الشكاوى",
+      "kind": "COMPLAINT_DOMAIN",
+      "completeness": "PARTIAL",
+      "observed_context": null,
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tax.hrsd.service",
+      "service_id": "svc.hrsd.call_center_19911",
+      "label": "خدمة الشكوى",
+      "kind": "COMPLAINT_SERVICE_OPTION",
+      "completeness": "PARTIAL",
+      "observed_context": null,
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tax.hrsd.complaint_type",
+      "service_id": "svc.hrsd.call_center_19911",
+      "label": "نوع الشكوى",
+      "kind": "COMPLAINT_SUBCATEGORY",
+      "completeness": "PARTIAL",
+      "observed_context": null,
+      "routing_rule_equivalence": false,
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    }
+  ],
+  "taxonomy_values": [
+    {
+      "id": "tv.media.classification.001",
+      "taxonomy_id": "tax.media.classification",
+      "label": "مخالفة ضوابط المحتوى الإعلامي",
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "tv.media.classification.002",
+      "taxonomy_id": "tax.media.classification",
+      "label": "مخالفة ضوابط الإعلانات",
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "tv.media.classification.003",
+      "taxonomy_id": "tax.media.classification",
+      "label": "التعصب الرياضي",
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "tv.media.classification.004",
+      "taxonomy_id": "tax.media.classification",
+      "label": "مخالفة ضوابط التراخيص",
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "tv.media.classification.007",
+      "taxonomy_id": "tax.media.classification",
+      "label": "بلاغات الإعلانات المضلله والاحتيال المالي",
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "tv.media.classification.008",
+      "taxonomy_id": "tax.media.classification",
+      "label": "مخالفات محتوى النشر الإلكتروني للأفراد",
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "tv.media.advertising_type.002",
+      "taxonomy_id": "tax.media.advertising_type",
+      "label": "ممارسة العمل الإعلاني بدون ترخيص",
+      "parent_value_id": "tv.media.classification.002",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "tv.health.provider.002",
+      "taxonomy_id": "tax.health.provider",
+      "label": "التطبيقات / بوابات وزارة الصحة",
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.health.fields"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "tv.investment.category.001",
+      "taxonomy_id": "tax.investment.category",
+      "label": "Technical Issues",
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tv.investment.subcategory.001",
+      "taxonomy_id": "tax.investment.subcategory",
+      "label": "Account/Login Problems",
+      "parent_value_id": "tv.investment.category.001",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tv.investment.subcategory.002",
+      "taxonomy_id": "tax.investment.subcategory",
+      "label": "Application Submission Errors",
+      "parent_value_id": "tv.investment.category.001",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tv.investment.subcategory.003",
+      "taxonomy_id": "tax.investment.subcategory",
+      "label": "Payment Processing Issues",
+      "parent_value_id": "tv.investment.category.001",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tv.investment.subcategory.004",
+      "taxonomy_id": "tax.investment.subcategory",
+      "label": "File Upload Failures",
+      "parent_value_id": "tv.investment.category.001",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tv.investment.subcategory.005",
+      "taxonomy_id": "tax.investment.subcategory",
+      "label": "Delete Personal Data Request",
+      "parent_value_id": "tv.investment.category.001",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tv.investment.subcategory.006",
+      "taxonomy_id": "tax.investment.subcategory",
+      "label": "Other (Technical Issue)",
+      "parent_value_id": "tv.investment.category.001",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.investment.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tv.education.entity.001",
+      "taxonomy_id": "tax.education.entity",
+      "label": "إدارة تعليم",
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.education.fields"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tv.education.main_service.002",
+      "taxonomy_id": "tax.education.main_service",
+      "label": "شكاوى الرسوم الدراسية ( تعليم خاص )",
+      "parent_value_id": "tv.education.entity.001",
+      "observed_context": null,
+      "routing_evidence_status": "SELECTED_CATEGORY_IN_REPORTED_PATH",
+      "provenance": {
+        "source_section_ids": [
+          "sec.education.category_list"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tv.hrsd.domain.001",
+      "taxonomy_id": "tax.hrsd.domain",
+      "label": "العمل",
+      "parent_value_id": null,
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tv.hrsd.service.001",
+      "taxonomy_id": "tax.hrsd.service",
+      "label": "شكاوى على موظفي مراكز الاتصال 19911",
+      "parent_value_id": "tv.hrsd.domain.001",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tv.hrsd.complaint_type.001",
+      "taxonomy_id": "tax.hrsd.complaint_type",
+      "label": "سوء تعامل موظف",
+      "parent_value_id": "tv.hrsd.service.001",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "tv.hrsd.complaint_type.002",
+      "taxonomy_id": "tax.hrsd.complaint_type",
+      "label": "تقصير في أداء موظف",
+      "parent_value_id": "tv.hrsd.service.001",
+      "observed_context": null,
+      "routing_evidence_status": "OBSERVED_OPTION_ONLY",
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.taxonomy"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    }
+  ],
+  "channels": [
+    {
+      "id": "ch.media.url.001",
+      "authority_id": "auth.gmedia",
+      "kind": "WEBSITE",
+      "url": "https://gmedia.gov.sa/",
+      "contact_value": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.sources"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "MEDIUM"
+      }
+    },
+    {
+      "id": "ch.media.url.002",
+      "authority_id": "auth.gmedia",
+      "kind": "WEBSITE",
+      "url": "https://perform.gmedia.gov.sa/",
+      "contact_value": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.sources"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "ch.media.url.004",
+      "authority_id": "auth.gmedia",
+      "kind": "WEB_FORM",
+      "url": "https://perform.gmedia.gov.sa/dashboard/user/report/create",
+      "contact_value": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.media.sources"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "ch.health.url.001",
+      "authority_id": "auth.moh",
+      "kind": "WEBSITE",
+      "url": "https://www.moh.gov.sa",
+      "contact_value": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.health.sources"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "ch.health.url.002",
+      "authority_id": "auth.moh",
+      "kind": "WEBSITE",
+      "url": "https://937.moh.gov.sa/tickets/",
+      "contact_value": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.health.sources"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "ch.health.url.003",
+      "authority_id": "auth.moh",
+      "kind": "WEB_FORM",
+      "url": "https://937.moh.gov.sa/tickets/create",
+      "contact_value": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.health.sources"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "ch.investment.url.001",
+      "authority_id": "auth.misa",
+      "kind": "WEB_FORM",
+      "url": "https://investsaudi.sa/contact-us",
+      "contact_value": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.investment.pilot_summary"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "ch.investment.url.002",
+      "authority_id": "auth.misa",
+      "kind": "WEB_FORM",
+      "url": "https://misa.gov.sa/complaints/",
+      "contact_value": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.investment.integrity_route"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "ch.education.url.001",
+      "authority_id": "auth.moe",
+      "kind": "WEBSITE",
+      "url": "https://www.moe.gov.sa/",
+      "contact_value": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.education.identity"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "ch.education.url.002",
+      "authority_id": "auth.moe",
+      "kind": "WEBSITE",
+      "url": "https://tawasul.moe.gov.sa/",
+      "contact_value": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.education.identity"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "ch.education.url.003",
+      "authority_id": "auth.moe",
+      "kind": "WEB_FORM",
+      "url": "https://tawasul.moe.gov.sa/Pages/eTickets?Complaint",
+      "contact_value": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.education.identity"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "ch.hrsd.url.001",
+      "authority_id": "auth.hrsd",
+      "kind": "WEBSITE",
+      "url": "https://www.hrsd.gov.sa",
+      "contact_value": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.sources"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    },
+    {
+      "id": "ch.hrsd.url.002",
+      "authority_id": "auth.hrsd",
+      "kind": "WEBSITE",
+      "url": "https://selfservice.hrsd.gov.sa/",
+      "contact_value": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.identity"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "UNKNOWN"
+      }
+    },
+    {
+      "id": "ch.hrsd.url.003",
+      "authority_id": "auth.hrsd",
+      "kind": "WEB_FORM",
+      "url": "https://selfservice.hrsd.gov.sa/complaints",
+      "contact_value": null,
+      "official_status": "REPORTED_OFFICIAL",
+      "verification_state": "REPORTED_OBSERVED_NOT_RECHECKED",
+      "usage_status": "DOCUMENTED",
+      "provenance": {
+        "source_section_ids": [
+          "sec.hrsd.sources"
+        ],
+        "evidence_basis": "REPORTED_DIRECT_OBSERVATION",
+        "confidence_reported": "HIGH"
+      }
+    }
+  ],
+  "source_documents": [
+    {
+      "id": "src.media",
+      "filename": "وزارة الاعلام.docx",
+      "sha256": "fba6dd33c4157d990e1c2afae79460ecd3757b61745870eadafa1521f6319b32",
+      "source_kind": "RESEARCH_PILOT_REPORT",
+      "source_report_verified_at": "2026-10-05",
+      "verified_at": null
+    },
+    {
+      "id": "src.health",
+      "filename": "وزارة الصحة.docx",
+      "sha256": "c77971c034eff67be241f80432444cc2485a24c052730f6cb4847826a2b92f80",
+      "source_kind": "RESEARCH_PILOT_REPORT",
+      "source_report_verified_at": "2026-10-04",
+      "verified_at": null
+    },
+    {
+      "id": "src.investment",
+      "filename": "وزارة الاستثمار.docx",
+      "sha256": "4f4ffa5056a59954ec711728a1927aee9d248728d89f0bcaf4679f72d2c0f5c9",
+      "source_kind": "RESEARCH_PILOT_REPORT",
+      "source_report_verified_at": "2026-10-05",
+      "verified_at": null
+    },
+    {
+      "id": "src.education",
+      "filename": "وزارة التعليم.docx",
+      "sha256": "dae699ce2af9406c5bad9adf630f6af2f01b0d606bdf99bc46d6646ff6ae3a85",
+      "source_kind": "RESEARCH_PILOT_REPORT",
+      "source_report_verified_at": "2026-10-05",
+      "verified_at": null
+    },
+    {
+      "id": "src.hrsd",
+      "filename": "وزارة الموارد البشرية.docx",
+      "sha256": "688ebd4160bb0824aca96efae0bdb274040376e972acd86efd22370b8146c334",
+      "source_kind": "RESEARCH_PILOT_REPORT",
+      "source_report_verified_at": "2026-10-05",
+      "verified_at": null
+    }
+  ],
+  "source_references": [
+    {
+      "id": "sec.media.pilot_summary",
+      "source_document_id": "src.media",
+      "section_name": "pilot_summary",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 5,
+        "paragraph_end": 33
+      }
+    },
+    {
+      "id": "sec.media.identity",
+      "source_document_id": "src.media",
+      "section_name": "identity",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 34,
+        "paragraph_end": 51
+      }
+    },
+    {
+      "id": "sec.media.scenarios",
+      "source_document_id": "src.media",
+      "section_name": "scenarios",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 52,
+        "paragraph_end": 125
+      }
+    },
+    {
+      "id": "sec.media.prerequisites",
+      "source_document_id": "src.media",
+      "section_name": "prerequisites",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 218,
+        "paragraph_end": 247
+      }
+    },
+    {
+      "id": "sec.media.taxonomy",
+      "source_document_id": "src.media",
+      "section_name": "taxonomy",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 288,
+        "paragraph_end": 393
+      }
+    },
+    {
+      "id": "sec.media.sources",
+      "source_document_id": "src.media",
+      "section_name": "sources",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 535,
+        "paragraph_end": 557
+      }
+    },
+    {
+      "id": "sec.media.routing_rules",
+      "source_document_id": "src.media",
+      "section_name": "routing_rules",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 594,
+        "paragraph_end": 625
+      }
+    },
+    {
+      "id": "sec.health.pilot_summary",
+      "source_document_id": "src.health",
+      "section_name": "pilot_summary",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 5,
+        "paragraph_end": 18
+      }
+    },
+    {
+      "id": "sec.health.identity",
+      "source_document_id": "src.health",
+      "section_name": "identity",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 19,
+        "paragraph_end": 38
+      }
+    },
+    {
+      "id": "sec.health.scenarios",
+      "source_document_id": "src.health",
+      "section_name": "scenarios",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 39,
+        "paragraph_end": 58
+      }
+    },
+    {
+      "id": "sec.health.prerequisites",
+      "source_document_id": "src.health",
+      "section_name": "prerequisites",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 115,
+        "paragraph_end": 130
+      }
+    },
+    {
+      "id": "sec.health.fields",
+      "source_document_id": "src.health",
+      "section_name": "fields",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 171,
+        "paragraph_end": 300
+      }
+    },
+    {
+      "id": "sec.health.taxonomy",
+      "source_document_id": "src.health",
+      "section_name": "taxonomy",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 301,
+        "paragraph_end": 314
+      }
+    },
+    {
+      "id": "sec.health.routing_rules",
+      "source_document_id": "src.health",
+      "section_name": "routing_rules",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 392,
+        "paragraph_end": 404
+      }
+    },
+    {
+      "id": "sec.health.sources",
+      "source_document_id": "src.health",
+      "section_name": "sources",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 405,
+        "paragraph_end": 426
+      }
+    },
+    {
+      "id": "sec.investment.pilot_summary",
+      "source_document_id": "src.investment",
+      "section_name": "pilot_summary",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 5,
+        "paragraph_end": 15
+      }
+    },
+    {
+      "id": "sec.investment.journey",
+      "source_document_id": "src.investment",
+      "section_name": "journey",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 17,
+        "paragraph_end": 30
+      }
+    },
+    {
+      "id": "sec.investment.taxonomy",
+      "source_document_id": "src.investment",
+      "section_name": "taxonomy",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 48,
+        "paragraph_end": 56
+      }
+    },
+    {
+      "id": "sec.investment.integrity_route",
+      "source_document_id": "src.investment",
+      "section_name": "integrity_route",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 74,
+        "paragraph_end": 79
+      }
+    },
+    {
+      "id": "sec.investment.completion_and_limitations",
+      "source_document_id": "src.investment",
+      "section_name": "completion_and_limitations",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 81,
+        "paragraph_end": 91
+      }
+    },
+    {
+      "id": "sec.education.pilot_summary",
+      "source_document_id": "src.education",
+      "section_name": "pilot_summary",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 5,
+        "paragraph_end": 17
+      }
+    },
+    {
+      "id": "sec.education.identity",
+      "source_document_id": "src.education",
+      "section_name": "identity",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 19,
+        "paragraph_end": 37
+      }
+    },
+    {
+      "id": "sec.education.category_list",
+      "source_document_id": "src.education",
+      "section_name": "category_list",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 44,
+        "paragraph_end": 79
+      }
+    },
+    {
+      "id": "sec.education.scenarios",
+      "source_document_id": "src.education",
+      "section_name": "scenarios",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 81,
+        "paragraph_end": 91
+      }
+    },
+    {
+      "id": "sec.education.fields",
+      "source_document_id": "src.education",
+      "section_name": "fields",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 170,
+        "paragraph_end": 308
+      }
+    },
+    {
+      "id": "sec.education.prerequisites",
+      "source_document_id": "src.education",
+      "section_name": "prerequisites",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 364,
+        "paragraph_end": 384
+      }
+    },
+    {
+      "id": "sec.education.routing_rules",
+      "source_document_id": "src.education",
+      "section_name": "routing_rules",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 447,
+        "paragraph_end": 457
+      }
+    },
+    {
+      "id": "sec.hrsd.pilot_summary",
+      "source_document_id": "src.hrsd",
+      "section_name": "pilot_summary",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 5,
+        "paragraph_end": 7
+      }
+    },
+    {
+      "id": "sec.hrsd.identity",
+      "source_document_id": "src.hrsd",
+      "section_name": "identity",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 8,
+        "paragraph_end": 25
+      }
+    },
+    {
+      "id": "sec.hrsd.scenarios",
+      "source_document_id": "src.hrsd",
+      "section_name": "scenarios",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 26,
+        "paragraph_end": 45
+      }
+    },
+    {
+      "id": "sec.hrsd.prerequisites",
+      "source_document_id": "src.hrsd",
+      "section_name": "prerequisites",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 136,
+        "paragraph_end": 144
+      }
+    },
+    {
+      "id": "sec.hrsd.taxonomy",
+      "source_document_id": "src.hrsd",
+      "section_name": "taxonomy",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 169,
+        "paragraph_end": 184
+      }
+    },
+    {
+      "id": "sec.hrsd.routing_rules",
+      "source_document_id": "src.hrsd",
+      "section_name": "routing_rules",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 358,
+        "paragraph_end": 381
+      }
+    },
+    {
+      "id": "sec.hrsd.sources",
+      "source_document_id": "src.hrsd",
+      "section_name": "sources",
+      "locator": {
+        "part": "word/document.xml",
+        "paragraph_start": 382,
+        "paragraph_end": 398
+      }
+    }
+  ]
+}
